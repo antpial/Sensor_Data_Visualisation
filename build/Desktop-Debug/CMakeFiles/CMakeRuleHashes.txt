@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+f1fc7432ff2ba184a83fdde22594f150 CMakeFiles/WDSv2_autogen
+f1fc7432ff2ba184a83fdde22594f150 CMakeFiles/WDSv2_autogen_timestamp_deps
+39c15be80581f5ae29b81315f52500df WDSv2_autogen/timestamp

@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-3fe60801f1850cf07683.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "WDSv2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "WDSv2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WDSv2-Debug-130c62372eb34c4de5ff.json",
+					"name" : "WDSv2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WDSv2_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WDSv2_autogen-Debug-4996a52a68a677557aa9.json",
+					"name" : "WDSv2_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "WDSv2_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-WDSv2_autogen_timestamp_deps-Debug-fceef9cf680fce074880.json",
+					"name" : "WDSv2_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/antek/WDSv2/build/Desktop-Debug",
+		"source" : "/home/antek/WDSv2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

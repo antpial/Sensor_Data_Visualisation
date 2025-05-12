@@ -1,0 +1,9 @@
+/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/WDSv2.dir
+/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/install.dir
+/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/install/local.dir
+/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/install/strip.dir
+/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/WDSv2_autogen_timestamp_deps.dir
+/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/WDSv2_autogen.dir
