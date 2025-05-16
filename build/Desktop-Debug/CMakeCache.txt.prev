@@ -285,6 +285,9 @@ Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
 //The directory containing a CMake configuration file for Qt5Gui.
 Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
 
+//The directory containing a CMake configuration file for Qt5SerialPort.
+Qt5SerialPort_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5SerialPort
+
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
 

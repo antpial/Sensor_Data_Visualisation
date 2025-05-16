@@ -41,6 +41,8 @@ else()
         add_executable(WDSv2
             ${PROJECT_SOURCES}
             ../Downloads/map.jpg
+            chartwindow.h chartwindow.cpp chartwindow.ui
+
         )
     endif()
 endif()

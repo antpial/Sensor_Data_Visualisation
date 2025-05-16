@@ -1,5 +1,6 @@
 /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/antek/WDSv2/mainwindow.h \
   /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/moc_predefs.h \
+  /home/antek/WDSv2/chartwindow.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
   /usr/include/assert.h \
@@ -326,6 +327,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \

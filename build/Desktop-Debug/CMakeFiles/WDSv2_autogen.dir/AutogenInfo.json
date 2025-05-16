@@ -85,6 +85,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/antek/WDSv2/chartwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_chartwindow.cpp",
+			null
+		],
+		[
 			"/home/antek/WDSv2/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -143,6 +149,7 @@
 	"SETTINGS_FILE" : "/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/WDSv2_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/antek/WDSv2/chartwindow.cpp", "MU", null ],
 		[ "/home/antek/WDSv2/main.cpp", "MU", null ],
 		[ "/home/antek/WDSv2/mainwindow.cpp", "MU", null ]
 	],

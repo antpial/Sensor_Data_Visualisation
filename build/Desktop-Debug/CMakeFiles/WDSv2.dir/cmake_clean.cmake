@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "WDSv2_autogen"
   "CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.o.d"
+  "CMakeFiles/WDSv2.dir/chartwindow.cpp.o"
+  "CMakeFiles/WDSv2.dir/chartwindow.cpp.o.d"
   "CMakeFiles/WDSv2.dir/main.cpp.o"
   "CMakeFiles/WDSv2.dir/main.cpp.o.d"
   "CMakeFiles/WDSv2.dir/mainwindow.cpp.o"

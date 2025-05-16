@@ -224,6 +224,30 @@ WDSv2_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.s
 .PHONY : WDSv2_autogen/mocs_compilation.cpp.s
 
+chartwindow.o: chartwindow.cpp.o
+.PHONY : chartwindow.o
+
+# target to build an object file
+chartwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/chartwindow.cpp.o
+.PHONY : chartwindow.cpp.o
+
+chartwindow.i: chartwindow.cpp.i
+.PHONY : chartwindow.i
+
+# target to preprocess a source file
+chartwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/chartwindow.cpp.i
+.PHONY : chartwindow.cpp.i
+
+chartwindow.s: chartwindow.cpp.s
+.PHONY : chartwindow.s
+
+# target to generate assembly for a file
+chartwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/chartwindow.cpp.s
+.PHONY : chartwindow.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -290,6 +314,9 @@ help:
 	@echo "... WDSv2_autogen/mocs_compilation.o"
 	@echo "... WDSv2_autogen/mocs_compilation.i"
 	@echo "... WDSv2_autogen/mocs_compilation.s"
+	@echo "... chartwindow.o"
+	@echo "... chartwindow.i"
+	@echo "... chartwindow.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

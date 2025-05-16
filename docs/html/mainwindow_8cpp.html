@@ -69,50 +69,111 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">mainwindow.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Implementacja klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a>.  
+<p>Implementacja klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a> odpowiedzialnej za główne okno aplikacji Project FOKA.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&quot;</code><br />
 <code>#include &quot;./ui_mainwindow.h&quot;</code><br />
+<code>#include &quot;chartwindow.h&quot;</code><br />
 <code>#include &lt;QTimer&gt;</code><br />
 <code>#include &lt;QGraphicsScene&gt;</code><br />
 <code>#include &lt;QGraphicsPixmapItem&gt;</code><br />
 <code>#include &lt;QPixmap&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;QDateTime&gt;</code><br />
+<code>#include &lt;QSerialPort&gt;</code><br />
+<code>#include &lt;QSerialPortInfo&gt;</code><br />
+<code>#include &lt;QDebug&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mainwindow.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="mainwindow_8cpp__incl.png" border="0" usemap="#amainwindow_8cpp" alt=""/></div>
 <map name="amainwindow_8cpp" id="amainwindow_8cpp">
-<area shape="rect" title="Implementacja klasy MainWindow." alt="" coords="470,5,601,31"/>
-<area shape="rect" href="mainwindow_8h.html" title="Deklaracja klasy MainWindow – głównego okna aplikacji Project FOKA." alt="" coords="27,79,143,104"/>
-<area shape="poly" title=" " alt="" coords="470,32,157,81,156,76,469,27"/>
-<area shape="rect" title=" " alt="" coords="145,152,216,177"/>
-<area shape="poly" title=" " alt="" coords="470,26,399,33,322,43,253,59,227,69,209,81,199,93,192,108,184,138,179,137,187,106,194,90,206,77,225,65,252,54,321,38,398,27,469,21"/>
-<area shape="rect" title=" " alt="" coords="219,79,361,104"/>
-<area shape="poly" title=" " alt="" coords="497,33,343,77,342,72,495,28"/>
-<area shape="rect" title=" " alt="" coords="386,79,514,104"/>
-<area shape="poly" title=" " alt="" coords="523,33,476,72,473,68,520,29"/>
-<area shape="rect" title=" " alt="" coords="538,79,706,104"/>
-<area shape="poly" title=" " alt="" coords="551,29,599,68,596,72,548,33"/>
-<area shape="rect" title=" " alt="" coords="731,79,812,104"/>
-<area shape="poly" title=" " alt="" coords="574,28,721,72,719,77,572,33"/>
-<area shape="rect" title=" " alt="" coords="836,79,899,104"/>
-<area shape="poly" title=" " alt="" coords="597,28,823,76,822,81,595,33"/>
-<area shape="rect" title=" " alt="" coords="923,79,1019,104"/>
-<area shape="poly" title=" " alt="" coords="601,26,910,76,909,81,601,32"/>
-<area shape="rect" title=" " alt="" coords="5,152,121,177"/>
-<area shape="poly" title=" " alt="" coords="84,105,73,140,68,138,79,104"/>
-<area shape="poly" title=" " alt="" coords="102,102,155,141,152,146,99,106"/>
+<area shape="rect" title="Implementacja klasy MainWindow odpowiedzialnej za główne okno aplikacji Project FOKA." alt="" coords="547,5,678,31"/>
+<area shape="rect" href="mainwindow_8h.html" title="Deklaracja klasy MainWindow – głównego okna aplikacji Project FOKA." alt="" coords="219,79,335,104"/>
+<area shape="poly" title=" " alt="" coords="559,33,345,78,344,73,558,28"/>
+<area shape="rect" title=" " alt="" coords="5,152,76,177"/>
+<area shape="poly" title=" " alt="" coords="547,22,470,26,376,35,275,53,176,81,116,112,67,146,64,141,113,107,174,76,274,48,376,30,470,21,547,17"/>
+<area shape="rect" title=" " alt="" coords="100,152,195,177"/>
+<area shape="poly" title=" " alt="" coords="547,25,460,32,360,43,269,59,233,69,207,81,192,93,179,109,160,141,155,138,174,105,188,89,205,76,232,64,268,54,360,37,459,26,547,20"/>
+<area shape="rect" title=" " alt="" coords="359,152,479,177"/>
+<area shape="poly" title=" " alt="" coords="548,28,490,46,463,61,440,80,431,93,426,108,421,138,416,138,421,107,427,91,436,77,460,56,488,41,546,23"/>
+<area shape="rect" href="chartwindow_8h_source.html" title=" " alt="" coords="504,152,620,177"/>
+<area shape="poly" title=" " alt="" coords="548,28,521,35,494,45,470,60,451,80,446,90,446,99,458,117,481,132,510,145,508,150,479,137,454,121,441,101,441,89,446,77,467,56,492,40,519,30,546,23"/>
+<area shape="rect" title=" " alt="" coords="461,79,604,104"/>
+<area shape="poly" title=" " alt="" coords="602,33,558,72,554,68,598,29"/>
+<area shape="rect" title=" " alt="" coords="629,79,757,104"/>
+<area shape="poly" title=" " alt="" coords="627,29,671,68,668,72,624,33"/>
+<area shape="rect" title=" " alt="" coords="781,79,949,104"/>
+<area shape="poly" title=" " alt="" coords="654,28,811,72,810,77,652,33"/>
+<area shape="rect" title=" " alt="" coords="973,79,1055,104"/>
+<area shape="poly" title=" " alt="" coords="679,27,960,76,959,81,678,32"/>
+<area shape="rect" title=" " alt="" coords="1079,79,1141,104"/>
+<area shape="poly" title=" " alt="" coords="679,23,850,42,1065,76,1064,81,849,47,678,28"/>
+<area shape="rect" title=" " alt="" coords="1166,79,1262,104"/>
+<area shape="poly" title=" " alt="" coords="679,22,886,42,1153,76,1152,81,885,48,678,28"/>
+<area shape="rect" title=" " alt="" coords="1286,79,1361,104"/>
+<area shape="poly" title=" " alt="" coords="678,20,935,37,1101,53,1273,76,1272,81,1101,59,935,42,678,25"/>
+<area shape="rect" title=" " alt="" coords="219,152,335,177"/>
+<area shape="poly" title=" " alt="" coords="279,104,279,138,274,138,274,104"/>
+<area shape="poly" title=" " alt="" coords="240,107,90,151,88,146,238,101"/>
+<area shape="poly" title=" " alt="" coords="257,106,182,147,180,143,255,102"/>
+<area shape="poly" title=" " alt="" coords="301,102,385,143,383,148,298,106"/>
+<area shape="poly" title=" " alt="" coords="323,101,503,146,502,151,322,107"/>
+<area shape="rect" title=" " alt="" coords="523,225,601,251"/>
+<area shape="poly" title=" " alt="" coords="565,178,565,212,559,212,559,178"/>
 </map>
 </div>
-</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Implementacja klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a>. </p>
-</div></div><!-- contents -->
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParsedPacket.html">ParsedPacket</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentująca paczkę danych odebraną z portu szeregowego.  <a href="structParsedPacket.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a34b3b648bc30f00f6742b030bc06479f" id="r_a34b3b648bc30f00f6742b030bc06479f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structParsedPacket.html">ParsedPacket</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mainwindow_8cpp.html#a34b3b648bc30f00f6742b030bc06479f">parseSerialLine</a> (const QString &amp;line)</td></tr>
+<tr class="memdesc:a34b3b648bc30f00f6742b030bc06479f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parsuje linię tekstową z portu szeregowego do struktury <a class="el" href="structParsedPacket.html" title="Struktura reprezentująca paczkę danych odebraną z portu szeregowego.">ParsedPacket</a>.  <br /></td></tr>
+<tr class="separator:a34b3b648bc30f00f6742b030bc06479f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Implementacja klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a> odpowiedzialnej za główne okno aplikacji Project FOKA. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a34b3b648bc30f00f6742b030bc06479f" name="a34b3b648bc30f00f6742b030bc06479f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34b3b648bc30f00f6742b030bc06479f">&#9670;&#160;</a></span>parseSerialLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structParsedPacket.html">ParsedPacket</a> parseSerialLine </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>line</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Parsuje linię tekstową z portu szeregowego do struktury <a class="el" href="structParsedPacket.html" title="Struktura reprezentująca paczkę danych odebraną z portu szeregowego.">ParsedPacket</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">line</td><td>Linia tekstowa do sparsowania. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Sparsowana paczka danych. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

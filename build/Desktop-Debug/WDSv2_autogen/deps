@@ -4,6 +4,8 @@ WDSv2_autogen/timestamp: \
 	/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake \
 	/home/antek/WDSv2/build/Desktop-Debug/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/moc_predefs.h \
+	/home/antek/WDSv2/chartwindow.cpp \
+	/home/antek/WDSv2/chartwindow.h \
 	/home/antek/WDSv2/main.cpp \
 	/home/antek/WDSv2/mainwindow.cpp \
 	/home/antek/WDSv2/mainwindow.h \
@@ -333,6 +335,7 @@ WDSv2_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportinfo.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
@@ -404,5 +407,6 @@ WDSv2_autogen/timestamp: \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake \
+	/home/antek/WDSv2/chartwindow.ui \
 	/home/antek/WDSv2/mainwindow.ui \
 	/usr/bin/cmake

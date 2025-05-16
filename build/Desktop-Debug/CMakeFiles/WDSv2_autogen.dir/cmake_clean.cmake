@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/WDSv2_autogen"
+  "WDSv2_autogen/include/ui_chartwindow.h"
   "WDSv2_autogen/include/ui_mainwindow.h"
   "WDSv2_autogen/mocs_compilation.cpp"
   "WDSv2_autogen/timestamp"

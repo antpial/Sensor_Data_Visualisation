@@ -1,22 +1,35 @@
 <map id="mainwindow.cpp" name="mainwindow.cpp">
-<area shape="rect" id="Node000001" title="Implementacja klasy MainWindow." alt="" coords="470,5,601,31"/>
-<area shape="rect" id="Node000002" href="$mainwindow_8h.html" title="Deklaracja klasy MainWindow – głównego okna aplikacji Project FOKA." alt="" coords="27,79,143,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="470,32,157,81,156,76,469,27"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="145,152,216,177"/>
-<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="470,26,399,33,322,43,253,59,227,69,209,81,199,93,192,108,184,138,179,137,187,106,194,90,206,77,225,65,252,54,321,38,398,27,469,21"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="219,79,361,104"/>
-<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="497,33,343,77,342,72,495,28"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="386,79,514,104"/>
-<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="523,33,476,72,473,68,520,29"/>
-<area shape="rect" id="Node000007" title=" " alt="" coords="538,79,706,104"/>
-<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="551,29,599,68,596,72,548,33"/>
-<area shape="rect" id="Node000008" title=" " alt="" coords="731,79,812,104"/>
-<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="574,28,721,72,719,77,572,33"/>
-<area shape="rect" id="Node000009" title=" " alt="" coords="836,79,899,104"/>
-<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="597,28,823,76,822,81,595,33"/>
-<area shape="rect" id="Node000010" title=" " alt="" coords="923,79,1019,104"/>
-<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="601,26,910,76,909,81,601,32"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,121,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="84,105,73,140,68,138,79,104"/>
-<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="102,102,155,141,152,146,99,106"/>
+<area shape="rect" id="Node000001" title="Implementacja klasy MainWindow odpowiedzialnej za główne okno aplikacji Project FOKA." alt="" coords="547,5,678,31"/>
+<area shape="rect" id="Node000002" href="$mainwindow_8h.html" title="Deklaracja klasy MainWindow – głównego okna aplikacji Project FOKA." alt="" coords="219,79,335,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="559,33,345,78,344,73,558,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,152,76,177"/>
+<area shape="poly" id="edge10_Node000001_Node000004" title=" " alt="" coords="547,22,470,26,376,35,275,53,176,81,116,112,67,146,64,141,113,107,174,76,274,48,376,30,470,21,547,17"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="100,152,195,177"/>
+<area shape="poly" id="edge16_Node000001_Node000005" title=" " alt="" coords="547,25,460,32,360,43,269,59,233,69,207,81,192,93,179,109,160,141,155,138,174,105,188,89,205,76,232,64,268,54,360,37,459,26,547,20"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="359,152,479,177"/>
+<area shape="poly" id="edge17_Node000001_Node000006" title=" " alt="" coords="548,28,490,46,463,61,440,80,431,93,426,108,421,138,416,138,421,107,427,91,436,77,460,56,488,41,546,23"/>
+<area shape="rect" id="Node000007" href="$chartwindow_8h_source.html" title=" " alt="" coords="504,152,620,177"/>
+<area shape="poly" id="edge9_Node000001_Node000007" title=" " alt="" coords="548,28,521,35,494,45,470,60,451,80,446,90,446,99,458,117,481,132,510,145,508,150,479,137,454,121,441,101,441,89,446,77,467,56,492,40,519,30,546,23"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="461,79,604,104"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="602,33,558,72,554,68,598,29"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="629,79,757,104"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="627,29,671,68,668,72,624,33"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="781,79,949,104"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="654,28,811,72,810,77,652,33"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="973,79,1055,104"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="679,27,960,76,959,81,678,32"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1079,79,1141,104"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="679,23,850,42,1065,76,1064,81,849,47,678,28"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1166,79,1262,104"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="679,22,886,42,1153,76,1152,81,885,48,678,28"/>
+<area shape="rect" id="Node000015" title=" " alt="" coords="1286,79,1361,104"/>
+<area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="678,20,935,37,1101,53,1273,76,1272,81,1101,59,935,42,678,25"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="219,152,335,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="279,104,279,138,274,138,274,104"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="240,107,90,151,88,146,238,101"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="257,106,182,147,180,143,255,102"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="301,102,385,143,383,148,298,106"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="323,101,503,146,502,151,322,107"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="523,225,601,251"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="565,178,565,212,559,212,559,178"/>
 </map>

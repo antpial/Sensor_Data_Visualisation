@@ -292,6 +292,9 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPortInfo \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportinfo.h \
+ /home/antek/WDSv2/chartwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/include/./ui_mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -339,7 +342,6 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsScene \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsPixmapItem \

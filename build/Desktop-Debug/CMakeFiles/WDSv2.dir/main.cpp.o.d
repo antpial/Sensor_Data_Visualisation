@@ -292,6 +292,9 @@ CMakeFiles/WDSv2.dir/main.cpp.o: /home/antek/WDSv2/main.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPortInfo \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportinfo.h \
+ /home/antek/WDSv2/chartwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \

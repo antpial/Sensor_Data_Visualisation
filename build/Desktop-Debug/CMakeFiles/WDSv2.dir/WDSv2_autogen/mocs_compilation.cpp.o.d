@@ -1,7 +1,7 @@
 CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.o: \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/mocs_compilation.cpp \
  /usr/include/stdc-predef.h \
- /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_chartwindow.cpp \
  /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -116,9 +116,9 @@ CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../mainwindow.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../chartwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
@@ -159,7 +159,6 @@ CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h \
@@ -285,6 +284,11 @@ CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_mainwindow.cpp \
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../mainwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
@@ -294,4 +298,5 @@ CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialport.h \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPortInfo \
- /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportinfo.h
+ /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportinfo.h \
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../chartwindow.h

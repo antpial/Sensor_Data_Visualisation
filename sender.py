@@ -2,7 +2,7 @@ import serial
 import time
 
 # Zamień na odpowiedni port z socata, np. /dev/pts/5
-PORT = '/dev/pts/4'
+PORT = '/dev/pts/1'
 
 ser = serial.Serial(PORT, 9600)
 i=0

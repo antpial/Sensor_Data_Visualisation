@@ -13,6 +13,7 @@
 #include <QTimer>
 #include <QSerialPort>
 #include <QSerialPortInfo>
+#include "chartwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -47,6 +48,8 @@ private:
     QTimer *logTimer;   ///< Timer odpowiedzialny za okresowe wykonywanie logowania i aktualizacji danych.
     int logCounter = 0; ///< Licznik wpisów w konsoli logu.
     QSerialPort *serial;
+    ChartWindow *chartWindow = nullptr;
+
 
     /**
      * @brief Dodaje nowy wpis do logu tekstowego w UI.
