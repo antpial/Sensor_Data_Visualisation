@@ -3,11 +3,19 @@
 
 #include <QMainWindow>
 #include <QTimer>
+#include <QLabel>
 #include "serialmanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+
+struct SensorTile {
+    QFrame* frame;
+    QLabel* nameLabel;
+    QLabel* valueLabel;
+};
 
 class ChartWindow;
 
@@ -28,6 +36,12 @@ private:
     QTimer *logTimer;
     SerialManager *serialManager;
     ChartWindow *chartWindow;
+    QVector<QLabel*> sensorLabels;
+    QVector<SensorTile> sensorTiles;
+    QVector<QPair<QString, QString>> sensorConfig;
+    QVector<QPair<QString, QString>> loadSensorConfig(const QString&);
+
+
 };
 
 #endif // MAINWINDOW_H

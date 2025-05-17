@@ -335,7 +335,10 @@
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPort
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialport.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h
+ mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
+ mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
+ mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
  mdp:/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h

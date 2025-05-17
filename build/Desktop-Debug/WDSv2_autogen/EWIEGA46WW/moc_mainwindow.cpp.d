@@ -328,7 +328,10 @@
   /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPort \
   /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialport.h \
   /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \

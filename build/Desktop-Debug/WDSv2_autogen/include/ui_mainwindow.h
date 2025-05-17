@@ -11,13 +11,15 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGraphicsView>
-#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QSplitter>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,12 +28,12 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QGridLayout *gridLayout;
-    QSplitter *splitter_2;
+    QVBoxLayout *mainLayout;
+    QSplitter *mainSplitter;
     QTextBrowser *console;
-    QSplitter *splitter;
     QGraphicsView *map;
-    QTextBrowser *sensorData;
+    QFrame *sensorBar;
+    QHBoxLayout *sensorLayout;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -39,34 +41,46 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(827, 622);
+        MainWindow->resize(900, 650);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        gridLayout = new QGridLayout(centralwidget);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        splitter_2 = new QSplitter(centralwidget);
-        splitter_2->setObjectName(QString::fromUtf8("splitter_2"));
-        splitter_2->setOrientation(Qt::Horizontal);
-        console = new QTextBrowser(splitter_2);
+        mainLayout = new QVBoxLayout(centralwidget);
+        mainLayout->setObjectName(QString::fromUtf8("mainLayout"));
+        mainSplitter = new QSplitter(centralwidget);
+        mainSplitter->setObjectName(QString::fromUtf8("mainSplitter"));
+        mainSplitter->setOrientation(Qt::Horizontal);
+        console = new QTextBrowser(mainSplitter);
         console->setObjectName(QString::fromUtf8("console"));
-        splitter_2->addWidget(console);
-        splitter = new QSplitter(splitter_2);
-        splitter->setObjectName(QString::fromUtf8("splitter"));
-        splitter->setOrientation(Qt::Vertical);
-        map = new QGraphicsView(splitter);
+        console->setMinimumWidth(150);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(console->sizePolicy().hasHeightForWidth());
+        console->setSizePolicy(sizePolicy);
+        mainSplitter->addWidget(console);
+        map = new QGraphicsView(mainSplitter);
         map->setObjectName(QString::fromUtf8("map"));
-        splitter->addWidget(map);
-        sensorData = new QTextBrowser(splitter);
-        sensorData->setObjectName(QString::fromUtf8("sensorData"));
-        splitter->addWidget(sensorData);
-        splitter_2->addWidget(splitter);
+        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(map->sizePolicy().hasHeightForWidth());
+        map->setSizePolicy(sizePolicy1);
+        mainSplitter->addWidget(map);
 
-        gridLayout->addWidget(splitter_2, 0, 0, 1, 1);
+        mainLayout->addWidget(mainSplitter);
+
+        sensorBar = new QFrame(centralwidget);
+        sensorBar->setObjectName(QString::fromUtf8("sensorBar"));
+        sensorBar->setFrameShape(QFrame::StyledPanel);
+        sensorBar->setMinimumHeight(50);
+        sensorLayout = new QHBoxLayout(sensorBar);
+        sensorLayout->setObjectName(QString::fromUtf8("sensorLayout"));
+
+        mainLayout->addWidget(sensorBar);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 827, 23));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -79,7 +93,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Monitor \305\201odzi", nullptr));
     } // retranslateUi
 
 };

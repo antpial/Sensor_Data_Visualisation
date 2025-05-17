@@ -1,37 +1,37 @@
 {
   "charts": [
     {
-      "sensor": "Thermometer",
+      "sensor": "Temp.",
       "y_range": 30,
       "unit_y": "°C",
       "color": "#FF0000"
     },
     {
-      "sensor": "Ph sensor",
+      "sensor": "Ph",
       "y_range": 14,
       "unit_y": "V",
       "color": "#00FF00"
     },
     {
-      "sensor": "Turbidity sensor",
+      "sensor": "Turbidity",
       "y_range": 100,
       "unit_y": "TSS",
       "color": "#0000FF"
     },
     {
-      "sensor": "Quality sensor",
+      "sensor": "Quality",
       "y_range": 100,
       "unit_y": "ppm",
       "color": "#FFA500"
     },
     {
-      "sensor": "Depth sensor",
+      "sensor": "Depth",
       "y_range": 200,
       "unit_y": "cm",
       "color": "#800080"
     },
     {
-      "sensor": "Bateryy Voltage",
+      "sensor": "Voltage",
       "y_range": 26,
       "unit_y": "V",
       "color": "#008080"
@@ -43,7 +43,7 @@
       "color": "#000000"
     },
     {
-      "sensor": "Boat Velocity",
+      "sensor": "Velocity",
       "y_range": 20,
       "unit_y": "km/h",
       "color": "#FFC0CB"

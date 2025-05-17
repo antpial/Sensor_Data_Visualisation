@@ -383,6 +383,7 @@ WDSv2_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsWidget \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
@@ -392,6 +393,7 @@ WDSv2_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicswidget.h \
+	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
