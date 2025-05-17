@@ -295,14 +295,65 @@ CMakeFiles/WDSv2.dir/main.cpp.o: /home/antek/WDSv2/main.cpp \
  /home/antek/WDSv2/chartwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qchartview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QAbstractAxis \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qabstractaxis.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartGlobal \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qchartglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QtGlobal \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QFont \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+ /usr/include/c++/13/variant \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QAbstractSeries \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qabstractseries.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChart \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qchart.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QLegend \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qlegend.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicswidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicslayoutitem.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QLineSeries \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qlineseries.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QXYSeries \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qxyseries.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
- /usr/include/c++/13/variant
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h

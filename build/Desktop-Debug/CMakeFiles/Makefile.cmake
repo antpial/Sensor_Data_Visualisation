@@ -11,9 +11,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   ".qtc/package-manager/auto-setup.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
+  "/home/antek/WDSv2/charts_config.json"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Charts/Qt5ChartsConfig.cmake"
+  "/usr/lib/x86_64-linux-gnu/cmake/Qt5Charts/Qt5ChartsConfigVersion.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake"
@@ -79,6 +82,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "charts_config.json"
   "CMakeFiles/WDSv2_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )

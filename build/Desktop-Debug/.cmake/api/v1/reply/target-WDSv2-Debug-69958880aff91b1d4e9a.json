@@ -31,19 +31,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 41,
+				"line" : 42,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 69,
+				"line" : 73,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 51,
+				"line" : 55,
 				"parent" : 0
 			},
 			{
@@ -97,6 +97,10 @@
 			[
 				{
 					"backtrace" : 3,
+					"define" : "QT_CHARTS_LIB"
+				},
+				{
+					"backtrace" : 3,
 					"define" : "QT_CORE_LIB"
 				},
 				{
@@ -147,6 +151,11 @@
 					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "/usr/include/x86_64-linux-gnu/qt5/QtSerialPort"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/usr/include/x86_64-linux-gnu/qt5/QtCharts"
 				}
 			],
 			"language" : "CXX",
@@ -206,12 +215,17 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5SerialPort.so.5.15.13",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5SerialPort.so.5.15.13",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5Charts.so.5.15.13",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13",
 				"role" : "libraries"
 			},
 			{
@@ -252,8 +266,8 @@
 			[
 				3,
 				6,
-				9,
-				10
+				10,
+				11
 			]
 		},
 		{
@@ -262,7 +276,8 @@
 			[
 				4,
 				8,
-				11
+				9,
+				12
 			]
 		},
 		{
@@ -276,7 +291,7 @@
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				12
+				13
 			]
 		}
 	],
@@ -330,6 +345,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "chartwindow.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 1,
+			"path" : "charts_config.json",
 			"sourceGroupIndex" : 2
 		},
 		{

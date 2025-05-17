@@ -2,9 +2,14 @@
 #define CHARTWINDOW_H
 
 #include <QWidget>
+#include <QtCharts/QChartView>
+#include <QtCharts/QLineSeries>
+#include <QTimer>
 
-namespace Ui {
-class ChartWindow;
+QT_CHARTS_USE_NAMESPACE
+
+    namespace Ui {
+    class ChartWindow;
 }
 
 class ChartWindow : public QWidget
@@ -16,10 +21,14 @@ public:
     ~ChartWindow();
 
 private slots:
-    void on_pushButton_clicked();
+    void updateCharts();
 
 private:
     Ui::ChartWindow *ui;
+    QList<QLineSeries*> seriesList;
+    QTimer *timer;
+
+    void initializeCharts();
 };
 
 #endif // CHARTWINDOW_H

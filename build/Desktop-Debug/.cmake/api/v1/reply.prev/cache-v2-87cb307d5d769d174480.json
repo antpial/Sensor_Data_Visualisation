@@ -1446,6 +1446,18 @@
 			"value" : "/usr/lib/qt5/bin/qmake"
 		},
 		{
+			"name" : "Qt5Charts_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt5Charts."
+				}
+			],
+			"type" : "PATH",
+			"value" : "/usr/lib/x86_64-linux-gnu/cmake/Qt5Charts"
+		},
+		{
 			"name" : "Qt5Core_DIR",
 			"properties" : 
 			[

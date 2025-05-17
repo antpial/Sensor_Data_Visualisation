@@ -77,6 +77,14 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5SerialPort/Qt5SerialPortConfigVersion.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5SerialPort/Qt5SerialPortConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Charts/Qt5ChartsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Charts/Qt5ChartsConfig.cmake",
+		"/home/antek/WDSv2/charts_config.json",
 		"/usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/antek/WDSv2",
@@ -100,7 +108,14 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_SERIALPORT_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CHARTS_LIB",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_SERIALPORT_LIB",
+		"QT_WIDGETS_LIB"
+	],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -116,6 +131,7 @@
 		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
 		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
 		"/usr/include/x86_64-linux-gnu/qt5/QtSerialPort",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCharts",
 		"/usr/include/c++/13",
 		"/usr/include/x86_64-linux-gnu/c++/13",
 		"/usr/include/c++/13/backward",

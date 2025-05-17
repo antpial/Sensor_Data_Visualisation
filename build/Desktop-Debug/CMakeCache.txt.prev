@@ -279,6 +279,9 @@ QT_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
 //No help, variable specified on the command line.
 QT_QMAKE_EXECUTABLE:FILEPATH=/usr/lib/qt5/bin/qmake
 
+//The directory containing a CMake configuration file for Qt5Charts.
+Qt5Charts_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Charts
+
 //The directory containing a CMake configuration file for Qt5Core.
 Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
 

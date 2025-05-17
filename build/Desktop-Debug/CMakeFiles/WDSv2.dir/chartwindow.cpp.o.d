@@ -281,28 +281,125 @@ CMakeFiles/WDSv2.dir/chartwindow.cpp.o: /home/antek/WDSv2/chartwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
- /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/include/ui_chartwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qchartview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QAbstractAxis \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qabstractaxis.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartGlobal \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qchartglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QtGlobal \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QPen \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QFont \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
  /usr/include/c++/13/variant \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QAbstractSeries \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qabstractseries.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChart \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qchart.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QLegend \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qlegend.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicswidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicslayoutitem.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QLineSeries \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qlineseries.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QXYSeries \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qxyseries.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/include/ui_chartwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/QValueAxis \
+ /usr/include/x86_64-linux-gnu/qt5/QtCharts/qvalueaxis.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonDocument \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsondocument.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborvalue.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonArray \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonarray.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QRandomGenerator \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrandom.h \
+ /usr/include/c++/13/random /usr/include/c++/13/cmath /usr/include/math.h \
+ /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/include/c++/13/bits/specfun.h /usr/include/c++/13/tr1/gamma.tcc \
+ /usr/include/c++/13/tr1/special_function_util.h \
+ /usr/include/c++/13/tr1/bessel_function.tcc \
+ /usr/include/c++/13/tr1/beta_function.tcc \
+ /usr/include/c++/13/tr1/ell_integral.tcc \
+ /usr/include/c++/13/tr1/exp_integral.tcc \
+ /usr/include/c++/13/tr1/hypergeometric.tcc \
+ /usr/include/c++/13/tr1/legendre_function.tcc \
+ /usr/include/c++/13/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/13/tr1/poly_hermite.tcc \
+ /usr/include/c++/13/tr1/poly_laguerre.tcc \
+ /usr/include/c++/13/tr1/riemann_zeta.tcc \
+ /usr/include/c++/13/bits/random.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/opt_random.h \
+ /usr/include/c++/13/bits/random.tcc \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h

@@ -1,0 +1,52 @@
+{
+  "charts": [
+    {
+      "sensor": "Sensor A",
+      "y_range": 100,
+      "unit_y": "°C",
+      "color": "#FF0000"
+    },
+    {
+      "sensor": "Sensor B",
+      "y_range": 5,
+      "unit_y": "V",
+      "color": "#00FF00"
+    },
+    {
+      "sensor": "Sensor C",
+      "y_range": 200,
+      "unit_y": "RPM",
+      "color": "#0000FF"
+    },
+    {
+      "sensor": "Sensor D",
+      "y_range": 10,
+      "unit_y": "kPa",
+      "color": "#FFA500"
+    },
+    {
+      "sensor": "Sensor E",
+      "y_range": 1,
+      "unit_y": "g",
+      "color": "#800080"
+    },
+    {
+      "sensor": "Sensor F",
+      "y_range": 50,
+      "unit_y": "A",
+      "color": "#008080"
+    },
+    {
+      "sensor": "Sensor G",
+      "y_range": 3.3,
+      "unit_y": "V",
+      "color": "#000000"
+    },
+    {
+      "sensor": "Sensor H",
+      "y_range": 400,
+      "unit_y": "lux",
+      "color": "#FFC0CB"
+    }
+  ]
+}

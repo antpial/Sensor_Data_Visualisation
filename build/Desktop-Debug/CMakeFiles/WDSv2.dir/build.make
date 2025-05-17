@@ -147,8 +147,9 @@ WDSv2: CMakeFiles/WDSv2.dir/main.cpp.o
 WDSv2: CMakeFiles/WDSv2.dir/mainwindow.cpp.o
 WDSv2: CMakeFiles/WDSv2.dir/chartwindow.cpp.o
 WDSv2: CMakeFiles/WDSv2.dir/build.make
-WDSv2: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 WDSv2: /usr/lib/x86_64-linux-gnu/libQt5SerialPort.so.5.15.13
+WDSv2: /usr/lib/x86_64-linux-gnu/libQt5Charts.so.5.15.13
+WDSv2: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 WDSv2: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 WDSv2: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 WDSv2: CMakeFiles/WDSv2.dir/link.txt

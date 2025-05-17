@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ChartWindow_t {
     QByteArrayData data[3];
-    char stringdata0[35];
+    char stringdata0[26];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,11 +33,11 @@ struct qt_meta_stringdata_ChartWindow_t {
 static const qt_meta_stringdata_ChartWindow_t qt_meta_stringdata_ChartWindow = {
     {
 QT_MOC_LITERAL(0, 0, 11), // "ChartWindow"
-QT_MOC_LITERAL(1, 12, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(2, 34, 0) // ""
+QT_MOC_LITERAL(1, 12, 12), // "updateCharts"
+QT_MOC_LITERAL(2, 25, 0) // ""
 
     },
-    "ChartWindow\0on_pushButton_clicked\0"
+    "ChartWindow\0updateCharts\0"
 };
 #undef QT_MOC_LITERAL
 
@@ -69,7 +69,7 @@ void ChartWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         auto *_t = static_cast<ChartWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_pushButton_clicked(); break;
+        case 0: _t->updateCharts(); break;
         default: ;
         }
     }
