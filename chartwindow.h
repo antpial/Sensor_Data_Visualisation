@@ -6,6 +6,8 @@
 #include <QtCharts/QLineSeries>
 #include <QTimer>
 
+#include "parsedpacket.h"
+
 QT_CHARTS_USE_NAMESPACE
 
     namespace Ui {
@@ -20,13 +22,13 @@ public:
     explicit ChartWindow(QWidget *parent = nullptr);
     ~ChartWindow();
 
-private slots:
-    void updateCharts();
+public slots:
+    void updateFromPacket(const ParsedPacket &packet);
+
 
 private:
     Ui::ChartWindow *ui;
     QList<QLineSeries*> seriesList;
-    QTimer *timer;
 
     void initializeCharts();
 };

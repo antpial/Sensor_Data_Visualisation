@@ -296,6 +296,30 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+serialmanager.o: serialmanager.cpp.o
+.PHONY : serialmanager.o
+
+# target to build an object file
+serialmanager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/serialmanager.cpp.o
+.PHONY : serialmanager.cpp.o
+
+serialmanager.i: serialmanager.cpp.i
+.PHONY : serialmanager.i
+
+# target to preprocess a source file
+serialmanager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/serialmanager.cpp.i
+.PHONY : serialmanager.cpp.i
+
+serialmanager.s: serialmanager.cpp.s
+.PHONY : serialmanager.s
+
+# target to generate assembly for a file
+serialmanager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/serialmanager.cpp.s
+.PHONY : serialmanager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -323,6 +347,9 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... serialmanager.o"
+	@echo "... serialmanager.i"
+	@echo "... serialmanager.s"
 .PHONY : help
 
 

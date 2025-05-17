@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-2f5bbf68c697faa3591e.json",
+					"jsonFile" : "directory-.-Debug-13219923bae4e43b59e5.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.5"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "WDSv2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-WDSv2-Debug-69958880aff91b1d4e9a.json",
+					"jsonFile" : "target-WDSv2-Debug-9b5a9e5200f060170804.json",
 					"name" : "WDSv2",
 					"projectIndex" : 0
 				},

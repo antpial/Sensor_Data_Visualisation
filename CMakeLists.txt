@@ -44,6 +44,8 @@ else()
             ../Downloads/map.jpg
             chartwindow.h chartwindow.cpp chartwindow.ui
             charts_config.json
+            serialmanager.h serialmanager.cpp
+            parsedpacket.h
 
         )
     endif()

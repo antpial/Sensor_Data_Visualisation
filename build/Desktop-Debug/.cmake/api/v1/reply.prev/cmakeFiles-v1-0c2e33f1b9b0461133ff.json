@@ -330,6 +330,9 @@
 			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt5Charts/Qt5ChartsConfig.cmake"
 		},
 		{
+			"path" : "charts_config.json"
+		},
+		{
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake"

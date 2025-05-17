@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ChartWindow_t {
-    QByteArrayData data[3];
-    char stringdata0[26];
+    QByteArrayData data[5];
+    char stringdata0[50];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,11 +33,14 @@ struct qt_meta_stringdata_ChartWindow_t {
 static const qt_meta_stringdata_ChartWindow_t qt_meta_stringdata_ChartWindow = {
     {
 QT_MOC_LITERAL(0, 0, 11), // "ChartWindow"
-QT_MOC_LITERAL(1, 12, 12), // "updateCharts"
-QT_MOC_LITERAL(2, 25, 0) // ""
+QT_MOC_LITERAL(1, 12, 16), // "updateFromPacket"
+QT_MOC_LITERAL(2, 29, 0), // ""
+QT_MOC_LITERAL(3, 30, 12), // "ParsedPacket"
+QT_MOC_LITERAL(4, 43, 6) // "packet"
 
     },
-    "ChartWindow\0updateCharts\0"
+    "ChartWindow\0updateFromPacket\0\0"
+    "ParsedPacket\0packet"
 };
 #undef QT_MOC_LITERAL
 
@@ -55,10 +58,10 @@ static const uint qt_meta_data_ChartWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x08 /* Private */,
+       1,    1,   19,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 3,    4,
 
        0        // eod
 };
@@ -69,11 +72,10 @@ void ChartWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         auto *_t = static_cast<ChartWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->updateCharts(); break;
+        case 0: _t->updateFromPacket((*reinterpret_cast< const ParsedPacket(*)>(_a[1]))); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 QT_INIT_METAOBJECT const QMetaObject ChartWindow::staticMetaObject = { {

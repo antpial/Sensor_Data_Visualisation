@@ -12,6 +12,8 @@
 #include <QRandomGenerator>
 #include <QDebug>
 
+#include "parsedpacket.h"
+
 #define NUM_OF_SAMPLES 20
 
 struct ChartConfig {
@@ -65,9 +67,6 @@ ChartWindow::ChartWindow(QWidget *parent) :
     ui->setupUi(this);
     initializeCharts();
 
-    timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, &ChartWindow::updateCharts);
-    timer->start(1000); // aktualizacja co 1 sekunda
 }
 
 ChartWindow::~ChartWindow()
@@ -88,7 +87,6 @@ void ChartWindow::initializeCharts()
     for (int i = 0; i < views.size(); ++i) {
         QLineSeries *series = new QLineSeries();
         QChart *chart = new QChart();
-        // chart->setAnimationOptions(QChart::SeriesAnimations);
         chart->addSeries(series);
 
         QString sensorName = QString("Sensor %1").arg(i + 1);
@@ -123,39 +121,44 @@ void ChartWindow::initializeCharts()
         pen.setWidth(2); // grubość linii
         series->setPen(pen);
 
+        chart->legend()->hide();
+
         seriesList.append(series);
 
-        for (int j = 0; j < 10; ++j) {
-            series->append(j, QRandomGenerator::global()->bounded(yRange));
-        }
+        // for (int j = 0; j < 10; ++j) {
+        //     series->append(j, QRandomGenerator::global()->bounded(yRange));
+        // }
     }
 
 }
 
-void ChartWindow::updateCharts()
+void ChartWindow::updateFromPacket(const ParsedPacket &packet)
 {
-    for (QLineSeries *series : seriesList) {
+    int count = qMin(packet.sensors.size(), seriesList.size());
+
+    for (int i = 0; i < count; ++i) {
+        QLineSeries *series = seriesList[i];
         QVector<QPointF> points = series->pointsVector();
+
         if (points.size() >= NUM_OF_SAMPLES)
-            points.removeFirst();  // przesuwamy wykres
+            points.removeFirst();
 
         qreal x = points.isEmpty() ? 0 : points.last().x() + 1;
-        qreal y = QRandomGenerator::global()->bounded(100);
-        points.append(QPointF(x, y));
+        qreal y = packet.sensors[i];
 
+        points.append(QPointF(x, y));
         series->replace(points);
 
         QChart *chart = series->chart();
         if (chart && chart->axisX()) {
             qreal xMax = points.last().x();
-            qreal xMin = xMax - NUM_OF_SAMPLES;  // Zakładamy, że pokazujemy ostatnie 20 punktów
+            qreal xMin = xMax - NUM_OF_SAMPLES;
             if (xMin < 0) xMin = 0;
 
             QValueAxis *axisX = qobject_cast<QValueAxis *>(chart->axisX());
             if (axisX)
                 axisX->setRange(xMin, xMax);
         }
-
     }
 }
 

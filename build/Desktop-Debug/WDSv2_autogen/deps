@@ -10,6 +10,9 @@ WDSv2_autogen/timestamp: \
 	/home/antek/WDSv2/main.cpp \
 	/home/antek/WDSv2/mainwindow.cpp \
 	/home/antek/WDSv2/mainwindow.h \
+	/home/antek/WDSv2/parsedpacket.h \
+	/home/antek/WDSv2/serialmanager.cpp \
+	/home/antek/WDSv2/serialmanager.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
 	/usr/include/assert.h \
@@ -273,8 +276,10 @@ WDSv2_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtCharts/qxyseries.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
+	/usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/QtGlobal \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
@@ -374,10 +379,8 @@ WDSv2_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPort \
-	/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPortInfo \
 	/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialport.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
-	/usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportinfo.h \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsWidget \
 	/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \

@@ -343,15 +343,21 @@ CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../parsedpacket.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_mainwindow.cpp \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../serialmanager.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPort \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialport.h \
  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPortInfo \
- /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportinfo.h \
- /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../chartwindow.h
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_serialmanager.cpp \
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../serialmanager.h
