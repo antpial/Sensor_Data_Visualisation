@@ -301,30 +301,82 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+ /home/antek/WDSv2/mapwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtPositioning/QGeoCoordinate \
+ /usr/include/x86_64-linux-gnu/qt5/QtPositioning/qgeocoordinate.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtPositioning/qpositioningglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/QQuickWidget \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qquickwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuick/qquickwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuick/qtquickglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qtqmlglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qtqml-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuick/qtquick-config.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuick/qsgrendererinterface.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuick/qsgnode.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuick/qsggeometry.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qopengl.h /usr/include/GL/gl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qopenglext.h \
+ /usr/include/inttypes.h /usr/include/x86_64-linux-gnu/qt5/QtCore/QRectF \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QMatrix4x4 \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix4x4.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector3d.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector4d.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qquaternion.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qgenericmatrix.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/c++/13/variant \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+ /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindow.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QRect \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qsurface.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qsurfaceformat.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qqml.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlprivate.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlparserstatus.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmllist.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlpropertyvaluesource.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmldebug.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qtquickwidgetsglobal.h \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/include/./ui_mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
- /usr/include/c++/13/variant \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
@@ -344,13 +396,16 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextBrowser \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextbrowser.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextdocument.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qquickwidget.h \
  /home/antek/WDSv2/chartwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \
@@ -367,7 +422,6 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QAbstractSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/qabstractseries.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChart \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/qchart.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QLegend \
@@ -375,18 +429,15 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicswidget.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicslayoutitem.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsitem.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/QBrush \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGraphicsView \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsview.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainter.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgraphicsscene.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QLineSeries \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/qlineseries.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QXYSeries \
@@ -403,9 +454,6 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborvalue.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcborcommon.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/quuid.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonObject \
@@ -417,4 +465,15 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/QQmlContext \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlcontext.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qjsvalue.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuick/QQuickItem \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuick/qquickitem.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlcomponent.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlerror.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qaccessible.h

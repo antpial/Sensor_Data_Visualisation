@@ -14,6 +14,17 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets SerialPort)
 find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets SerialPort)
 find_package(Qt5 COMPONENTS Widgets Charts REQUIRED)
+find_package(Qt5 REQUIRED COMPONENTS
+    Core
+    Gui
+    Widgets
+    Quick
+    Qml
+    QuickWidgets
+    Positioning
+    Location
+)
+
 
 set(PROJECT_SOURCES
         main.cpp
@@ -46,6 +57,7 @@ else()
             charts_config.json
             serialmanager.h serialmanager.cpp
             parsedpacket.h
+            mapwindow.h mapwindow.cpp
 
         )
     endif()
@@ -55,6 +67,17 @@ configure_file(charts_config.json charts_config.json COPYONLY)
 
 # target_link_libraries(WDSv2 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 target_link_libraries(WDSv2 PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::SerialPort Qt${QT_VERSION_MAJOR}::Charts)
+target_link_libraries(WDSv2 PRIVATE
+    Qt5::Core
+    Qt5::Gui
+    Qt5::Widgets
+    Qt5::Quick
+    Qt5::Qml
+    Qt5::QuickWidgets
+    Qt5::Positioning
+    Qt5::Location
+)
+
 
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

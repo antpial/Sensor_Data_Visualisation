@@ -5,6 +5,7 @@
 #include <QTimer>
 #include <QLabel>
 #include "serialmanager.h"
+#include "mapwindow.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -40,7 +41,7 @@ private:
     QVector<SensorTile> sensorTiles;
     QVector<QPair<QString, QString>> sensorConfig;
     QVector<QPair<QString, QString>> loadSensorConfig(const QString&);
-
+    void updatePosition(double, double);
 
 };
 

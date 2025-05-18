@@ -12,7 +12,6 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
-#include <QtWidgets/QGraphicsView>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
@@ -21,6 +20,7 @@
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include <qquickwidget.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -31,7 +31,7 @@ public:
     QVBoxLayout *mainLayout;
     QSplitter *mainSplitter;
     QTextBrowser *console;
-    QGraphicsView *map;
+    QQuickWidget *map;
     QFrame *sensorBar;
     QHBoxLayout *sensorLayout;
     QMenuBar *menubar;
@@ -58,7 +58,7 @@ public:
         sizePolicy.setHeightForWidth(console->sizePolicy().hasHeightForWidth());
         console->setSizePolicy(sizePolicy);
         mainSplitter->addWidget(console);
-        map = new QGraphicsView(mainSplitter);
+        map = new QQuickWidget(mainSplitter);
         map->setObjectName(QString::fromUtf8("map"));
         QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy1.setHorizontalStretch(0);

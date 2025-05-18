@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "chartwindow.h"
+#include "mapwindow.h"
+
 
 #include <QGraphicsScene>
 #include <QGraphicsPixmapItem>
@@ -11,6 +13,9 @@
 #include <QJsonValue>
 #include <QFile>
 #include <QDebug>
+#include <QQmlContext>
+#include <QVBoxLayout>
+#include <QQuickItem>
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -23,7 +28,7 @@ MainWindow::MainWindow(QWidget *parent)
     serialManager = new SerialManager(this);
     connect(serialManager, &SerialManager::newPacketReceived, this, &MainWindow::handleNewPacket);
     connect(serialManager, &SerialManager::serialError, this, &MainWindow::handleSerialError);
-    serialManager->start("/dev/pts/2");
+    serialManager->start("/dev/pts/5");
 
     // Wykresy
     chartWindow = new ChartWindow();
@@ -32,18 +37,29 @@ MainWindow::MainWindow(QWidget *parent)
     chartWindow->show();
 
     // Mapa
-    QGraphicsScene *scene = new QGraphicsScene(this);
-    QPixmap pixmap("/home/antek/Downloads/map.jpg");
-    scene->addItem(new QGraphicsPixmapItem(pixmap));
-    ui->map->setScene(scene);
-    ui->sensorBar->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-    ui->sensorBar->setMinimumHeight(100);
+    // QGraphicsScene *scene = new QGraphicsScene(this);
+    // QPixmap pixmap("/home/antek/Downloads/map.jpg");
+    // scene->addItem(new QGraphicsPixmapItem(pixmap));
+    // ui->map->setScene(scene);
+    // ui->sensorBar->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    // ui->sensorBar->setMinimumHeight(100);
+
+    ui->map->setSource(QUrl::fromLocalFile("/home/antek/WDSv2/mapa.qml"));
+    // ui->map->setResizeMode(QQuickWidget::SizeRootObjectToView);
+
+
+    // mapWindow = new MapWindow();
+    // mapWindow->setAttribute(Qt::WA_DeleteOnClose);
+    // mapWindow->show();
+
 
     //tabliczki z sensorami
     sensorConfig = loadSensorConfig("charts_config.json"); // ścieżka do pliku JSON
 
 
 }
+
+
 
 MainWindow::~MainWindow()
 {
@@ -135,8 +151,33 @@ void MainWindow::handleNewPacket(const ParsedPacket &packet)
     if (!packet.log.isEmpty()) {
         ui->console->append(packet.log);
     }
+
+    //mapa
+    if (packet.hasPosition) {
+        updatePosition(packet.latitude, packet.longitude);
+    }
+
 }
 
+
+void MainWindow::updatePosition(double latitude, double longitude)
+{
+    QObject *rootObject = ui->map->rootObject();
+    if (!rootObject) {
+        qWarning() << "Root object is null!";
+        return;
+    }
+
+    QVariant lat = latitude;
+    QVariant lon = longitude;
+
+    bool invoked = QMetaObject::invokeMethod(rootObject, "updateBoatPosition",
+                                             Q_ARG(QVariant, lat),
+                                             Q_ARG(QVariant, lon));
+    if (!invoked) {
+        qWarning() << "Failed to invoke updateBoatPosition!";
+    }
+}
 
 
 

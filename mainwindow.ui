@@ -28,7 +28,7 @@
         <sizepolicy hsizetype="Preferred" vsizetype="Expanding"/>
        </property>
       </widget>
-      <widget class="QGraphicsView" name="map">
+      <widget class="QQuickWidget" name="map">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Expanding" vsizetype="Expanding"/>
        </property>

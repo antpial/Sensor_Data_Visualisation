@@ -1,8 +1,5 @@
-/home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/antek/WDSv2/mainwindow.h \
+/home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_mapwindow.cpp: /home/antek/WDSv2/mapwindow.h \
   /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/moc_predefs.h \
-  /home/antek/WDSv2/mapwindow.h \
-  /home/antek/WDSv2/parsedpacket.h \
-  /home/antek/WDSv2/serialmanager.h \
   /usr/include/GL/gl.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
@@ -258,14 +255,11 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QRectF \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h \
@@ -324,7 +318,6 @@
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -389,13 +382,7 @@
   /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/QQuickWidget \
   /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qquickwidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qtquickwidgetsglobal.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPort \
-  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialport.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \

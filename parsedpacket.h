@@ -9,8 +9,12 @@
  * @brief Struktura reprezentująca paczkę danych odebraną z portu szeregowego.
  */
 struct ParsedPacket {
-    QVector<double> sensors;
-    QString log;
+    QVector<double> sensors;    // odczyty z sensorów
+    QString log;                // ewentualny tekst do logu (console)
+    bool hasPosition;          // flaga, czy pakiet zawiera dane pozycyjne
+    double latitude;           // szerokość geograficzna
+    double longitude;          // długość geograficzna
 };
+
 
 #endif // PARSEDPACKET_H

@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/WDSv2.dir/main.cpp.o.d"
   "CMakeFiles/WDSv2.dir/mainwindow.cpp.o"
   "CMakeFiles/WDSv2.dir/mainwindow.cpp.o.d"
+  "CMakeFiles/WDSv2.dir/mapwindow.cpp.o"
+  "CMakeFiles/WDSv2.dir/mapwindow.cpp.o.d"
   "CMakeFiles/WDSv2.dir/serialmanager.cpp.o"
   "CMakeFiles/WDSv2.dir/serialmanager.cpp.o.d"
   "WDSv2"

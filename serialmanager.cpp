@@ -29,6 +29,7 @@ void SerialManager::readData()
 ParsedPacket SerialManager::parseSerialLine(const QString &line)
 {
     ParsedPacket result;
+    result.hasPosition = false;
 
     QString cleanLine = line.trimmed();
     int logIndex = cleanLine.indexOf('!');
@@ -37,10 +38,33 @@ ParsedPacket SerialManager::parseSerialLine(const QString &line)
     QString logPart = (logIndex >= 0) ? cleanLine.mid(logIndex + 1) : "";
 
     QStringList items = dataPart.split(';', Qt::SkipEmptyParts);
-    for (const QString &item : items) {
-        bool ok;
-        double val = item.toDouble(&ok);
-        if (ok) result.sensors.append(val);
+
+    if (items.size() >= 2) {
+        bool latOk = false, lonOk = false;
+
+        double lat = items[0].toDouble(&latOk);
+        double lon = items[1].toDouble(&lonOk);
+
+        if (latOk && lonOk) {
+            result.latitude = lat;
+            result.longitude = lon;
+            qDebug() << lat << " , " << lon;
+            result.hasPosition = true;
+
+            // Pozostałe wartości to sensory
+            for (int i = 2; i < items.size(); ++i) {
+                bool ok;
+                double val = items[i].toDouble(&ok);
+                if (ok) result.sensors.append(val);
+            }
+        } else {
+            // Jeśli nie udało się sparsować współrzędnych, próbujemy wszystko jako sensory
+            for (const QString &item : items) {
+                bool ok;
+                double val = item.toDouble(&ok);
+                if (ok) result.sensors.append(val);
+            }
+        }
     }
 
     result.log = logPart;

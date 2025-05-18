@@ -288,6 +288,30 @@ Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
 //The directory containing a CMake configuration file for Qt5Gui.
 Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
 
+//The directory containing a CMake configuration file for Qt5Location.
+Qt5Location_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Location
+
+//The directory containing a CMake configuration file for Qt5Network.
+Qt5Network_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Network
+
+//The directory containing a CMake configuration file for Qt5PositioningQuick.
+Qt5PositioningQuick_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5PositioningQuick
+
+//The directory containing a CMake configuration file for Qt5Positioning.
+Qt5Positioning_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Positioning
+
+//The directory containing a CMake configuration file for Qt5QmlModels.
+Qt5QmlModels_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5QmlModels
+
+//The directory containing a CMake configuration file for Qt5Qml.
+Qt5Qml_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Qml
+
+//The directory containing a CMake configuration file for Qt5QuickWidgets.
+Qt5QuickWidgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5QuickWidgets
+
+//The directory containing a CMake configuration file for Qt5Quick.
+Qt5Quick_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Quick
+
 //The directory containing a CMake configuration file for Qt5SerialPort.
 Qt5SerialPort_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5SerialPort
 
