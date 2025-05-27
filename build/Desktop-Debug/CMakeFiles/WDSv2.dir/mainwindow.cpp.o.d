@@ -369,6 +369,7 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/include/./ui_mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/QQuickWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
@@ -405,7 +406,6 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qquickwidget.h \
  /home/antek/WDSv2/chartwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt5/QtCharts/QChartView \

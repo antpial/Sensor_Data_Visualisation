@@ -8,8 +8,8 @@ PORT = '/dev/pts/1'
 BAUD_RATE = 9600
 
 # Początkowe współrzędne GPS (podaj swoje wartości)
-start_lat = 51.1  # przykładowa szerokość geograficzna
-start_lon = 17.0  # przykładowa długość geograficzna
+start_lat = 51.106054  # przykładowa szerokość geograficzna
+start_lon = 17.060251  # przykładowa długość geograficzna
 
 # Zakresy wartości z configa (pozostałe sensory)
 SENSOR_RANGES = [
@@ -23,11 +23,11 @@ SENSOR_RANGES = [
     (0, 20)      # Boat Velocity (km/h)
 ]
 
-# Ustawienia spiralnego ruchu
-angle = 0.0        # początkowy kąt
-radius = 0.0       # początkowy promień w metrach
-radius_increment = 0.5  # zwiększenie promienia na cykl (w metrach)
-angle_increment = 5     # zwiększenie kąta w stopniach na cykl
+# Parametry ruchu
+radius = 10  # promień okręgu w metrach
+angular_speed_deg_per_sec = 10  # prędkość kątowa w stopniach na sekundę
+
+angle = 0  # początkowy kąt
 
 # Stałe pomocnicze
 EARTH_RADIUS = 6371000  # promień Ziemi w metrach
@@ -37,30 +37,29 @@ i = 0
 
 print(f"Wysyłanie danych na port {PORT}...")
 
-def generate_spiral_coordinates():
-    global angle, radius
+def generate_circular_coordinates():
+    global angle
 
-    # Przelicz promień i kąt na przesunięcie w metrach
+    # Oblicz przesunięcie w metrach względem środka
     dx = radius * math.cos(math.radians(angle))
     dy = radius * math.sin(math.radians(angle))
 
-    # Przelicz metry na stopnie
+    # Zamiana metry → stopnie geograficzne
     delta_lat = dy / EARTH_RADIUS * (180 / math.pi)
     delta_lon = dx / (EARTH_RADIUS * math.cos(math.radians(start_lat))) * (180 / math.pi)
 
     lat = start_lat + delta_lat
     lon = start_lon + delta_lon
 
-    # Zwiększ promień i kąt do kolejnego kroku
-    radius += radius_increment
-    angle += angle_increment
+    # Zwiększ kąt do kolejnego kroku (pełne koło: 360 stopni)
+    angle = (angle + angular_speed_deg_per_sec) % 360
 
     return round(lat, 6), round(lon, 6)
 
 try:
     while True:
         # Generowanie współrzędnych spiralnych
-        lat, lon = generate_spiral_coordinates()
+        lat, lon = generate_circular_coordinates()
         gps_coords = f"{lat};{lon}"
 
         # Generowanie pozostałych wartości sensorycznych

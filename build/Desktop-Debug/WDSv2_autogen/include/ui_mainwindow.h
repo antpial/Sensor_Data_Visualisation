@@ -10,6 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtQuickWidgets/QQuickWidget>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHBoxLayout>
@@ -20,7 +21,6 @@
 #include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
-#include <qquickwidget.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -51,7 +51,6 @@ public:
         mainSplitter->setOrientation(Qt::Horizontal);
         console = new QTextBrowser(mainSplitter);
         console->setObjectName(QString::fromUtf8("console"));
-        console->setMinimumWidth(150);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -71,8 +70,9 @@ public:
 
         sensorBar = new QFrame(centralwidget);
         sensorBar->setObjectName(QString::fromUtf8("sensorBar"));
+        sensorBar->setMinimumSize(QSize(0, 100));
+        sensorBar->setMaximumSize(QSize(16777215, 100));
         sensorBar->setFrameShape(QFrame::StyledPanel);
-        sensorBar->setMinimumHeight(50);
         sensorLayout = new QHBoxLayout(sensorBar);
         sensorLayout->setObjectName(QString::fromUtf8("sensorLayout"));
 
@@ -81,6 +81,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
+        menubar->setGeometry(QRect(0, 0, 900, 23));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

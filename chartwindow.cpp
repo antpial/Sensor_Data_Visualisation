@@ -65,6 +65,7 @@ ChartWindow::ChartWindow(QWidget *parent) :
     ui(new Ui::ChartWindow)
 {
     ui->setupUi(this);
+    this->setStyleSheet("background-color: #ffffff;"); // jasnoszary kolor
     initializeCharts();
 
 }
@@ -120,14 +121,14 @@ void ChartWindow::initializeCharts()
         QPen pen(color);
         pen.setWidth(2); // grubość linii
         series->setPen(pen);
+        axisX->setLabelsColor("#000000");      // kolor etykiet (cyferek)
+        axisY->setLabelsColor("#000000");      // kolor etykiet (cyferek)
+        chart -> setTitleBrush(Qt::black);
 
         chart->legend()->hide();
 
         seriesList.append(series);
 
-        // for (int j = 0; j < 10; ++j) {
-        //     series->append(j, QRandomGenerator::global()->bounded(yRange));
-        // }
     }
 
 }

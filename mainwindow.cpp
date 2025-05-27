@@ -17,18 +17,24 @@
 #include <QVBoxLayout>
 #include <QQuickItem>
 
+#define PORT_PATH "/dev/pts/2"
+#define CRITICAL_DEPTH 50
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     setWindowTitle("Project FOKA ground base");
+    this->setStyleSheet("background-color: #ffffff;"); // jasnoszary kolor
+    ui->console->setStyleSheet("background-color: #ffffff;");
+    ui->sensorBar->setStyleSheet("background-color: #ffffff");
 
     // Serial manager
     serialManager = new SerialManager(this);
     connect(serialManager, &SerialManager::newPacketReceived, this, &MainWindow::handleNewPacket);
     connect(serialManager, &SerialManager::serialError, this, &MainWindow::handleSerialError);
-    serialManager->start("/dev/pts/5");
+    serialManager->start(PORT_PATH);
 
     // Wykresy
     chartWindow = new ChartWindow();
@@ -45,7 +51,7 @@ MainWindow::MainWindow(QWidget *parent)
     // ui->sensorBar->setMinimumHeight(100);
 
     ui->map->setSource(QUrl::fromLocalFile("/home/antek/WDSv2/mapa.qml"));
-    // ui->map->setResizeMode(QQuickWidget::SizeRootObjectToView);
+    ui->map->setResizeMode(QQuickWidget::SizeRootObjectToView);
 
 
     // mapWindow = new MapWindow();
@@ -55,6 +61,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     //tabliczki z sensorami
     sensorConfig = loadSensorConfig("charts_config.json"); // ścieżka do pliku JSON
+
 
 
 }
@@ -117,8 +124,21 @@ void MainWindow::handleNewPacket(const ParsedPacket &packet)
             QFrame* frame = new QFrame(this);
             frame->setFrameShape(QFrame::StyledPanel);
             frame->setFrameShadow(QFrame::Raised);
-            frame->setStyleSheet("QFrame { background-color: #c9c7c7; border-radius: 8px; padding: 5px; }");
-            frame->setMaximumWidth(150); // lub inna liczba, np. 150
+            // frame->setStyleSheet("QFrame { background-color: #c9c7c7; border-radius: 8px; padding: 1px; }");
+            frame->setMaximumWidth(150);
+            frame->setMinimumHeight(60);
+            frame->setMaximumHeight(120);
+            frame->setLineWidth(1);                   // grubość linii
+            frame->setMidLineWidth(0);
+            frame->setStyleSheet(
+                "QFrame {"
+                "  border: 1px solid #000000;"   // kolor i grubość obramowania
+                "  border-radius: 6px;"          // zaokrąglenie rogów
+                "  background-color: #ffffff;"   // kolor tła wewnątrz ramki
+                "}"
+                );
+
+
 
 
             QVBoxLayout* vbox = new QVBoxLayout(frame);
@@ -128,11 +148,11 @@ void MainWindow::handleNewPacket(const ParsedPacket &packet)
 
             QLabel* nameLabel = new QLabel(name, frame);
             nameLabel->setAlignment(Qt::AlignCenter);
-            nameLabel->setStyleSheet("font-weight: bold;");
+            nameLabel->setStyleSheet("font-size: 20px;border: 0px solid #000000;");
 
             QLabel* valueLabel = new QLabel("0.00 " + unit, frame);
             valueLabel->setAlignment(Qt::AlignCenter);
-            valueLabel->setStyleSheet("font-size: 16px;");
+            valueLabel->setStyleSheet("font-size: 20px;border: 0px solid #000000;");
 
             vbox->addWidget(nameLabel);
             vbox->addWidget(valueLabel);
@@ -146,6 +166,13 @@ void MainWindow::handleNewPacket(const ParsedPacket &packet)
     for (int i = 0; i < packet.sensors.size(); ++i) {
         QString unit = (i < sensorConfig.size()) ? sensorConfig[i].second : "";
         sensorTiles[i].valueLabel->setText(QString::number(packet.sensors[i], 'f', 2) + " " + unit);
+        if(sensorTiles[i].nameLabel->text() == "Depth"){
+            if(packet.sensors[i] < CRITICAL_DEPTH){
+                sensorTiles[i].frame->setStyleSheet("QFrame { background-color: #f52f2f; border-radius: 6px; padding: 1px;border: 1px solid #000000;}");
+            }else{
+                sensorTiles[i].frame->setStyleSheet("QFrame { background-color: #ffffff; border-radius: 6px; padding: 1px;border: 1px solid #000000;}");
+            }
+        }
     }
 
     if (!packet.log.isEmpty()) {

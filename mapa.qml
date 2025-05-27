@@ -19,12 +19,12 @@ Item {
         anchors.fill: parent
         visible: true
         plugin: mapPlugin
-        center: QtPositioning.coordinate(51.1, 17.0)
-        zoomLevel: 15
+        center: QtPositioning.coordinate(51.106098, 17.060781)
+        zoomLevel: 20
 
         MapQuickItem {
             id: boatItem
-            coordinate: QtPositioning.coordinate(51.1, 17.0)
+            coordinate: QtPositioning.coordinate(51.106098, 17.060781)
             anchorPoint.x: 12
             anchorPoint.y: 12
             sourceItem: Rectangle {
