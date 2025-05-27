@@ -412,6 +412,11 @@ CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmldebug.h \
  /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qtquickwidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTranslator \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_mapwindow.cpp \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_serialmanager.cpp \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../serialmanager.h

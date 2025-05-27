@@ -4,7 +4,7 @@ import random
 import math
 
 # Ustaw właściwy port socat (drugi koniec wirtualnego portu)
-PORT = '/dev/pts/1'
+PORT = '/dev/pts/3'
 BAUD_RATE = 9600
 
 # Początkowe współrzędne GPS (podaj swoje wartości)

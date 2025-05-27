@@ -6,6 +6,8 @@
 #include <QLabel>
 #include "serialmanager.h"
 #include "mapwindow.h"
+#include <QPushButton>
+#include <QTranslator>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -42,6 +44,21 @@ private:
     QVector<QPair<QString, QString>> sensorConfig;
     QVector<QPair<QString, QString>> loadSensorConfig(const QString&);
     void updatePosition(double, double);
+    QPushButton *langButton = nullptr;
+    QPushButton *btnPL = nullptr;
+    QPushButton *btnEN = nullptr;
+    QTranslator translator;
+    void updateLanguageButtonPositions();
+    void loadLanguage(const QString &langCode);
+    void setupMap();
+    bool mapReady = false;
+    bool hasPendingPosition = false;
+    double lastLat = 0;
+    double lastLon = 0;
+
+
+protected:
+    void resizeEvent(QResizeEvent *event) override;
 
 };
 

@@ -366,6 +366,11 @@ CMakeFiles/WDSv2.dir/main.cpp.o: /home/antek/WDSv2/main.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmldebug.h \
  /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qtquickwidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTranslator \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \

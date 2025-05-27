@@ -52,12 +52,13 @@ else()
     else()
         add_executable(WDSv2
             ${PROJECT_SOURCES}
-            ../Downloads/map.jpg
+
             chartwindow.h chartwindow.cpp chartwindow.ui
             charts_config.json
             serialmanager.h serialmanager.cpp
             parsedpacket.h
             mapwindow.h mapwindow.cpp
+            icons/gb.png icons/pl.png
 
         )
     endif()

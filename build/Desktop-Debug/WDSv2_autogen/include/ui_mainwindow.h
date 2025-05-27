@@ -94,7 +94,7 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Monitor \305\201odzi", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Project FOKA ground base", nullptr));
     } // retranslateUi
 
 };

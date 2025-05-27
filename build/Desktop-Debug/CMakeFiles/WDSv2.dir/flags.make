@@ -6,5 +6,5 @@ CXX_DEFINES = -DQT_CHARTS_LIB -DQT_CORE_LIB -DQT_GUI_LIB -DQT_LOCATION_LIB -DQT_
 
 CXX_INCLUDES = -I/home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/include -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtSerialPort -isystem /usr/include/x86_64-linux-gnu/qt5/QtCharts -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuick -isystem /usr/include/x86_64-linux-gnu/qt5/QtQmlModels -isystem /usr/include/x86_64-linux-gnu/qt5/QtQml -isystem /usr/include/x86_64-linux-gnu/qt5/QtNetwork -isystem /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets -isystem /usr/include/x86_64-linux-gnu/qt5/QtPositioning -isystem /usr/include/x86_64-linux-gnu/qt5/QtLocation -isystem /usr/include/x86_64-linux-gnu/qt5/QtPositioningQuick
 
-CXX_FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+CXX_FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fPIC
 

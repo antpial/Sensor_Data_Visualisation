@@ -23,6 +23,10 @@ struct ChartConfig {
     QColor color;
 };
 
+void ChartWindow::retranslateUi() {
+    ui->retranslateUi(this);
+}
+
 QVector<ChartConfig> loadChartConfigs(const QString &filePath)
 {
     QVector<ChartConfig> configs;

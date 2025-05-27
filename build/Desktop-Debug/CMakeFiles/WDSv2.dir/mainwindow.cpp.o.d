@@ -366,6 +366,11 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h \
  /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmldebug.h \
  /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qtquickwidgetsglobal.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTranslator \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/include/./ui_mainwindow.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
@@ -476,4 +481,6 @@ CMakeFiles/WDSv2.dir/mainwindow.cpp.o: /home/antek/WDSv2/mainwindow.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlerror.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QList \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qaccessible.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qaccessible.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QResizeEvent \
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h

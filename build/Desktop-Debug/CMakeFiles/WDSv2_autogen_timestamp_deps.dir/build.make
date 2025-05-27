@@ -66,16 +66,16 @@ include CMakeFiles/WDSv2_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/WDSv2_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Charts.so.5.15.13
-CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5SerialPort.so.5.15.13
+CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/qt5/bin/moc
+CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5QuickWidgets.so.5.15.13
 CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
-CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
-CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/qt5/bin/moc
 CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/qt5/bin/uic
-CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Quick.so.5.15.13
+CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5SerialPort.so.5.15.13
+CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Charts.so.5.15.13
 CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Positioning.so.5.15.13
 CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Qml.so.5.15.13
+CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Quick.so.5.15.13
 CMakeFiles/WDSv2_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Location.so.5.15.13
 
 WDSv2_autogen_timestamp_deps: CMakeFiles/WDSv2_autogen_timestamp_deps

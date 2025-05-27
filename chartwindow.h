@@ -20,6 +20,7 @@ class ChartWindow : public QWidget
 
 public:
     explicit ChartWindow(QWidget *parent = nullptr);
+    void retranslateUi();
     ~ChartWindow();
 
 public slots:

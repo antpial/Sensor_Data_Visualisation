@@ -42,19 +42,19 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 98,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 69,
+				"line" : 99,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
 				"line" : 70,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 71,
 				"parent" : 0
 			},
 			{
@@ -151,7 +151,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always"
+					"fragment" : "-DQT_QML_DEBUG -g -std=gnu++17"
 				},
 				{
 					"backtrace" : 3,
@@ -309,9 +309,9 @@
 				0,
 				1,
 				2,
-				7,
-				11,
-				14
+				6,
+				10,
+				13
 			]
 		}
 	],
@@ -337,7 +337,7 @@
 		],
 		"prefix" : 
 		{
-			"path" : "/usr/local"
+			"path" : "/tmp"
 		}
 	},
 	"link" : 
@@ -436,9 +436,9 @@
 				0,
 				1,
 				2,
-				7,
-				11,
-				14
+				6,
+				10,
+				13
 			]
 		},
 		{
@@ -446,36 +446,43 @@
 			"sourceIndexes" : 
 			[
 				3,
-				6,
-				10,
+				5,
+				9,
+				11,
 				12,
-				13,
-				15,
-				16
+				16,
+				17
+			]
+		},
+		{
+			"name" : "Forms",
+			"sourceIndexes" : 
+			[
+				4,
+				7
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				4,
 				8,
-				9,
-				17
+				18
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				5
+				14,
+				15
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				18
+				19
 			]
 		}
 	],
@@ -512,11 +519,6 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "/home/antek/Downloads/map.jpg",
-			"sourceGroupIndex" : 3
-		},
-		{
-			"backtrace" : 1,
 			"path" : "chartwindow.h",
 			"sourceGroupIndex" : 1
 		},
@@ -534,7 +536,7 @@
 		{
 			"backtrace" : 1,
 			"path" : "charts_config.json",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 1,
@@ -564,6 +566,16 @@
 			"sourceGroupIndex" : 0
 		},
 		{
+			"backtrace" : 1,
+			"path" : "icons/gb.png",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 1,
+			"path" : "icons/pl.png",
+			"sourceGroupIndex" : 4
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop-Debug/WDSv2_autogen/include/ui_mainwindow.h",
@@ -579,13 +591,13 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop-Debug/WDSv2_autogen/timestamp",
-			"sourceGroupIndex" : 2
+			"sourceGroupIndex" : 3
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop-Debug/WDSv2_autogen/timestamp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
 		}
 	],
 	"type" : "EXECUTABLE"

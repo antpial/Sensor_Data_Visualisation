@@ -33,7 +33,7 @@ Item {
                 color: "red"
                 radius: 12
             }
-        }
+	}
 
         MapPolyline {
             id: track
@@ -41,6 +41,7 @@ Item {
             line.color: "blue"
             path: []
         }
+        
     }
 
     // Przeniesiona funkcja tutaj, do "root", żeby mogła być wołana z C++
