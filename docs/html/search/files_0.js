@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mainwindow_2ecpp_0',['mainwindow.cpp',['../mainwindow_8cpp.html',1,'']]],
-  ['mainwindow_2eh_1',['mainwindow.h',['../mainwindow_8h.html',1,'']]]
+  ['chartwindow_2ecpp_0',['chartwindow.cpp',['../chartwindow_8cpp.html',1,'']]],
+  ['chartwindow_2eh_1',['chartwindow.h',['../chartwindow_8h.html',1,'']]]
 ];

@@ -1,0 +1,172 @@
+\doxysection{sender Namespace Reference}
+\hypertarget{namespacesender}{}\label{namespacesender}\index{sender@{sender}}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesender_a4f9705a1286d85955ffd896aa6261edb}{generate\+\_\+circular\+\_\+coordinates}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}{PORT}} = \textquotesingle{}/dev/pts/2\textquotesingle{}
+\item 
+int \mbox{\hyperlink{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381}{BAUD\+\_\+\+RATE}} = 9600
+\item 
+float \mbox{\hyperlink{namespacesender_a660ff5f39d1a59b1b3d18a36edc18019}{start\+\_\+lat}} = 51.\+106054
+\item 
+float \mbox{\hyperlink{namespacesender_abc13dc3fb9c99d9925f270acaad69dbc}{start\+\_\+lon}} = 17.\+060251
+\item 
+list \mbox{\hyperlink{namespacesender_a2a79b48310f28dddc55624fe44dc90ab}{SENSOR\+\_\+\+RANGES}}
+\item 
+int \mbox{\hyperlink{namespacesender_a5325b9900ae4e312e1c897f126ba0814}{radius}} = 10
+\item 
+int \mbox{\hyperlink{namespacesender_ae14be42f80757e2ac7fbba7c1da9dd50}{angular\+\_\+speed\+\_\+deg\+\_\+per\+\_\+sec}} = 10
+\item 
+int \mbox{\hyperlink{namespacesender_ae1cc33e852a1a7d42321e84cbe266ec4}{angle}} = 0
+\item 
+int \mbox{\hyperlink{namespacesender_ae062f7af50dedac7843a9f1f44f47727}{EARTH\+\_\+\+RADIUS}} = 6371000
+\item 
+\mbox{\hyperlink{namespacesender_a1ae8f95a1098e31638cdc47980f0d1d4}{ser}} = serial.\+Serial(\mbox{\hyperlink{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}{PORT}}, \mbox{\hyperlink{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381}{BAUD\+\_\+\+RATE}})
+\item 
+int \mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}} = 0
+\item 
+\mbox{\hyperlink{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}{lat}}
+\item 
+\mbox{\hyperlink{namespacesender_a73899320007cf34f0d3affedc769da46}{lon}}
+\item 
+str \mbox{\hyperlink{namespacesender_a8139e479d3f16bc95ef5d253300da965}{gps\+\_\+coords}} = f"{}\{\mbox{\hyperlink{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}{lat}}\};\{\mbox{\hyperlink{namespacesender_a73899320007cf34f0d3affedc769da46}{lon}}\}"{}
+\item 
+list \mbox{\hyperlink{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3}{sensor\+\_\+values}} = \mbox{[}\mbox{\hyperlink{namespacesender_a8139e479d3f16bc95ef5d253300da965}{gps\+\_\+coords}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacesender_a3d12c2434abf97cd2e17b81d80816347}{val}} = round(random.\+uniform(low, high), 2)
+\item 
+str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{message}} = "{};"{} + "{};"{}.join(\mbox{\hyperlink{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3}{sensor\+\_\+values}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{namespacesender_a4f9705a1286d85955ffd896aa6261edb}\label{namespacesender_a4f9705a1286d85955ffd896aa6261edb} 
+\index{sender@{sender}!generate\_circular\_coordinates@{generate\_circular\_coordinates}}
+\index{generate\_circular\_coordinates@{generate\_circular\_coordinates}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{generate\_circular\_coordinates()}{generate\_circular\_coordinates()}}
+{\footnotesize\ttfamily sender.\+generate\+\_\+circular\+\_\+coordinates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{namespacesender_ae1cc33e852a1a7d42321e84cbe266ec4}\label{namespacesender_ae1cc33e852a1a7d42321e84cbe266ec4} 
+\index{sender@{sender}!angle@{angle}}
+\index{angle@{angle}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily int sender.\+angle = 0}
+
+\Hypertarget{namespacesender_ae14be42f80757e2ac7fbba7c1da9dd50}\label{namespacesender_ae14be42f80757e2ac7fbba7c1da9dd50} 
+\index{sender@{sender}!angular\_speed\_deg\_per\_sec@{angular\_speed\_deg\_per\_sec}}
+\index{angular\_speed\_deg\_per\_sec@{angular\_speed\_deg\_per\_sec}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{angular\_speed\_deg\_per\_sec}{angular\_speed\_deg\_per\_sec}}
+{\footnotesize\ttfamily int sender.\+angular\+\_\+speed\+\_\+deg\+\_\+per\+\_\+sec = 10}
+
+\Hypertarget{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381}\label{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381} 
+\index{sender@{sender}!BAUD\_RATE@{BAUD\_RATE}}
+\index{BAUD\_RATE@{BAUD\_RATE}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{BAUD\_RATE}{BAUD\_RATE}}
+{\footnotesize\ttfamily int sender.\+BAUD\+\_\+\+RATE = 9600}
+
+\Hypertarget{namespacesender_ae062f7af50dedac7843a9f1f44f47727}\label{namespacesender_ae062f7af50dedac7843a9f1f44f47727} 
+\index{sender@{sender}!EARTH\_RADIUS@{EARTH\_RADIUS}}
+\index{EARTH\_RADIUS@{EARTH\_RADIUS}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{EARTH\_RADIUS}{EARTH\_RADIUS}}
+{\footnotesize\ttfamily int sender.\+EARTH\+\_\+\+RADIUS = 6371000}
+
+\Hypertarget{namespacesender_a8139e479d3f16bc95ef5d253300da965}\label{namespacesender_a8139e479d3f16bc95ef5d253300da965} 
+\index{sender@{sender}!gps\_coords@{gps\_coords}}
+\index{gps\_coords@{gps\_coords}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{gps\_coords}{gps\_coords}}
+{\footnotesize\ttfamily str sender.\+gps\+\_\+coords = f"{}\{\mbox{\hyperlink{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}{lat}}\};\{\mbox{\hyperlink{namespacesender_a73899320007cf34f0d3affedc769da46}{lon}}\}"{}}
+
+\Hypertarget{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}\label{namespacesender_a167ecc363ec220fca8586feb9a0c96b1} 
+\index{sender@{sender}!i@{i}}
+\index{i@{i}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int sender.\+i = 0}
+
+\Hypertarget{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}\label{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62} 
+\index{sender@{sender}!lat@{lat}}
+\index{lat@{lat}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{lat}{lat}}
+{\footnotesize\ttfamily sender.\+lat}
+
+\Hypertarget{namespacesender_a73899320007cf34f0d3affedc769da46}\label{namespacesender_a73899320007cf34f0d3affedc769da46} 
+\index{sender@{sender}!lon@{lon}}
+\index{lon@{lon}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{lon}{lon}}
+{\footnotesize\ttfamily sender.\+lon}
+
+\Hypertarget{namespacesender_ade590ab6f9253e036d94151cb25acee7}\label{namespacesender_ade590ab6f9253e036d94151cb25acee7} 
+\index{sender@{sender}!message@{message}}
+\index{message@{message}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{message}{message}}
+{\footnotesize\ttfamily str sender.\+message = "{};"{} + "{};"{}.join(\mbox{\hyperlink{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3}{sensor\+\_\+values}})}
+
+\Hypertarget{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}\label{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a} 
+\index{sender@{sender}!PORT@{PORT}}
+\index{PORT@{PORT}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{PORT}{PORT}}
+{\footnotesize\ttfamily str sender.\+PORT = \textquotesingle{}/dev/pts/2\textquotesingle{}}
+
+\Hypertarget{namespacesender_a5325b9900ae4e312e1c897f126ba0814}\label{namespacesender_a5325b9900ae4e312e1c897f126ba0814} 
+\index{sender@{sender}!radius@{radius}}
+\index{radius@{radius}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily int sender.\+radius = 10}
+
+\Hypertarget{namespacesender_a2a79b48310f28dddc55624fe44dc90ab}\label{namespacesender_a2a79b48310f28dddc55624fe44dc90ab} 
+\index{sender@{sender}!SENSOR\_RANGES@{SENSOR\_RANGES}}
+\index{SENSOR\_RANGES@{SENSOR\_RANGES}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{SENSOR\_RANGES}{SENSOR\_RANGES}}
+{\footnotesize\ttfamily list sender.\+SENSOR\+\_\+\+RANGES}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ =\ \ [}
+\DoxyCodeLine{00002\ \ \ \ \ (0,\ 30),\ \ \ \ \ \textcolor{comment}{\#\ Thermometer\ (°C)}}
+\DoxyCodeLine{00003\ \ \ \ \ (0,\ 14),\ \ \ \ \ \textcolor{comment}{\#\ Ph\ sensor\ (V)}}
+\DoxyCodeLine{00004\ \ \ \ \ (0,\ 100),\ \ \ \ \textcolor{comment}{\#\ Turbidity\ sensor\ (TSS)}}
+\DoxyCodeLine{00005\ \ \ \ \ (0,\ 100),\ \ \ \ \textcolor{comment}{\#\ Quality\ sensor\ (ppm)}}
+\DoxyCodeLine{00006\ \ \ \ \ (0,\ 200),\ \ \ \ \textcolor{comment}{\#\ Depth\ sensor\ (cm)}}
+\DoxyCodeLine{00007\ \ \ \ \ (18,\ 26),\ \ \ \ \textcolor{comment}{\#\ Battery\ Voltage\ (V)}}
+\DoxyCodeLine{00008\ \ \ \ \ (0,\ 100),\ \ \ \ \textcolor{comment}{\#\ Current\ (A)}}
+\DoxyCodeLine{00009\ \ \ \ \ (0,\ 20)\ \ \ \ \ \ \textcolor{comment}{\#\ Boat\ Velocity\ (km/h)}}
+\DoxyCodeLine{00010\ ]}
+
+\end{DoxyCode}
+\Hypertarget{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3}\label{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3} 
+\index{sender@{sender}!sensor\_values@{sensor\_values}}
+\index{sensor\_values@{sensor\_values}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{sensor\_values}{sensor\_values}}
+{\footnotesize\ttfamily list sender.\+sensor\+\_\+values = \mbox{[}\mbox{\hyperlink{namespacesender_a8139e479d3f16bc95ef5d253300da965}{gps\+\_\+coords}}\mbox{]}}
+
+\Hypertarget{namespacesender_a1ae8f95a1098e31638cdc47980f0d1d4}\label{namespacesender_a1ae8f95a1098e31638cdc47980f0d1d4} 
+\index{sender@{sender}!ser@{ser}}
+\index{ser@{ser}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{ser}{ser}}
+{\footnotesize\ttfamily sender.\+ser = serial.\+Serial(\mbox{\hyperlink{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}{PORT}}, \mbox{\hyperlink{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381}{BAUD\+\_\+\+RATE}})}
+
+\Hypertarget{namespacesender_a660ff5f39d1a59b1b3d18a36edc18019}\label{namespacesender_a660ff5f39d1a59b1b3d18a36edc18019} 
+\index{sender@{sender}!start\_lat@{start\_lat}}
+\index{start\_lat@{start\_lat}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{start\_lat}{start\_lat}}
+{\footnotesize\ttfamily float sender.\+start\+\_\+lat = 51.\+106054}
+
+\Hypertarget{namespacesender_abc13dc3fb9c99d9925f270acaad69dbc}\label{namespacesender_abc13dc3fb9c99d9925f270acaad69dbc} 
+\index{sender@{sender}!start\_lon@{start\_lon}}
+\index{start\_lon@{start\_lon}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{start\_lon}{start\_lon}}
+{\footnotesize\ttfamily float sender.\+start\+\_\+lon = 17.\+060251}
+
+\Hypertarget{namespacesender_a3d12c2434abf97cd2e17b81d80816347}\label{namespacesender_a3d12c2434abf97cd2e17b81d80816347} 
+\index{sender@{sender}!val@{val}}
+\index{val@{val}!sender@{sender}}
+\doxysubsubsection{\texorpdfstring{val}{val}}
+{\footnotesize\ttfamily sender.\+val = round(random.\+uniform(low, high), 2)}
+

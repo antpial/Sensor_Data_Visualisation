@@ -57,7 +57,7 @@ else()
             charts_config.json
             serialmanager.h serialmanager.cpp
             parsedpacket.h
-            mapwindow.h mapwindow.cpp
+
             icons/gb.png icons/pl.png
 
         )

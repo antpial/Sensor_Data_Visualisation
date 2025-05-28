@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parseserialline_0',['parseSerialLine',['../mainwindow_8cpp.html#a34b3b648bc30f00f6742b030bc06479f',1,'mainwindow.cpp']]]
+  ['generate_5fcircular_5fcoordinates_0',['generate_circular_coordinates',['../namespacesender.html#a4f9705a1286d85955ffd896aa6261edb',1,'sender']]]
 ];

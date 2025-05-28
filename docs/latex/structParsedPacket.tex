@@ -5,22 +5,83 @@
 Struktura reprezentująca paczkę danych odebraną z portu szeregowego.  
 
 
+
+
+{\ttfamily \#include $<$parsedpacket.\+h$>$}
+
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}\label{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c} 
-QVector$<$ double $>$ {\bfseries sensors}
-\begin{DoxyCompactList}\small\item\em Wartości z czujników. \end{DoxyCompactList}\item 
-\Hypertarget{structParsedPacket_a21c17f7e156918b39f9b4f52edaa34fc}\label{structParsedPacket_a21c17f7e156918b39f9b4f52edaa34fc} 
-QString {\bfseries log}
-\begin{DoxyCompactList}\small\item\em Wiadomość logu (jeśli występuje). \end{DoxyCompactList}\end{DoxyCompactItemize}
+QVector$<$ double $>$ \mbox{\hyperlink{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}{sensors}}
+\begin{DoxyCompactList}\small\item\em Wektor wartości odczytanych z sensorów. \end{DoxyCompactList}\item 
+QString \mbox{\hyperlink{structParsedPacket_a21c17f7e156918b39f9b4f52edaa34fc}{log}}
+\begin{DoxyCompactList}\small\item\em Tekst do wyświetlenia w konsoli (log systemowy). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structParsedPacket_a8b780ebe2dea38bfbf4daa3f17a50493}{has\+Position}}
+\begin{DoxyCompactList}\small\item\em Flaga wskazująca, czy pakiet zawiera dane GPS. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structParsedPacket_ab39507c102d3c4cadf87af36b9b34203}{latitude}}
+\begin{DoxyCompactList}\small\item\em Szerokość geograficzna (jeśli has\+Position == true). \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{structParsedPacket_a3094b3a650084273b23890a521ce4783}{longitude}}
+\begin{DoxyCompactList}\small\item\em Długość geograficzna (jeśli has\+Position == true). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Struktura reprezentująca paczkę danych odebraną z portu szeregowego. 
 
-Zawiera dane z czujników oraz opcjonalny log tekstowy. 
+Przechowuje aktualne odczyty sensorów, informacje do logów oraz dane lokalizacyjne (jeśli obecne). 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structParsedPacket_a8b780ebe2dea38bfbf4daa3f17a50493}\label{structParsedPacket_a8b780ebe2dea38bfbf4daa3f17a50493} 
+\index{ParsedPacket@{ParsedPacket}!hasPosition@{hasPosition}}
+\index{hasPosition@{hasPosition}!ParsedPacket@{ParsedPacket}}
+\doxysubsubsection{\texorpdfstring{hasPosition}{hasPosition}}
+{\footnotesize\ttfamily bool Parsed\+Packet\+::has\+Position}
+
+
+
+Flaga wskazująca, czy pakiet zawiera dane GPS. 
+
+\Hypertarget{structParsedPacket_ab39507c102d3c4cadf87af36b9b34203}\label{structParsedPacket_ab39507c102d3c4cadf87af36b9b34203} 
+\index{ParsedPacket@{ParsedPacket}!latitude@{latitude}}
+\index{latitude@{latitude}!ParsedPacket@{ParsedPacket}}
+\doxysubsubsection{\texorpdfstring{latitude}{latitude}}
+{\footnotesize\ttfamily double Parsed\+Packet\+::latitude}
+
+
+
+Szerokość geograficzna (jeśli has\+Position == true). 
+
+\Hypertarget{structParsedPacket_a21c17f7e156918b39f9b4f52edaa34fc}\label{structParsedPacket_a21c17f7e156918b39f9b4f52edaa34fc} 
+\index{ParsedPacket@{ParsedPacket}!log@{log}}
+\index{log@{log}!ParsedPacket@{ParsedPacket}}
+\doxysubsubsection{\texorpdfstring{log}{log}}
+{\footnotesize\ttfamily QString Parsed\+Packet\+::log}
+
+
+
+Tekst do wyświetlenia w konsoli (log systemowy). 
+
+\Hypertarget{structParsedPacket_a3094b3a650084273b23890a521ce4783}\label{structParsedPacket_a3094b3a650084273b23890a521ce4783} 
+\index{ParsedPacket@{ParsedPacket}!longitude@{longitude}}
+\index{longitude@{longitude}!ParsedPacket@{ParsedPacket}}
+\doxysubsubsection{\texorpdfstring{longitude}{longitude}}
+{\footnotesize\ttfamily double Parsed\+Packet\+::longitude}
+
+
+
+Długość geograficzna (jeśli has\+Position == true). 
+
+\Hypertarget{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}\label{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c} 
+\index{ParsedPacket@{ParsedPacket}!sensors@{sensors}}
+\index{sensors@{sensors}!ParsedPacket@{ParsedPacket}}
+\doxysubsubsection{\texorpdfstring{sensors}{sensors}}
+{\footnotesize\ttfamily QVector$<$double$>$ Parsed\+Packet\+::sensors}
+
+
+
+Wektor wartości odczytanych z sensorów. 
+
+
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{mainwindow_8cpp}{mainwindow.\+cpp}}\end{DoxyCompactItemize}
+\mbox{\hyperlink{parsedpacket_8h}{parsedpacket.\+h}}\end{DoxyCompactItemize}

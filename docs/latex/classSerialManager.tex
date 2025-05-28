@@ -1,0 +1,210 @@
+\doxysection{Serial\+Manager Class Reference}
+\hypertarget{classSerialManager}{}\label{classSerialManager}\index{SerialManager@{SerialManager}}
+
+
+Klasa odpowiedzialna za odbieranie danych z portu szeregowego oraz ich przetwarzanie.  
+
+
+
+
+{\ttfamily \#include $<$serialmanager.\+h$>$}
+
+
+
+Inheritance diagram for Serial\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classSerialManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Serial\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{classSerialManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSerialManager_a9a87300a5ea23e50817b47545534e55f}{new\+Packet\+Received}} (const \mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}} \&packet)
+\begin{DoxyCompactList}\small\item\em Sygnał emitowany po odebraniu i sparsowaniu pakietu danych. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSerialManager_acf8595e4fcee2d061daea8e63517c89f}{serial\+Error}} (const QString \&error)
+\begin{DoxyCompactList}\small\item\em Sygnał emitowany w przypadku błędu podczas otwierania portu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSerialManager_aa2d090c2f7dc822a3fb1f3ac432abd0d}{Serial\+Manager}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{classSerialManager}{Serial\+Manager}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSerialManager_a97cb7430b2decec7805fde39590ed7fa}{start}} (const QString \&port\+Name)
+\begin{DoxyCompactList}\small\item\em Uruchamia nasłuch na wskazanym porcie szeregowym. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classSerialManager_ab9f933dca0b5d7a302acc702ef395706}{read\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Slot do obsługi danych przychodzących z portu szeregowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}} \mbox{\hyperlink{classSerialManager_a43f9af28ef02b9e1a4eed48a0a1d7e7e}{parse\+Serial\+Line}} (const QString \&line)
+\begin{DoxyCompactList}\small\item\em Parsuje linię tekstu odebraną z portu szeregowego do struktury \doxylink{structParsedPacket}{Parsed\+Packet}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QSerial\+Port \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}
+\begin{DoxyCompactList}\small\item\em Obiekt do obsługi komunikacji szeregowej (QSerial\+Port). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa odpowiedzialna za odbieranie danych z portu szeregowego oraz ich przetwarzanie. 
+
+\doxylink{classSerialManager}{Serial\+Manager} nasłuchuje portu szeregowego, odczytuje linie danych, parsuje je do struktury {\ttfamily \doxylink{structParsedPacket}{Parsed\+Packet}} i emituje sygnały w przypadku odebrania danych lub błędu. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classSerialManager_aa2d090c2f7dc822a3fb1f3ac432abd0d}\label{classSerialManager_aa2d090c2f7dc822a3fb1f3ac432abd0d} 
+\index{SerialManager@{SerialManager}!SerialManager@{SerialManager}}
+\index{SerialManager@{SerialManager}!SerialManager@{SerialManager}}
+\doxysubsubsection{\texorpdfstring{SerialManager()}{SerialManager()}}
+{\footnotesize\ttfamily Serial\+Manager\+::\+Serial\+Manager (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor klasy \doxylink{classSerialManager}{Serial\+Manager}. 
+
+Konstruktor klasy \doxylink{classSerialManager}{Serial\+Manager}. Inicjalizuje obiekt QSerial\+Port oraz łączy sygnał {\ttfamily ready\+Read()} z metodą {\ttfamily \doxylink{classSerialManager_ab9f933dca0b5d7a302acc702ef395706}{read\+Data()}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Obiekt nadrzędny (domyślnie nullptr). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classSerialManager_a9a87300a5ea23e50817b47545534e55f}\label{classSerialManager_a9a87300a5ea23e50817b47545534e55f} 
+\index{SerialManager@{SerialManager}!newPacketReceived@{newPacketReceived}}
+\index{newPacketReceived@{newPacketReceived}!SerialManager@{SerialManager}}
+\doxysubsubsection{\texorpdfstring{newPacketReceived}{newPacketReceived}}
+{\footnotesize\ttfamily void Serial\+Manager\+::new\+Packet\+Received (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Sygnał emitowany po odebraniu i sparsowaniu pakietu danych. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Sparsowany pakiet danych. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSerialManager_a43f9af28ef02b9e1a4eed48a0a1d7e7e}\label{classSerialManager_a43f9af28ef02b9e1a4eed48a0a1d7e7e} 
+\index{SerialManager@{SerialManager}!parseSerialLine@{parseSerialLine}}
+\index{parseSerialLine@{parseSerialLine}!SerialManager@{SerialManager}}
+\doxysubsubsection{\texorpdfstring{parseSerialLine()}{parseSerialLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}} Serial\+Manager\+::parse\+Serial\+Line (\begin{DoxyParamCaption}\item[{const QString \&}]{line }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Parsuje linię tekstu odebraną z portu szeregowego do struktury \doxylink{structParsedPacket}{Parsed\+Packet}. 
+
+Parsuje linię tekstu odebraną z portu szeregowego.
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Pojedyncza linia danych wejściowych. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Struktura zawierająca dane sensorów i ewentualne dane lokalizacyjne.
+\end{DoxyReturn}
+Linia może zawierać\+:
+\begin{DoxyItemize}
+\item Współrzędne geograficzne (latitude;longitude)
+\item Dane sensorów
+\item Dodatkowy log tekstowy poprzedzony znakiem {\ttfamily !}
+\end{DoxyItemize}
+
+Przykład\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{51.107;17.038;12.5;3.14;8.9!Błąd\ pomiaru\ temperatury}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em line} & Linia danych wejściowych. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Parsowana struktura danych \doxylink{structParsedPacket}{Parsed\+Packet}. 
+\end{DoxyReturn}
+\Hypertarget{classSerialManager_ab9f933dca0b5d7a302acc702ef395706}\label{classSerialManager_ab9f933dca0b5d7a302acc702ef395706} 
+\index{SerialManager@{SerialManager}!readData@{readData}}
+\index{readData@{readData}!SerialManager@{SerialManager}}
+\doxysubsubsection{\texorpdfstring{readData}{readData}}
+{\footnotesize\ttfamily void Serial\+Manager\+::read\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Slot do obsługi danych przychodzących z portu szeregowego. 
+
+Odczytuje dostępne linie z portu szeregowego i przekazuje je do parsera.
+
+Funkcja wywoływana automatycznie po odebraniu danych (ready\+Read). \Hypertarget{classSerialManager_acf8595e4fcee2d061daea8e63517c89f}\label{classSerialManager_acf8595e4fcee2d061daea8e63517c89f} 
+\index{SerialManager@{SerialManager}!serialError@{serialError}}
+\index{serialError@{serialError}!SerialManager@{SerialManager}}
+\doxysubsubsection{\texorpdfstring{serialError}{serialError}}
+{\footnotesize\ttfamily void Serial\+Manager\+::serial\+Error (\begin{DoxyParamCaption}\item[{const QString \&}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Sygnał emitowany w przypadku błędu podczas otwierania portu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & Treść błędu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classSerialManager_a97cb7430b2decec7805fde39590ed7fa}\label{classSerialManager_a97cb7430b2decec7805fde39590ed7fa} 
+\index{SerialManager@{SerialManager}!start@{start}}
+\index{start@{start}!SerialManager@{SerialManager}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void Serial\+Manager\+::start (\begin{DoxyParamCaption}\item[{const QString \&}]{port\+Name }\end{DoxyParamCaption})}
+
+
+
+Uruchamia nasłuch na wskazanym porcie szeregowym. 
+
+Rozpoczyna nasłuch na wskazanym porcie szeregowym.
+
+
+\begin{DoxyParams}{Parameters}
+{\em port\+Name} & Nazwa portu, np. "{}/dev/tty\+USB0"{}.\\
+\hline
+{\em port\+Name} & Nazwa portu szeregowego, np. "{}/dev/tty\+USB0"{}. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}\label{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d} 
+\index{SerialManager@{SerialManager}!serial@{serial}}
+\index{serial@{serial}!SerialManager@{SerialManager}}
+\doxysubsubsection{\texorpdfstring{serial}{serial}}
+{\footnotesize\ttfamily QSerial\+Port\texorpdfstring{$\ast$}{*} Serial\+Manager\+::serial\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Obiekt do obsługi komunikacji szeregowej (QSerial\+Port). 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{serialmanager_8h}{serialmanager.\+h}}\item 
+\mbox{\hyperlink{serialmanager_8cpp}{serialmanager.\+cpp}}\end{DoxyCompactItemize}

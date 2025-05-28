@@ -2,21 +2,27 @@
 \hypertarget{mainwindow_8cpp}{}\label{mainwindow_8cpp}\index{mainwindow.cpp@{mainwindow.cpp}}
 
 
-Implementacja klasy \doxylink{classMainWindow}{Main\+Window} odpowiedzialnej za główne okno aplikacji Project FOKA.  
+Implementacja klasy \doxylink{classMainWindow}{Main\+Window} -\/ głównego okna aplikacji naziemnej Project FOKA.  
 
 
 {\ttfamily \#include "{}mainwindow.\+h"{}}\newline
 {\ttfamily \#include "{}./ui\+\_\+mainwindow.\+h"{}}\newline
 {\ttfamily \#include "{}chartwindow.\+h"{}}\newline
-{\ttfamily \#include $<$QTimer$>$}\newline
 {\ttfamily \#include $<$QGraphics\+Scene$>$}\newline
 {\ttfamily \#include $<$QGraphics\+Pixmap\+Item$>$}\newline
 {\ttfamily \#include $<$QPixmap$>$}\newline
-{\ttfamily \#include $<$cmath$>$}\newline
-{\ttfamily \#include $<$QDate\+Time$>$}\newline
-{\ttfamily \#include $<$QSerial\+Port$>$}\newline
-{\ttfamily \#include $<$QSerial\+Port\+Info$>$}\newline
+{\ttfamily \#include $<$QJson\+Document$>$}\newline
+{\ttfamily \#include $<$QJson\+Object$>$}\newline
+{\ttfamily \#include $<$QJson\+Array$>$}\newline
+{\ttfamily \#include $<$QJson\+Value$>$}\newline
+{\ttfamily \#include $<$QFile$>$}\newline
 {\ttfamily \#include $<$QDebug$>$}\newline
+{\ttfamily \#include $<$QQml\+Context$>$}\newline
+{\ttfamily \#include $<$QVBox\+Layout$>$}\newline
+{\ttfamily \#include $<$QQuick\+Item$>$}\newline
+{\ttfamily \#include $<$QPush\+Button$>$}\newline
+{\ttfamily \#include $<$QResize\+Event$>$}\newline
+{\ttfamily \#include $<$QTranslator$>$}\newline
 Include dependency graph for mainwindow.\+cpp\+:
 \nopagebreak
 \begin{figure}[H]
@@ -25,39 +31,38 @@ Include dependency graph for mainwindow.\+cpp\+:
 \includegraphics[width=350pt]{mainwindow_8cpp__incl}
 \end{center}
 \end{figure}
-\doxysubsubsection*{Classes}
+\doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}}
-\begin{DoxyCompactList}\small\item\em Struktura reprezentująca paczkę danych odebraną z portu szeregowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Functions}
-\begin{DoxyCompactItemize}
-\item 
-\mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}} \mbox{\hyperlink{mainwindow_8cpp_a34b3b648bc30f00f6742b030bc06479f}{parse\+Serial\+Line}} (const QString \&line)
-\begin{DoxyCompactList}\small\item\em Parsuje linię tekstową z portu szeregowego do struktury \doxylink{structParsedPacket}{Parsed\+Packet}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\#define \mbox{\hyperlink{mainwindow_8cpp_a8ecce89454d01137c9ec050f99df0585}{PORT\+\_\+\+PATH}}~"{}/dev/pts/1"{}
+\begin{DoxyCompactList}\small\item\em Ścieżka do portu szeregowego. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{mainwindow_8cpp_aa8a4beea0b619696e5be70f0f7cbcee4}{CRITICAL\+\_\+\+DEPTH}}~50
+\begin{DoxyCompactList}\small\item\em Głębokość krytyczna w cm. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Implementacja klasy \doxylink{classMainWindow}{Main\+Window} odpowiedzialnej za główne okno aplikacji Project FOKA. 
+Implementacja klasy \doxylink{classMainWindow}{Main\+Window} -\/ głównego okna aplikacji naziemnej Project FOKA. 
 
 
 
-\doxysubsection{Function Documentation}
-\Hypertarget{mainwindow_8cpp_a34b3b648bc30f00f6742b030bc06479f}\label{mainwindow_8cpp_a34b3b648bc30f00f6742b030bc06479f} 
-\index{mainwindow.cpp@{mainwindow.cpp}!parseSerialLine@{parseSerialLine}}
-\index{parseSerialLine@{parseSerialLine}!mainwindow.cpp@{mainwindow.cpp}}
-\doxysubsubsection{\texorpdfstring{parseSerialLine()}{parseSerialLine()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}} parse\+Serial\+Line (\begin{DoxyParamCaption}\item[{const QString \&}]{line }\end{DoxyParamCaption})}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{mainwindow_8cpp_aa8a4beea0b619696e5be70f0f7cbcee4}\label{mainwindow_8cpp_aa8a4beea0b619696e5be70f0f7cbcee4} 
+\index{mainwindow.cpp@{mainwindow.cpp}!CRITICAL\_DEPTH@{CRITICAL\_DEPTH}}
+\index{CRITICAL\_DEPTH@{CRITICAL\_DEPTH}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{CRITICAL\_DEPTH}{CRITICAL\_DEPTH}}
+{\footnotesize\ttfamily \#define CRITICAL\+\_\+\+DEPTH~50}
 
 
 
-Parsuje linię tekstową z portu szeregowego do struktury \doxylink{structParsedPacket}{Parsed\+Packet}. 
+Głębokość krytyczna w cm. 
+
+\Hypertarget{mainwindow_8cpp_a8ecce89454d01137c9ec050f99df0585}\label{mainwindow_8cpp_a8ecce89454d01137c9ec050f99df0585} 
+\index{mainwindow.cpp@{mainwindow.cpp}!PORT\_PATH@{PORT\_PATH}}
+\index{PORT\_PATH@{PORT\_PATH}!mainwindow.cpp@{mainwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{PORT\_PATH}{PORT\_PATH}}
+{\footnotesize\ttfamily \#define PORT\+\_\+\+PATH~"{}/dev/pts/1"{}}
 
 
-\begin{DoxyParams}{Parameters}
-{\em line} & Linia tekstowa do sparsowania. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-Sparsowana paczka danych. 
-\end{DoxyReturn}
+
+Ścieżka do portu szeregowego. 
+

@@ -2,7 +2,7 @@
 \hypertarget{classMainWindow}{}\label{classMainWindow}\index{MainWindow@{MainWindow}}
 
 
-Klasa reprezentująca główne okno aplikacji.  
+Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym, obsługą sensorów i lokalizacją łodzi.  
 
 
 
@@ -11,7 +11,8 @@ Klasa reprezentująca główne okno aplikacji.
 
 
 
-Inheritance diagram for Main\+Window\+:\nopagebreak
+Inheritance diagram for Main\+Window\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -20,11 +21,12 @@ Inheritance diagram for Main\+Window\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for Main\+Window\+:\nopagebreak
+Collaboration diagram for Main\+Window\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=167pt]{classMainWindow__coll__graph}
+\includegraphics[width=350pt]{classMainWindow__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Member Functions}
@@ -32,15 +34,70 @@ Collaboration diagram for Main\+Window\+:\nopagebreak
 \item 
 \mbox{\hyperlink{classMainWindow_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
 \begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{classMainWindow}{Main\+Window}. \end{DoxyCompactList}\item 
-\Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7} 
-{\bfseries \texorpdfstring{$\sim$}{\string~}\+Main\+Window} ()
+\mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\texorpdfstring{$\sim$}{\string~}\+Main\+Window}} ()
 \begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{classMainWindow}{Main\+Window}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainWindow_aad75236c74a5c340c3e18749a9b5eb4f}{resize\+Event}} (QResize\+Event \texorpdfstring{$\ast$}{*}event) override
+\begin{DoxyCompactList}\small\item\em Obsługuje zdarzenie zmiany rozmiaru okna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMainWindow_a2d8c660a89cbff3f408e33110c1c2c61}{handle\+New\+Packet}} (const \mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}} \&packet)
+\begin{DoxyCompactList}\small\item\em Obsługuje nowy pakiet danych odebrany z portu szeregowego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a064b13fe8d8c2c4471dec0c44a4b0a6b}{handle\+Serial\+Error}} (const QString \&error)
+\begin{DoxyCompactList}\small\item\em Obsługuje błędy portu szeregowego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+QVector$<$ QPair$<$ QString, QString $>$ $>$ \mbox{\hyperlink{classMainWindow_ac8fa0d9c2019ef65f4a71feb2d1e8ea4}{load\+Sensor\+Config}} (const QString \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Ładuje konfigurację sensorów z pliku JSON. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_af1363200af71ba9cd608533794a5fcbf}{update\+Position}} (double latitude, double longitude)
+\begin{DoxyCompactList}\small\item\em Aktualizuje pozycję łodzi na mapie. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_afc023dc10c45fd50cd731c41952fc6fd}{update\+Language\+Button\+Positions}} ()
+\begin{DoxyCompactList}\small\item\em Ustawia pozycję przycisków językowych względem mapy. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_afe4a897bd163a15ecd30f6a262b4a135}{load\+Language}} (const QString \&lang\+Code)
+\begin{DoxyCompactList}\small\item\em Ładuje i stosuje tłumaczenie GUI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainWindow_a08670ff7ecdbe1b065ff84860525b5bc}{setup\+Map}} ()
+\begin{DoxyCompactList}\small\item\em Ustawia mapę i jej parametry (funkcja nieużywana). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Main\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}}
+\begin{DoxyCompactList}\small\item\em Interfejs użytkownika wygenerowany przez Qt Designer. \end{DoxyCompactList}\item 
+QTimer \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainWindow_ac6acedc605e8700660ab349c08b37eac}{log\+Timer}}
+\begin{DoxyCompactList}\small\item\em Timer do obsługi logów (obecnie nieużywany) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSerialManager}{Serial\+Manager}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainWindow_a1e45c6a8193b3c32ac122bf615748127}{serial\+Manager}}
+\begin{DoxyCompactList}\small\item\em Manager portu szeregowego. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classChartWindow}{Chart\+Window}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainWindow_ae7b5edf93b98f6a1f0db64564a69cc96}{chart\+Window}}
+\begin{DoxyCompactList}\small\item\em Okno wykresów. \end{DoxyCompactList}\item 
+QVector$<$ QLabel \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classMainWindow_aa4995b5b66dfd31153708d6fa242ea27}{sensor\+Labels}}
+\begin{DoxyCompactList}\small\item\em Etykiety sensorów (nieużywane, zachowane na przyszłość) \end{DoxyCompactList}\item 
+QVector$<$ \mbox{\hyperlink{structSensorTile}{Sensor\+Tile}} $>$ \mbox{\hyperlink{classMainWindow_a2ead0d7421c8b42b82133d4fe6747089}{sensor\+Tiles}}
+\begin{DoxyCompactList}\small\item\em Kafelki sensorów. \end{DoxyCompactList}\item 
+QVector$<$ QPair$<$ QString, QString $>$ $>$ \mbox{\hyperlink{classMainWindow_a1108c2b0f58b54e7e69f6e3929ca4eec}{sensor\+Config}}
+\begin{DoxyCompactList}\small\item\em Konfiguracja sensorów\+: para \texorpdfstring{$<$}{<}nazwa, jednostka\texorpdfstring{$>$}{>} \end{DoxyCompactList}\item 
+QPush\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainWindow_a92d08c165f352a5187ca16c3f4517b9d}{lang\+Button}} = nullptr
+\begin{DoxyCompactList}\small\item\em Przyciski zmiany języka (deprecated / nieużywane) \end{DoxyCompactList}\item 
+QPush\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainWindow_ab1d6a75930e70103d1d08289b51f0937}{btn\+PL}} = nullptr
+\begin{DoxyCompactList}\small\item\em Przycisk do wyboru języka polskiego. \end{DoxyCompactList}\item 
+QPush\+Button \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classMainWindow_aeb1de0d49e14bad708dccf9b19fe5f3f}{btn\+EN}} = nullptr
+\begin{DoxyCompactList}\small\item\em Przycisk do wyboru języka angielskiego. \end{DoxyCompactList}\item 
+QTranslator \mbox{\hyperlink{classMainWindow_a8e829b3590ccdeeada42625415afc6f3}{translator}}
+\begin{DoxyCompactList}\small\item\em Tłumacz Qt. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMainWindow_afd14383d1d27c426e0cf1df5bf20cb16}{map\+Ready}} = false
+\begin{DoxyCompactList}\small\item\em Flaga gotowości mapy. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classMainWindow_a4aa7e99e292a9ef95b65f61e46e7870e}{has\+Pending\+Position}} = false
+\begin{DoxyCompactList}\small\item\em Flaga oczekującej pozycji do narysowania. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classMainWindow_abbd49b4459b1d9d64dbf57d14c820b16}{last\+Lat}} = 0
+\begin{DoxyCompactList}\small\item\em Ostatnia szerokość geograficzna. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classMainWindow_a44a996ad0ebb5c3242a90d3bc51180fe}{last\+Lon}} = 0
+\begin{DoxyCompactList}\small\item\em Ostatnia długość geograficzna. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Klasa reprezentująca główne okno aplikacji. 
-
-\doxylink{classMainWindow}{Main\+Window} zawiera funkcjonalności takie jak wyświetlanie danych z czujników, logowanie zdarzeń, oraz wizualizację mapy przy użyciu QGraphics\+Scene. 
+Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym, obsługą sensorów i lokalizacją łodzi. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classMainWindow_a996c5a2b6f77944776856f08ec30858d}\label{classMainWindow_a996c5a2b6f77944776856f08ec30858d} 
@@ -53,13 +110,316 @@ Klasa reprezentująca główne okno aplikacji.
 
 Konstruktor klasy \doxylink{classMainWindow}{Main\+Window}. 
 
+Konstruktor klasy \doxylink{classMainWindow}{Main\+Window}. Inicjalizuje UI, komponenty graficzne, managera portu szeregowego oraz ustawia pozycje elementów.
+
 
 \begin{DoxyParams}{Parameters}
-{\em parent} & Wskaźnik na nadrzędny widget (opcjonalnie).\\
+{\em parent} & Wskaźnik na widget nadrzędny (domyślnie nullptr).\\
 \hline
-{\em parent} & Wskaźnik na rodzica (opcjonalnie). \\
+{\em parent} & Wskaźnik na obiekt nadrzędny (domyślnie nullptr). \\
 \hline
 \end{DoxyParams}
+\Hypertarget{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}\label{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7} 
+\index{MainWindow@{MainWindow}!````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}}
+\index{````~MainWindow@{\texorpdfstring{$\sim$}{\string~}MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}MainWindow()}{\string~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxylink{classMainWindow}{Main\+Window}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMainWindow_a2d8c660a89cbff3f408e33110c1c2c61}\label{classMainWindow_a2d8c660a89cbff3f408e33110c1c2c61} 
+\index{MainWindow@{MainWindow}!handleNewPacket@{handleNewPacket}}
+\index{handleNewPacket@{handleNewPacket}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{handleNewPacket}{handleNewPacket}}
+{\footnotesize\ttfamily void Main\+Window\+::handle\+New\+Packet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Obsługuje nowy pakiet danych odebrany z portu szeregowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Struktura z danymi pomiarowymi i lokalizacją.\\
+\hline
+{\em packet} & Struktura zawierająca dane pomiarowe i pozycję. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_a064b13fe8d8c2c4471dec0c44a4b0a6b}\label{classMainWindow_a064b13fe8d8c2c4471dec0c44a4b0a6b} 
+\index{MainWindow@{MainWindow}!handleSerialError@{handleSerialError}}
+\index{handleSerialError@{handleSerialError}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{handleSerialError}{handleSerialError}}
+{\footnotesize\ttfamily void Main\+Window\+::handle\+Serial\+Error (\begin{DoxyParamCaption}\item[{const QString \&}]{error }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Obsługuje błędy portu szeregowego. 
+
+Obsługuje błędy związane z komunikacją szeregową.
+
+
+\begin{DoxyParams}{Parameters}
+{\em error} & Treść błędu.\\
+\hline
+{\em error} & Komunikat błędu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_afe4a897bd163a15ecd30f6a262b4a135}\label{classMainWindow_afe4a897bd163a15ecd30f6a262b4a135} 
+\index{MainWindow@{MainWindow}!loadLanguage@{loadLanguage}}
+\index{loadLanguage@{loadLanguage}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{loadLanguage()}{loadLanguage()}}
+{\footnotesize\ttfamily void Main\+Window\+::load\+Language (\begin{DoxyParamCaption}\item[{const QString \&}]{lang\+Code }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ładuje i stosuje tłumaczenie GUI. 
+
+Ładuje tłumaczenie interfejsu na podstawie kodu języka.
+
+
+\begin{DoxyParams}{Parameters}
+{\em lang\+Code} & Kod języka (np. "{}pl"{}, "{}en"{}). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_ac8fa0d9c2019ef65f4a71feb2d1e8ea4}\label{classMainWindow_ac8fa0d9c2019ef65f4a71feb2d1e8ea4} 
+\index{MainWindow@{MainWindow}!loadSensorConfig@{loadSensorConfig}}
+\index{loadSensorConfig@{loadSensorConfig}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{loadSensorConfig()}{loadSensorConfig()}}
+{\footnotesize\ttfamily QVector$<$ QPair$<$ QString, QString $>$ $>$ Main\+Window\+::load\+Sensor\+Config (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ładuje konfigurację sensorów z pliku JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Ścieżka do pliku JSON z konfiguracją. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor par \texorpdfstring{$<$}{<}nazwa, jednostka\texorpdfstring{$>$}{>}.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Ścieżka do pliku JSON. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor par \texorpdfstring{$<$}{<}nazwa, jednostka\texorpdfstring{$>$}{>}. 
+\end{DoxyReturn}
+\Hypertarget{classMainWindow_aad75236c74a5c340c3e18749a9b5eb4f}\label{classMainWindow_aad75236c74a5c340c3e18749a9b5eb4f} 
+\index{MainWindow@{MainWindow}!resizeEvent@{resizeEvent}}
+\index{resizeEvent@{resizeEvent}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{resizeEvent()}{resizeEvent()}}
+{\footnotesize\ttfamily void Main\+Window\+::resize\+Event (\begin{DoxyParamCaption}\item[{QResize\+Event \texorpdfstring{$\ast$}{*}}]{event }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+Obsługuje zdarzenie zmiany rozmiaru okna. 
+
+Zdarzenie zmiany rozmiaru okna.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & Obiekt zdarzenia zmiany rozmiaru.\\
+\hline
+{\em event} & Obiekt zdarzenia (może być nullptr). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMainWindow_a08670ff7ecdbe1b065ff84860525b5bc}\label{classMainWindow_a08670ff7ecdbe1b065ff84860525b5bc} 
+\index{MainWindow@{MainWindow}!setupMap@{setupMap}}
+\index{setupMap@{setupMap}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setupMap()}{setupMap()}}
+{\footnotesize\ttfamily void Main\+Window\+::setup\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ustawia mapę i jej parametry (funkcja nieużywana). 
+
+\Hypertarget{classMainWindow_afc023dc10c45fd50cd731c41952fc6fd}\label{classMainWindow_afc023dc10c45fd50cd731c41952fc6fd} 
+\index{MainWindow@{MainWindow}!updateLanguageButtonPositions@{updateLanguageButtonPositions}}
+\index{updateLanguageButtonPositions@{updateLanguageButtonPositions}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateLanguageButtonPositions()}{updateLanguageButtonPositions()}}
+{\footnotesize\ttfamily void Main\+Window\+::update\+Language\+Button\+Positions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ustawia pozycję przycisków językowych względem mapy. 
+
+\Hypertarget{classMainWindow_af1363200af71ba9cd608533794a5fcbf}\label{classMainWindow_af1363200af71ba9cd608533794a5fcbf} 
+\index{MainWindow@{MainWindow}!updatePosition@{updatePosition}}
+\index{updatePosition@{updatePosition}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updatePosition()}{updatePosition()}}
+{\footnotesize\ttfamily void Main\+Window\+::update\+Position (\begin{DoxyParamCaption}\item[{double}]{latitude,  }\item[{double}]{longitude }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Aktualizuje pozycję łodzi na mapie. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em latitude} & Szerokość geograficzna. \\
+\hline
+{\em longitude} & Długość geograficzna. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classMainWindow_aeb1de0d49e14bad708dccf9b19fe5f3f}\label{classMainWindow_aeb1de0d49e14bad708dccf9b19fe5f3f} 
+\index{MainWindow@{MainWindow}!btnEN@{btnEN}}
+\index{btnEN@{btnEN}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{btnEN}{btnEN}}
+{\footnotesize\ttfamily QPush\+Button\texorpdfstring{$\ast$}{*} Main\+Window\+::btn\+EN = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk do wyboru języka angielskiego. 
+
+\Hypertarget{classMainWindow_ab1d6a75930e70103d1d08289b51f0937}\label{classMainWindow_ab1d6a75930e70103d1d08289b51f0937} 
+\index{MainWindow@{MainWindow}!btnPL@{btnPL}}
+\index{btnPL@{btnPL}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{btnPL}{btnPL}}
+{\footnotesize\ttfamily QPush\+Button\texorpdfstring{$\ast$}{*} Main\+Window\+::btn\+PL = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przycisk do wyboru języka polskiego. 
+
+\Hypertarget{classMainWindow_ae7b5edf93b98f6a1f0db64564a69cc96}\label{classMainWindow_ae7b5edf93b98f6a1f0db64564a69cc96} 
+\index{MainWindow@{MainWindow}!chartWindow@{chartWindow}}
+\index{chartWindow@{chartWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{chartWindow}{chartWindow}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classChartWindow}{Chart\+Window}}\texorpdfstring{$\ast$}{*} Main\+Window\+::chart\+Window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Okno wykresów. 
+
+\Hypertarget{classMainWindow_a4aa7e99e292a9ef95b65f61e46e7870e}\label{classMainWindow_a4aa7e99e292a9ef95b65f61e46e7870e} 
+\index{MainWindow@{MainWindow}!hasPendingPosition@{hasPendingPosition}}
+\index{hasPendingPosition@{hasPendingPosition}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{hasPendingPosition}{hasPendingPosition}}
+{\footnotesize\ttfamily bool Main\+Window\+::has\+Pending\+Position = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga oczekującej pozycji do narysowania. 
+
+\Hypertarget{classMainWindow_a92d08c165f352a5187ca16c3f4517b9d}\label{classMainWindow_a92d08c165f352a5187ca16c3f4517b9d} 
+\index{MainWindow@{MainWindow}!langButton@{langButton}}
+\index{langButton@{langButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{langButton}{langButton}}
+{\footnotesize\ttfamily QPush\+Button\texorpdfstring{$\ast$}{*} Main\+Window\+::lang\+Button = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Przyciski zmiany języka (deprecated / nieużywane) 
+
+\Hypertarget{classMainWindow_abbd49b4459b1d9d64dbf57d14c820b16}\label{classMainWindow_abbd49b4459b1d9d64dbf57d14c820b16} 
+\index{MainWindow@{MainWindow}!lastLat@{lastLat}}
+\index{lastLat@{lastLat}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{lastLat}{lastLat}}
+{\footnotesize\ttfamily double Main\+Window\+::last\+Lat = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ostatnia szerokość geograficzna. 
+
+\Hypertarget{classMainWindow_a44a996ad0ebb5c3242a90d3bc51180fe}\label{classMainWindow_a44a996ad0ebb5c3242a90d3bc51180fe} 
+\index{MainWindow@{MainWindow}!lastLon@{lastLon}}
+\index{lastLon@{lastLon}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{lastLon}{lastLon}}
+{\footnotesize\ttfamily double Main\+Window\+::last\+Lon = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ostatnia długość geograficzna. 
+
+\Hypertarget{classMainWindow_ac6acedc605e8700660ab349c08b37eac}\label{classMainWindow_ac6acedc605e8700660ab349c08b37eac} 
+\index{MainWindow@{MainWindow}!logTimer@{logTimer}}
+\index{logTimer@{logTimer}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{logTimer}{logTimer}}
+{\footnotesize\ttfamily QTimer\texorpdfstring{$\ast$}{*} Main\+Window\+::log\+Timer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Timer do obsługi logów (obecnie nieużywany) 
+
+\Hypertarget{classMainWindow_afd14383d1d27c426e0cf1df5bf20cb16}\label{classMainWindow_afd14383d1d27c426e0cf1df5bf20cb16} 
+\index{MainWindow@{MainWindow}!mapReady@{mapReady}}
+\index{mapReady@{mapReady}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{mapReady}{mapReady}}
+{\footnotesize\ttfamily bool Main\+Window\+::map\+Ready = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flaga gotowości mapy. 
+
+\Hypertarget{classMainWindow_a1108c2b0f58b54e7e69f6e3929ca4eec}\label{classMainWindow_a1108c2b0f58b54e7e69f6e3929ca4eec} 
+\index{MainWindow@{MainWindow}!sensorConfig@{sensorConfig}}
+\index{sensorConfig@{sensorConfig}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sensorConfig}{sensorConfig}}
+{\footnotesize\ttfamily QVector$<$QPair$<$QString, QString$>$ $>$ Main\+Window\+::sensor\+Config\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Konfiguracja sensorów\+: para \texorpdfstring{$<$}{<}nazwa, jednostka\texorpdfstring{$>$}{>} 
+
+\Hypertarget{classMainWindow_aa4995b5b66dfd31153708d6fa242ea27}\label{classMainWindow_aa4995b5b66dfd31153708d6fa242ea27} 
+\index{MainWindow@{MainWindow}!sensorLabels@{sensorLabels}}
+\index{sensorLabels@{sensorLabels}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sensorLabels}{sensorLabels}}
+{\footnotesize\ttfamily QVector$<$QLabel\texorpdfstring{$\ast$}{*}$>$ Main\+Window\+::sensor\+Labels\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Etykiety sensorów (nieużywane, zachowane na przyszłość) 
+
+\Hypertarget{classMainWindow_a2ead0d7421c8b42b82133d4fe6747089}\label{classMainWindow_a2ead0d7421c8b42b82133d4fe6747089} 
+\index{MainWindow@{MainWindow}!sensorTiles@{sensorTiles}}
+\index{sensorTiles@{sensorTiles}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{sensorTiles}{sensorTiles}}
+{\footnotesize\ttfamily QVector$<$\mbox{\hyperlink{structSensorTile}{Sensor\+Tile}}$>$ Main\+Window\+::sensor\+Tiles\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Kafelki sensorów. 
+
+\Hypertarget{classMainWindow_a1e45c6a8193b3c32ac122bf615748127}\label{classMainWindow_a1e45c6a8193b3c32ac122bf615748127} 
+\index{MainWindow@{MainWindow}!serialManager@{serialManager}}
+\index{serialManager@{serialManager}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{serialManager}{serialManager}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSerialManager}{Serial\+Manager}}\texorpdfstring{$\ast$}{*} Main\+Window\+::serial\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Manager portu szeregowego. 
+
+\Hypertarget{classMainWindow_a8e829b3590ccdeeada42625415afc6f3}\label{classMainWindow_a8e829b3590ccdeeada42625415afc6f3} 
+\index{MainWindow@{MainWindow}!translator@{translator}}
+\index{translator@{translator}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{translator}{translator}}
+{\footnotesize\ttfamily QTranslator Main\+Window\+::translator\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Tłumacz Qt. 
+
+\Hypertarget{classMainWindow_a35466a70ed47252a0191168126a352a5}\label{classMainWindow_a35466a70ed47252a0191168126a352a5} 
+\index{MainWindow@{MainWindow}!ui@{ui}}
+\index{ui@{ui}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Main\+Window\texorpdfstring{$\ast$}{*} Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Interfejs użytkownika wygenerowany przez Qt Designer. 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

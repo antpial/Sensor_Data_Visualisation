@@ -2,14 +2,15 @@
 \hypertarget{mainwindow_8h}{}\label{mainwindow_8h}\index{mainwindow.h@{mainwindow.h}}
 
 
-Deklaracja klasy \doxylink{classMainWindow}{Main\+Window} – głównego okna aplikacji Project FOKA.  
+Deklaracja klasy \doxylink{classMainWindow}{Main\+Window} -\/ głównego interfejsu użytkownika aplikacji Project FOKA.  
 
 
 {\ttfamily \#include $<$QMain\+Window$>$}\newline
 {\ttfamily \#include $<$QTimer$>$}\newline
-{\ttfamily \#include $<$QSerial\+Port$>$}\newline
-{\ttfamily \#include $<$QSerial\+Port\+Info$>$}\newline
-{\ttfamily \#include "{}chartwindow.\+h"{}}\newline
+{\ttfamily \#include $<$QLabel$>$}\newline
+{\ttfamily \#include $<$QPush\+Button$>$}\newline
+{\ttfamily \#include $<$QTranslator$>$}\newline
+{\ttfamily \#include "{}serialmanager.\+h"{}}\newline
 Include dependency graph for mainwindow.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -23,17 +24,23 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=178pt]{mainwindow_8h__dep__incl}
+\includegraphics[width=258pt]{mainwindow_8h__dep__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+struct \mbox{\hyperlink{structSensorTile}{Sensor\+Tile}}
+\begin{DoxyCompactList}\small\item\em Struktura reprezentująca pojedynczy kafelek sensora w GUI. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{classMainWindow}{Main\+Window}}
-\begin{DoxyCompactList}\small\item\em Klasa reprezentująca główne okno aplikacji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym, obsługą sensorów i lokalizacją łodzi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceUi}{Ui}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Deklaracja klasy \doxylink{classMainWindow}{Main\+Window} – głównego okna aplikacji Project FOKA. 
+Deklaracja klasy \doxylink{classMainWindow}{Main\+Window} -\/ głównego interfejsu użytkownika aplikacji Project FOKA. 
 
-Plik zawiera definicję klasy \doxylink{classMainWindow}{Main\+Window} odpowiedzialnej za logikę interfejsu użytkownika, obsługę czujników i wyświetlanie mapy w aplikacji Qt. 

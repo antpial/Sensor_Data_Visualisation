@@ -70,36 +70,48 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a>  </div>
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#namespaces">Namespaces</a>  </div>
   <div class="headertitle"><div class="title">mainwindow.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Deklaracja klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a> – głównego okna aplikacji Project FOKA.  
+<p>Deklaracja klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym,...">MainWindow</a> - głównego interfejsu użytkownika aplikacji Project FOKA.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;QMainWindow&gt;</code><br />
 <code>#include &lt;QTimer&gt;</code><br />
-<code>#include &lt;QSerialPort&gt;</code><br />
-<code>#include &lt;QSerialPortInfo&gt;</code><br />
-<code>#include &quot;chartwindow.h&quot;</code><br />
+<code>#include &lt;QLabel&gt;</code><br />
+<code>#include &lt;QPushButton&gt;</code><br />
+<code>#include &lt;QTranslator&gt;</code><br />
+<code>#include &quot;<a class="el" href="serialmanager_8h_source.html">serialmanager.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mainwindow.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="mainwindow_8h__incl.png" border="0" usemap="#amainwindow_8h" alt=""/></div>
 <map name="amainwindow_8h" id="amainwindow_8h">
-<area shape="rect" title="Deklaracja klasy MainWindow – głównego okna aplikacji Project FOKA." alt="" coords="229,5,345,31"/>
+<area shape="rect" title="Deklaracja klasy MainWindow &#45; głównego interfejsu użytkownika aplikacji Project FOKA." alt="" coords="271,5,387,31"/>
 <area shape="rect" title=" " alt="" coords="5,79,121,104"/>
-<area shape="poly" title=" " alt="" coords="252,33,113,77,112,72,251,28"/>
+<area shape="poly" title=" " alt="" coords="287,33,120,78,119,72,285,28"/>
 <area shape="rect" title=" " alt="" coords="145,79,216,104"/>
-<area shape="poly" title=" " alt="" coords="272,33,211,73,208,69,269,28"/>
-<area shape="rect" title=" " alt="" coords="240,79,335,104"/>
-<area shape="poly" title=" " alt="" coords="290,31,290,65,285,65,285,31"/>
-<area shape="rect" title=" " alt="" coords="359,79,479,104"/>
-<area shape="poly" title=" " alt="" coords="310,28,387,70,385,74,307,33"/>
-<area shape="rect" href="chartwindow_8h_source.html" title=" " alt="" coords="504,79,620,104"/>
-<area shape="poly" title=" " alt="" coords="332,28,505,73,504,78,331,33"/>
-<area shape="rect" title=" " alt="" coords="523,152,601,177"/>
-<area shape="poly" title=" " alt="" coords="565,104,565,138,559,138,559,104"/>
+<area shape="poly" title=" " alt="" coords="306,33,218,75,216,70,304,28"/>
+<area shape="rect" title=" " alt="" coords="241,79,307,104"/>
+<area shape="poly" title=" " alt="" coords="322,33,293,69,289,66,318,29"/>
+<area shape="rect" title=" " alt="" coords="331,79,438,104"/>
+<area shape="poly" title=" " alt="" coords="340,29,369,66,365,69,336,33"/>
+<area shape="rect" title=" " alt="" coords="462,79,558,104"/>
+<area shape="poly" title=" " alt="" coords="359,28,469,71,467,76,357,33"/>
+<area shape="rect" href="serialmanager_8h.html" title="Deklaracja klasy SerialManager odpowiedzialnej za komunikację szeregową i parsowanie danych." alt="" coords="583,79,709,104"/>
+<area shape="poly" title=" " alt="" coords="380,28,582,73,581,78,379,33"/>
+<area shape="rect" title=" " alt="" coords="499,152,574,177"/>
+<area shape="poly" title=" " alt="" coords="630,106,568,147,565,142,627,102"/>
+<area shape="rect" title=" " alt="" coords="599,152,693,177"/>
+<area shape="poly" title=" " alt="" coords="649,104,649,138,643,138,643,104"/>
+<area shape="rect" href="parsedpacket_8h.html" title="Deklaracja struktury ParsedPacket służącej do przechowywania danych odebranych z portu szeregowego." alt="" coords="717,152,839,177"/>
+<area shape="poly" title=" " alt="" coords="668,102,746,143,743,148,666,106"/>
+<area shape="rect" title=" " alt="" coords="693,225,767,251"/>
+<area shape="poly" title=" " alt="" coords="772,179,748,216,743,213,768,176"/>
+<area shape="rect" title=" " alt="" coords="791,225,861,251"/>
+<area shape="poly" title=" " alt="" coords="788,176,813,213,808,216,784,179"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -107,9 +119,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="mainwindow_8h__dep__incl.png" border="0" usemap="#amainwindow_8hdep" alt=""/></div>
 <map name="amainwindow_8hdep" id="amainwindow_8hdep">
-<area shape="rect" title="Deklaracja klasy MainWindow – głównego okna aplikacji Project FOKA." alt="" coords="13,5,129,31"/>
-<area shape="rect" href="mainwindow_8cpp.html" title="Implementacja klasy MainWindow odpowiedzialnej za główne okno aplikacji Project FOKA." alt="" coords="5,79,136,104"/>
-<area shape="poly" title=" " alt="" coords="73,44,73,79,68,79,68,44"/>
+<area shape="rect" title="Deklaracja klasy MainWindow &#45; głównego interfejsu użytkownika aplikacji Project FOKA." alt="" coords="54,5,170,31"/>
+<area shape="rect" href="main_8cpp.html" title="Punkt wejścia do aplikacji Project FOKA." alt="" coords="5,79,88,104"/>
+<area shape="poly" title=" " alt="" coords="94,43,59,80,55,77,90,39"/>
+<area shape="rect" href="mainwindow_8cpp.html" title="Implementacja klasy MainWindow &#45; głównego okna aplikacji naziemnej Project FOKA." alt="" coords="112,79,243,104"/>
+<area shape="poly" title=" " alt="" coords="134,39,169,77,165,80,130,43"/>
 </map>
 </div>
 </div>
@@ -117,13 +131,20 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structSensorTile.html">SensorTile</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Struktura reprezentująca pojedynczy kafelek sensora w GUI.  <a href="structSensorTile.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html">MainWindow</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Klasa reprezentująca główne okno aplikacji.  <a href="classMainWindow.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym, obsługą sensorów i lokalizacją łodzi.  <a href="classMainWindow.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="namespaces" name="namespaces"></a>
+Namespaces</h2></td></tr>
+<tr class="memitem:namespaceUi" id="r_namespaceUi"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceUi.html">Ui</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Deklaracja klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a> – głównego okna aplikacji Project FOKA. </p>
-<p>Plik zawiera definicję klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a> odpowiedzialnej za logikę interfejsu użytkownika, obsługę czujników i wyświetlanie mapy w aplikacji Qt. </p>
+<div class="textblock"><p>Deklaracja klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym,...">MainWindow</a> - głównego interfejsu użytkownika aplikacji Project FOKA. </p>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

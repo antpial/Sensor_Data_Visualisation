@@ -356,67 +356,15 @@ CMakeFiles/WDSv2.dir/WDSv2_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
- /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../serialmanager.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPort \
- /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialport.h \
- /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
- /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../mapwindow.h \
- /usr/include/x86_64-linux-gnu/qt5/QtPositioning/QGeoCoordinate \
- /usr/include/x86_64-linux-gnu/qt5/QtPositioning/qgeocoordinate.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
- /usr/include/x86_64-linux-gnu/qt5/QtPositioning/qpositioningglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/QQuickWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qquickwidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qquickwindow.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qtquickglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qtqmlglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qtqml-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qtquick-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qsgrendererinterface.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qsgnode.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qsggeometry.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qopengl.h /usr/include/GL/gl.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qopenglext.h \
- /usr/include/inttypes.h /usr/include/x86_64-linux-gnu/qt5/QtCore/QRectF \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QMatrix4x4 \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix4x4.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector3d.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector4d.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qquaternion.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qgenericmatrix.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindow.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QRect \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qsurface.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qsurfaceformat.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqml.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlprivate.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlparserstatus.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmllist.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlpropertyvaluesource.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmldebug.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qtquickwidgetsglobal.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTranslator \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h \
- /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_mapwindow.cpp \
+ /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../serialmanager.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
+ /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/QSerialPort \
+ /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialport.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtSerialPort/qserialportglobal.h \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/moc_serialmanager.cpp \
  /home/antek/WDSv2/build/Desktop-Debug/WDSv2_autogen/EWIEGA46WW/../../../../serialmanager.h

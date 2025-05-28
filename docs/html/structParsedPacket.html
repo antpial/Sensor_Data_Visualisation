@@ -78,23 +78,113 @@ $(function() {
 
 <p>Struktura reprezentująca paczkę danych odebraną z portu szeregowego.  
  <a href="structParsedPacket.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="parsedpacket_8h_source.html">parsedpacket.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5717e3804d9be81e2bac5161e4c17f2c" id="r_a5717e3804d9be81e2bac5161e4c17f2c"><td class="memItemLeft" align="right" valign="top"><a id="a5717e3804d9be81e2bac5161e4c17f2c" name="a5717e3804d9be81e2bac5161e4c17f2c"></a>
-QVector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>sensors</b></td></tr>
-<tr class="memdesc:a5717e3804d9be81e2bac5161e4c17f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wartości z czujników. <br /></td></tr>
+<tr class="memitem:a5717e3804d9be81e2bac5161e4c17f2c" id="r_a5717e3804d9be81e2bac5161e4c17f2c"><td class="memItemLeft" align="right" valign="top">QVector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParsedPacket.html#a5717e3804d9be81e2bac5161e4c17f2c">sensors</a></td></tr>
+<tr class="memdesc:a5717e3804d9be81e2bac5161e4c17f2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wektor wartości odczytanych z sensorów.  <br /></td></tr>
 <tr class="separator:a5717e3804d9be81e2bac5161e4c17f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21c17f7e156918b39f9b4f52edaa34fc" id="r_a21c17f7e156918b39f9b4f52edaa34fc"><td class="memItemLeft" align="right" valign="top"><a id="a21c17f7e156918b39f9b4f52edaa34fc" name="a21c17f7e156918b39f9b4f52edaa34fc"></a>
-QString&#160;</td><td class="memItemRight" valign="bottom"><b>log</b></td></tr>
-<tr class="memdesc:a21c17f7e156918b39f9b4f52edaa34fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wiadomość logu (jeśli występuje). <br /></td></tr>
+<tr class="memitem:a21c17f7e156918b39f9b4f52edaa34fc" id="r_a21c17f7e156918b39f9b4f52edaa34fc"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParsedPacket.html#a21c17f7e156918b39f9b4f52edaa34fc">log</a></td></tr>
+<tr class="memdesc:a21c17f7e156918b39f9b4f52edaa34fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tekst do wyświetlenia w konsoli (log systemowy).  <br /></td></tr>
 <tr class="separator:a21c17f7e156918b39f9b4f52edaa34fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b780ebe2dea38bfbf4daa3f17a50493" id="r_a8b780ebe2dea38bfbf4daa3f17a50493"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParsedPacket.html#a8b780ebe2dea38bfbf4daa3f17a50493">hasPosition</a></td></tr>
+<tr class="memdesc:a8b780ebe2dea38bfbf4daa3f17a50493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flaga wskazująca, czy pakiet zawiera dane GPS.  <br /></td></tr>
+<tr class="separator:a8b780ebe2dea38bfbf4daa3f17a50493"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab39507c102d3c4cadf87af36b9b34203" id="r_ab39507c102d3c4cadf87af36b9b34203"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParsedPacket.html#ab39507c102d3c4cadf87af36b9b34203">latitude</a></td></tr>
+<tr class="memdesc:ab39507c102d3c4cadf87af36b9b34203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Szerokość geograficzna (jeśli hasPosition == true).  <br /></td></tr>
+<tr class="separator:ab39507c102d3c4cadf87af36b9b34203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3094b3a650084273b23890a521ce4783" id="r_a3094b3a650084273b23890a521ce4783"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structParsedPacket.html#a3094b3a650084273b23890a521ce4783">longitude</a></td></tr>
+<tr class="memdesc:a3094b3a650084273b23890a521ce4783"><td class="mdescLeft">&#160;</td><td class="mdescRight">Długość geograficzna (jeśli hasPosition == true).  <br /></td></tr>
+<tr class="separator:a3094b3a650084273b23890a521ce4783"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Struktura reprezentująca paczkę danych odebraną z portu szeregowego. </p>
-<p>Zawiera dane z czujników oraz opcjonalny log tekstowy. </p>
-</div><hr/>The documentation for this struct was generated from the following file:<ul>
-<li><a class="el" href="mainwindow_8cpp.html">mainwindow.cpp</a></li>
+<p>Przechowuje aktualne odczyty sensorów, informacje do logów oraz dane lokalizacyjne (jeśli obecne). </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
+<a id="a8b780ebe2dea38bfbf4daa3f17a50493" name="a8b780ebe2dea38bfbf4daa3f17a50493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b780ebe2dea38bfbf4daa3f17a50493">&#9670;&#160;</a></span>hasPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ParsedPacket::hasPosition</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flaga wskazująca, czy pakiet zawiera dane GPS. </p>
+
+</div>
+</div>
+<a id="ab39507c102d3c4cadf87af36b9b34203" name="ab39507c102d3c4cadf87af36b9b34203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab39507c102d3c4cadf87af36b9b34203">&#9670;&#160;</a></span>latitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ParsedPacket::latitude</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Szerokość geograficzna (jeśli hasPosition == true). </p>
+
+</div>
+</div>
+<a id="a21c17f7e156918b39f9b4f52edaa34fc" name="a21c17f7e156918b39f9b4f52edaa34fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21c17f7e156918b39f9b4f52edaa34fc">&#9670;&#160;</a></span>log</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString ParsedPacket::log</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Tekst do wyświetlenia w konsoli (log systemowy). </p>
+
+</div>
+</div>
+<a id="a3094b3a650084273b23890a521ce4783" name="a3094b3a650084273b23890a521ce4783"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3094b3a650084273b23890a521ce4783">&#9670;&#160;</a></span>longitude</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ParsedPacket::longitude</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Długość geograficzna (jeśli hasPosition == true). </p>
+
+</div>
+</div>
+<a id="a5717e3804d9be81e2bac5161e4c17f2c" name="a5717e3804d9be81e2bac5161e4c17f2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5717e3804d9be81e2bac5161e4c17f2c">&#9670;&#160;</a></span>sensors</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;double&gt; ParsedPacket::sensors</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wektor wartości odczytanych z sensorów. </p>
+
+</div>
+</div>
+<hr/>The documentation for this struct was generated from the following file:<ul>
+<li><a class="el" href="parsedpacket_8h_source.html">parsedpacket.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

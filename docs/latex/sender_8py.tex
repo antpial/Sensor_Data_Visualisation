@@ -1,0 +1,49 @@
+\doxysection{sender.\+py File Reference}
+\hypertarget{sender_8py}{}\label{sender_8py}\index{sender.py@{sender.py}}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacesender}{sender}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacesender_a4f9705a1286d85955ffd896aa6261edb}{sender.\+generate\+\_\+circular\+\_\+coordinates}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+str \mbox{\hyperlink{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}{sender.\+PORT}} = \textquotesingle{}/dev/pts/2\textquotesingle{}
+\item 
+int \mbox{\hyperlink{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381}{sender.\+BAUD\+\_\+\+RATE}} = 9600
+\item 
+float \mbox{\hyperlink{namespacesender_a660ff5f39d1a59b1b3d18a36edc18019}{sender.\+start\+\_\+lat}} = 51.\+106054
+\item 
+float \mbox{\hyperlink{namespacesender_abc13dc3fb9c99d9925f270acaad69dbc}{sender.\+start\+\_\+lon}} = 17.\+060251
+\item 
+list \mbox{\hyperlink{namespacesender_a2a79b48310f28dddc55624fe44dc90ab}{sender.\+SENSOR\+\_\+\+RANGES}}
+\item 
+int \mbox{\hyperlink{namespacesender_a5325b9900ae4e312e1c897f126ba0814}{sender.\+radius}} = 10
+\item 
+int \mbox{\hyperlink{namespacesender_ae14be42f80757e2ac7fbba7c1da9dd50}{sender.\+angular\+\_\+speed\+\_\+deg\+\_\+per\+\_\+sec}} = 10
+\item 
+int \mbox{\hyperlink{namespacesender_ae1cc33e852a1a7d42321e84cbe266ec4}{sender.\+angle}} = 0
+\item 
+int \mbox{\hyperlink{namespacesender_ae062f7af50dedac7843a9f1f44f47727}{sender.\+EARTH\+\_\+\+RADIUS}} = 6371000
+\item 
+\mbox{\hyperlink{namespacesender_a1ae8f95a1098e31638cdc47980f0d1d4}{sender.\+ser}} = serial.\+Serial(\mbox{\hyperlink{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}{PORT}}, \mbox{\hyperlink{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381}{BAUD\+\_\+\+RATE}})
+\item 
+int \mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{sender.\+i}} = 0
+\item 
+\mbox{\hyperlink{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}{sender.\+lat}}
+\item 
+\mbox{\hyperlink{namespacesender_a73899320007cf34f0d3affedc769da46}{sender.\+lon}}
+\item 
+str \mbox{\hyperlink{namespacesender_a8139e479d3f16bc95ef5d253300da965}{sender.\+gps\+\_\+coords}} = f"{}\{\mbox{\hyperlink{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}{lat}}\};\{\mbox{\hyperlink{namespacesender_a73899320007cf34f0d3affedc769da46}{lon}}\}"{}
+\item 
+list \mbox{\hyperlink{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3}{sender.\+sensor\+\_\+values}} = \mbox{[}\mbox{\hyperlink{namespacesender_a8139e479d3f16bc95ef5d253300da965}{gps\+\_\+coords}}\mbox{]}
+\item 
+\mbox{\hyperlink{namespacesender_a3d12c2434abf97cd2e17b81d80816347}{sender.\+val}} = round(random.\+uniform(low, high), 2)
+\item 
+str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{sender.\+message}} = "{};"{} + "{};"{}.join(\mbox{\hyperlink{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3}{sensor\+\_\+values}})
+\end{DoxyCompactItemize}

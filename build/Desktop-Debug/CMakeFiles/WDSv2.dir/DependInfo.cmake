@@ -13,7 +13,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/antek/WDSv2/chartwindow.cpp" "CMakeFiles/WDSv2.dir/chartwindow.cpp.o" "gcc" "CMakeFiles/WDSv2.dir/chartwindow.cpp.o.d"
   "/home/antek/WDSv2/main.cpp" "CMakeFiles/WDSv2.dir/main.cpp.o" "gcc" "CMakeFiles/WDSv2.dir/main.cpp.o.d"
   "/home/antek/WDSv2/mainwindow.cpp" "CMakeFiles/WDSv2.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/WDSv2.dir/mainwindow.cpp.o.d"
-  "/home/antek/WDSv2/mapwindow.cpp" "CMakeFiles/WDSv2.dir/mapwindow.cpp.o" "gcc" "CMakeFiles/WDSv2.dir/mapwindow.cpp.o.d"
   "/home/antek/WDSv2/serialmanager.cpp" "CMakeFiles/WDSv2.dir/serialmanager.cpp.o" "gcc" "CMakeFiles/WDSv2.dir/serialmanager.cpp.o.d"
   )
 

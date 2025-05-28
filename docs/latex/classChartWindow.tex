@@ -2,6 +2,15 @@
 \hypertarget{classChartWindow}{}\label{classChartWindow}\index{ChartWindow@{ChartWindow}}
 
 
+Klasa \doxylink{classChartWindow}{Chart\+Window} reprezentuje okno wykresów w aplikacji Project FOKA.  
+
+
+
+
+{\ttfamily \#include $<$chartwindow.\+h$>$}
+
+
+
 Inheritance diagram for Chart\+Window\+:
 \nopagebreak
 \begin{figure}[H]
@@ -20,15 +29,135 @@ Collaboration diagram for Chart\+Window\+:
 \includegraphics[width=162pt]{classChartWindow__coll__graph}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9}{update\+From\+Packet}} (const \mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}} \&packet)
+\begin{DoxyCompactList}\small\item\em Aktualizuje dane wykresów na podstawie odebranego pakietu sensorów. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{classChartWindow_a898138e91e25646ddbcce42ebe88d3d5}{Chart\+Window}} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \doxylink{classChartWindow}{Chart\+Window}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3}{retranslate\+Ui}} ()
+\begin{DoxyCompactList}\small\item\em Umożliwia przetłumaczenie interfejsu wykresów po zmianie języka aplikacji. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classChartWindow_a9714c04a78085f4a64559008c5fe39e9}{\texorpdfstring{$\sim$}{\string~}\+Chart\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destruktor klasy \doxylink{classChartWindow}{Chart\+Window}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classChartWindow_a37dcba8017c15a968b733da3a23ca769}{initialize\+Charts}} ()
+\begin{DoxyCompactList}\small\item\em Inicjalizuje wykresy zgodnie z konfiguracją z pliku JSON. Tworzy wykresy, ustawia ich zakresy i kolory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Ui\+::\+Chart\+Window \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}
+\begin{DoxyCompactList}\small\item\em Wskaźnik na interfejs użytkownika (wygenerowany przez Qt Designer) \end{DoxyCompactList}\item 
+QList$<$ QLine\+Series \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}{series\+List}}
+\begin{DoxyCompactList}\small\item\em Lista serii danych (jedna seria na jeden wykres/sensor) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa \doxylink{classChartWindow}{Chart\+Window} reprezentuje okno wykresów w aplikacji Project FOKA. 
+
+Wyświetla dane z sensorów w formie wykresów liniowych. Każdy sensor ma swój osobny wykres, aktualizowany przy nadejściu nowego pakietu danych. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classChartWindow_a898138e91e25646ddbcce42ebe88d3d5}\label{classChartWindow_a898138e91e25646ddbcce42ebe88d3d5} 
-{\bfseries Chart\+Window} (QWidget \texorpdfstring{$\ast$}{*}parent=nullptr)
-\end{DoxyCompactItemize}
+\index{ChartWindow@{ChartWindow}!ChartWindow@{ChartWindow}}
+\index{ChartWindow@{ChartWindow}!ChartWindow@{ChartWindow}}
+\doxysubsubsection{\texorpdfstring{ChartWindow()}{ChartWindow()}}
+{\footnotesize\ttfamily Chart\+Window\+::\+Chart\+Window (\begin{DoxyParamCaption}\item[{QWidget \texorpdfstring{$\ast$}{*}}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Konstruktor klasy \doxylink{classChartWindow}{Chart\+Window}. 
+
+Konstruktor klasy \doxylink{classChartWindow}{Chart\+Window}. Inicjalizuje interfejs użytkownika oraz tworzy wykresy na podstawie konfiguracji.
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Wskaźnik na obiekt nadrzędny (domyślnie nullptr). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classChartWindow_a9714c04a78085f4a64559008c5fe39e9}\label{classChartWindow_a9714c04a78085f4a64559008c5fe39e9} 
+\index{ChartWindow@{ChartWindow}!````~ChartWindow@{\texorpdfstring{$\sim$}{\string~}ChartWindow}}
+\index{````~ChartWindow@{\texorpdfstring{$\sim$}{\string~}ChartWindow}!ChartWindow@{ChartWindow}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}ChartWindow()}{\string~ChartWindow()}}
+{\footnotesize\ttfamily Chart\+Window\+::\texorpdfstring{$\sim$}{\string~}\+Chart\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destruktor klasy \doxylink{classChartWindow}{Chart\+Window}. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classChartWindow_a37dcba8017c15a968b733da3a23ca769}\label{classChartWindow_a37dcba8017c15a968b733da3a23ca769} 
+\index{ChartWindow@{ChartWindow}!initializeCharts@{initializeCharts}}
+\index{initializeCharts@{initializeCharts}!ChartWindow@{ChartWindow}}
+\doxysubsubsection{\texorpdfstring{initializeCharts()}{initializeCharts()}}
+{\footnotesize\ttfamily void Chart\+Window\+::initialize\+Charts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Inicjalizuje wykresy zgodnie z konfiguracją z pliku JSON. Tworzy wykresy, ustawia ich zakresy i kolory. 
+
+Tworzy i konfiguruje wykresy dla każdego sensora. Wczytuje parametry wykresów z pliku {\ttfamily charts\+\_\+config.\+json}. \Hypertarget{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3}\label{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3} 
+\index{ChartWindow@{ChartWindow}!retranslateUi@{retranslateUi}}
+\index{retranslateUi@{retranslateUi}!ChartWindow@{ChartWindow}}
+\doxysubsubsection{\texorpdfstring{retranslateUi()}{retranslateUi()}}
+{\footnotesize\ttfamily void Chart\+Window\+::retranslate\+Ui (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Umożliwia przetłumaczenie interfejsu wykresów po zmianie języka aplikacji. 
+
+Tłumaczy interfejs użytkownika wykresów na nowy język. Funkcja wywoływana przy zmianie języka. \Hypertarget{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9}\label{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9} 
+\index{ChartWindow@{ChartWindow}!updateFromPacket@{updateFromPacket}}
+\index{updateFromPacket@{updateFromPacket}!ChartWindow@{ChartWindow}}
+\doxysubsubsection{\texorpdfstring{updateFromPacket}{updateFromPacket}}
+{\footnotesize\ttfamily void Chart\+Window\+::update\+From\+Packet (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structParsedPacket}{Parsed\+Packet}} \&}]{packet }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Aktualizuje dane wykresów na podstawie odebranego pakietu sensorów. 
+
+Aktualizuje dane wykresów na podstawie nowego pakietu danych.
+
+
+\begin{DoxyParams}{Parameters}
+{\em packet} & Struktura z danymi odebranymi z portu szeregowego.\\
+\hline
+{\em packet} & Pakiet danych z wartościami sensorów. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}\label{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8} 
+\index{ChartWindow@{ChartWindow}!seriesList@{seriesList}}
+\index{seriesList@{seriesList}!ChartWindow@{ChartWindow}}
+\doxysubsubsection{\texorpdfstring{seriesList}{seriesList}}
+{\footnotesize\ttfamily QList$<$QLine\+Series\texorpdfstring{$\ast$}{*}$>$ Chart\+Window\+::series\+List\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Lista serii danych (jedna seria na jeden wykres/sensor) 
+
+\Hypertarget{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}\label{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9} 
+\index{ChartWindow@{ChartWindow}!ui@{ui}}
+\index{ui@{ui}!ChartWindow@{ChartWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Chart\+Window\texorpdfstring{$\ast$}{*} Chart\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wskaźnik na interfejs użytkownika (wygenerowany przez Qt Designer) 
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-chartwindow.\+h\item 
-chartwindow.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{chartwindow_8h}{chartwindow.\+h}}\item 
+\mbox{\hyperlink{chartwindow_8cpp}{chartwindow.\+cpp}}\end{DoxyCompactItemize}

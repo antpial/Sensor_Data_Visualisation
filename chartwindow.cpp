@@ -1,3 +1,8 @@
+/**
+ * @file chartwindow.cpp
+ * @brief Implementacja klasy ChartWindow do wizualizacji danych sensorów za pomocą wykresów.
+ */
+
 #include "chartwindow.h"
 #include "ui_chartwindow.h"
 #include <QtCharts/QChartView>
@@ -14,19 +19,32 @@
 
 #include "parsedpacket.h"
 
-#define NUM_OF_SAMPLES 20
+#define NUM_OF_SAMPLES 20 ///< Liczba próbek przechowywanych na wykresie
 
+/**
+ * @struct ChartConfig
+ * @brief Struktura przechowująca konfigurację pojedynczego wykresu.
+ */
 struct ChartConfig {
-    QString sensorName;
-    double yRange;
-    QString unitY;
-    QColor color;
+    QString sensorName; ///< Nazwa sensora
+    double yRange;      ///< Zakres osi Y
+    QString unitY;      ///< Jednostka osi Y
+    QColor color;       ///< Kolor linii wykresu
 };
 
+/**
+ * @brief Tłumaczy interfejs użytkownika wykresów na nowy język.
+ * Funkcja wywoływana przy zmianie języka.
+ */
 void ChartWindow::retranslateUi() {
     ui->retranslateUi(this);
 }
 
+/**
+ * @brief Wczytuje konfigurację wykresów z pliku JSON.
+ * @param filePath Ścieżka do pliku JSON z konfiguracją wykresów.
+ * @return Wektor konfiguracji wykresów.
+ */
 QVector<ChartConfig> loadChartConfigs(const QString &filePath)
 {
     QVector<ChartConfig> configs;
@@ -63,25 +81,34 @@ QVector<ChartConfig> loadChartConfigs(const QString &filePath)
     return configs;
 }
 
-
+/**
+ * @brief Konstruktor klasy ChartWindow.
+ * Inicjalizuje interfejs użytkownika oraz tworzy wykresy na podstawie konfiguracji.
+ * @param parent Wskaźnik na obiekt nadrzędny (domyślnie nullptr).
+ */
 ChartWindow::ChartWindow(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::ChartWindow)
 {
     ui->setupUi(this);
-    this->setStyleSheet("background-color: #ffffff;"); // jasnoszary kolor
+    this->setStyleSheet("background-color: #ffffff;");
     initializeCharts();
-
 }
 
+/**
+ * @brief Destruktor klasy ChartWindow.
+ */
 ChartWindow::~ChartWindow()
 {
     delete ui;
 }
 
+/**
+ * @brief Tworzy i konfiguruje wykresy dla każdego sensora.
+ * Wczytuje parametry wykresów z pliku `charts_config.json`.
+ */
 void ChartWindow::initializeCharts()
 {
-
     QList<QChartView*> views = {
         ui->chartView_1, ui->chartView_2, ui->chartView_3, ui->chartView_4,
         ui->chartView_5, ui->chartView_6, ui->chartView_7, ui->chartView_8
@@ -123,20 +150,21 @@ void ChartWindow::initializeCharts()
         views[i]->setRenderHint(QPainter::Antialiasing);
 
         QPen pen(color);
-        pen.setWidth(2); // grubość linii
+        pen.setWidth(2);
         series->setPen(pen);
-        axisX->setLabelsColor("#000000");      // kolor etykiet (cyferek)
-        axisY->setLabelsColor("#000000");      // kolor etykiet (cyferek)
-        chart -> setTitleBrush(Qt::black);
-
+        axisX->setLabelsColor("#000000");
+        axisY->setLabelsColor("#000000");
+        chart->setTitleBrush(Qt::black);
         chart->legend()->hide();
 
         seriesList.append(series);
-
     }
-
 }
 
+/**
+ * @brief Aktualizuje dane wykresów na podstawie nowego pakietu danych.
+ * @param packet Pakiet danych z wartościami sensorów.
+ */
 void ChartWindow::updateFromPacket(const ParsedPacket &packet)
 {
     int count = qMin(packet.sensors.size(), seriesList.size());
@@ -166,5 +194,3 @@ void ChartWindow::updateFromPacket(const ParsedPacket &packet)
         }
     }
 }
-
-

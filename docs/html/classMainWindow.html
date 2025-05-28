@@ -71,12 +71,16 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-slots">Private Slots</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classMainWindow-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">MainWindow Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Klasa reprezentująca główne okno aplikacji.  
+<p>Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym, obsługą sensorów i lokalizacją łodzi.  
  <a href="classMainWindow.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&gt;</code></p>
@@ -85,7 +89,7 @@ Inheritance diagram for MainWindow:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMainWindow__inherit__graph.png" border="0" usemap="#aMainWindow_inherit__map" alt="Inheritance graph"/></div>
 <map name="aMainWindow_inherit__map" id="aMainWindow_inherit__map">
-<area shape="rect" title="Klasa reprezentująca główne okno aplikacji." alt="" coords="10,79,117,104"/>
+<area shape="rect" title="Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym,..." alt="" coords="10,79,117,104"/>
 <area shape="rect" title=" " alt="" coords="5,5,121,31"/>
 <area shape="poly" title=" " alt="" coords="66,44,66,79,61,79,61,44"/>
 </map>
@@ -95,25 +99,112 @@ Collaboration diagram for MainWindow:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMainWindow__coll__graph.png" border="0" usemap="#aMainWindow_coll__map" alt="Collaboration graph"/></div>
 <map name="aMainWindow_coll__map" id="aMainWindow_coll__map">
-<area shape="rect" title="Klasa reprezentująca główne okno aplikacji." alt="" coords="10,79,117,104"/>
-<area shape="rect" title=" " alt="" coords="5,5,121,31"/>
-<area shape="poly" title=" " alt="" coords="66,44,66,79,61,79,61,44"/>
+<area shape="rect" title="Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym,..." alt="" coords="150,168,257,193"/>
+<area shape="rect" title=" " alt="" coords="5,80,121,105"/>
+<area shape="poly" title=" " alt="" coords="95,110,186,165,183,170,93,115"/>
+<area shape="rect" href="classSerialManager.html" title="Klasa odpowiedzialna za odbieranie danych z portu szeregowego oraz ich przetwarzanie." alt="" coords="145,80,261,105"/>
+<area shape="poly" title=" " alt="" coords="206,119,206,167,201,167,201,119"/>
+<area shape="rect" title=" " alt="" coords="166,5,241,31"/>
+<area shape="poly" title=" " alt="" coords="206,45,206,80,201,80,201,45"/>
+<area shape="rect" href="classChartWindow.html" title="Klasa ChartWindow reprezentuje okno wykresów w aplikacji Project FOKA." alt="" coords="286,80,395,105"/>
+<area shape="poly" title=" " alt="" coords="331,119,308,146,283,160,258,170,256,165,281,156,304,142,327,116"/>
+<area shape="rect" title=" " alt="" coords="301,5,380,31"/>
+<area shape="poly" title=" " alt="" coords="343,45,343,80,338,80,338,45"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a996c5a2b6f77944776856f08ec30858d" id="r_a996c5a2b6f77944776856f08ec30858d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a> (QWidget *parent=nullptr)</td></tr>
-<tr class="memdesc:a996c5a2b6f77944776856f08ec30858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a>.  <br /></td></tr>
+<tr class="memdesc:a996c5a2b6f77944776856f08ec30858d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym,...">MainWindow</a>.  <br /></td></tr>
 <tr class="separator:a996c5a2b6f77944776856f08ec30858d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7" id="r_ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top"><a id="ae98d00a93bc118200eeef9f9bba1dba7" name="ae98d00a93bc118200eeef9f9bba1dba7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>~MainWindow</b> ()</td></tr>
-<tr class="memdesc:ae98d00a93bc118200eeef9f9bba1dba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a>. <br /></td></tr>
+<tr class="memitem:ae98d00a93bc118200eeef9f9bba1dba7" id="r_ae98d00a93bc118200eeef9f9bba1dba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7">~MainWindow</a> ()</td></tr>
+<tr class="memdesc:ae98d00a93bc118200eeef9f9bba1dba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym,...">MainWindow</a>.  <br /></td></tr>
 <tr class="separator:ae98d00a93bc118200eeef9f9bba1dba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:aad75236c74a5c340c3e18749a9b5eb4f" id="r_aad75236c74a5c340c3e18749a9b5eb4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#aad75236c74a5c340c3e18749a9b5eb4f">resizeEvent</a> (QResizeEvent *event) override</td></tr>
+<tr class="memdesc:aad75236c74a5c340c3e18749a9b5eb4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje zdarzenie zmiany rozmiaru okna.  <br /></td></tr>
+<tr class="separator:aad75236c74a5c340c3e18749a9b5eb4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
+Private Slots</h2></td></tr>
+<tr class="memitem:a2d8c660a89cbff3f408e33110c1c2c61" id="r_a2d8c660a89cbff3f408e33110c1c2c61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a2d8c660a89cbff3f408e33110c1c2c61">handleNewPacket</a> (const <a class="el" href="structParsedPacket.html">ParsedPacket</a> &amp;packet)</td></tr>
+<tr class="memdesc:a2d8c660a89cbff3f408e33110c1c2c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje nowy pakiet danych odebrany z portu szeregowego.  <br /></td></tr>
+<tr class="separator:a2d8c660a89cbff3f408e33110c1c2c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a064b13fe8d8c2c4471dec0c44a4b0a6b" id="r_a064b13fe8d8c2c4471dec0c44a4b0a6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a064b13fe8d8c2c4471dec0c44a4b0a6b">handleSerialError</a> (const QString &amp;error)</td></tr>
+<tr class="memdesc:a064b13fe8d8c2c4471dec0c44a4b0a6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje błędy portu szeregowego.  <br /></td></tr>
+<tr class="separator:a064b13fe8d8c2c4471dec0c44a4b0a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ac8fa0d9c2019ef65f4a71feb2d1e8ea4" id="r_ac8fa0d9c2019ef65f4a71feb2d1e8ea4"><td class="memItemLeft" align="right" valign="top">QVector&lt; QPair&lt; QString, QString &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ac8fa0d9c2019ef65f4a71feb2d1e8ea4">loadSensorConfig</a> (const QString &amp;filePath)</td></tr>
+<tr class="memdesc:ac8fa0d9c2019ef65f4a71feb2d1e8ea4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ładuje konfigurację sensorów z pliku JSON.  <br /></td></tr>
+<tr class="separator:ac8fa0d9c2019ef65f4a71feb2d1e8ea4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1363200af71ba9cd608533794a5fcbf" id="r_af1363200af71ba9cd608533794a5fcbf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#af1363200af71ba9cd608533794a5fcbf">updatePosition</a> (double latitude, double longitude)</td></tr>
+<tr class="memdesc:af1363200af71ba9cd608533794a5fcbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktualizuje pozycję łodzi na mapie.  <br /></td></tr>
+<tr class="separator:af1363200af71ba9cd608533794a5fcbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc023dc10c45fd50cd731c41952fc6fd" id="r_afc023dc10c45fd50cd731c41952fc6fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#afc023dc10c45fd50cd731c41952fc6fd">updateLanguageButtonPositions</a> ()</td></tr>
+<tr class="memdesc:afc023dc10c45fd50cd731c41952fc6fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia pozycję przycisków językowych względem mapy.  <br /></td></tr>
+<tr class="separator:afc023dc10c45fd50cd731c41952fc6fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4a897bd163a15ecd30f6a262b4a135" id="r_afe4a897bd163a15ecd30f6a262b4a135"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#afe4a897bd163a15ecd30f6a262b4a135">loadLanguage</a> (const QString &amp;langCode)</td></tr>
+<tr class="memdesc:afe4a897bd163a15ecd30f6a262b4a135"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ładuje i stosuje tłumaczenie GUI.  <br /></td></tr>
+<tr class="separator:afe4a897bd163a15ecd30f6a262b4a135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08670ff7ecdbe1b065ff84860525b5bc" id="r_a08670ff7ecdbe1b065ff84860525b5bc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a08670ff7ecdbe1b065ff84860525b5bc">setupMap</a> ()</td></tr>
+<tr class="memdesc:a08670ff7ecdbe1b065ff84860525b5bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawia mapę i jej parametry (funkcja nieużywana).  <br /></td></tr>
+<tr class="separator:a08670ff7ecdbe1b065ff84860525b5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a35466a70ed47252a0191168126a352a5" id="r_a35466a70ed47252a0191168126a352a5"><td class="memItemLeft" align="right" valign="top">Ui::MainWindow *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a35466a70ed47252a0191168126a352a5">ui</a></td></tr>
+<tr class="memdesc:a35466a70ed47252a0191168126a352a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interfejs użytkownika wygenerowany przez Qt Designer.  <br /></td></tr>
+<tr class="separator:a35466a70ed47252a0191168126a352a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6acedc605e8700660ab349c08b37eac" id="r_ac6acedc605e8700660ab349c08b37eac"><td class="memItemLeft" align="right" valign="top">QTimer *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ac6acedc605e8700660ab349c08b37eac">logTimer</a></td></tr>
+<tr class="memdesc:ac6acedc605e8700660ab349c08b37eac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Timer do obsługi logów (obecnie nieużywany)  <br /></td></tr>
+<tr class="separator:ac6acedc605e8700660ab349c08b37eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e45c6a8193b3c32ac122bf615748127" id="r_a1e45c6a8193b3c32ac122bf615748127"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classSerialManager.html">SerialManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a1e45c6a8193b3c32ac122bf615748127">serialManager</a></td></tr>
+<tr class="memdesc:a1e45c6a8193b3c32ac122bf615748127"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manager portu szeregowego.  <br /></td></tr>
+<tr class="separator:a1e45c6a8193b3c32ac122bf615748127"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7b5edf93b98f6a1f0db64564a69cc96" id="r_ae7b5edf93b98f6a1f0db64564a69cc96"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classChartWindow.html">ChartWindow</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ae7b5edf93b98f6a1f0db64564a69cc96">chartWindow</a></td></tr>
+<tr class="memdesc:ae7b5edf93b98f6a1f0db64564a69cc96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Okno wykresów.  <br /></td></tr>
+<tr class="separator:ae7b5edf93b98f6a1f0db64564a69cc96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4995b5b66dfd31153708d6fa242ea27" id="r_aa4995b5b66dfd31153708d6fa242ea27"><td class="memItemLeft" align="right" valign="top">QVector&lt; QLabel * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#aa4995b5b66dfd31153708d6fa242ea27">sensorLabels</a></td></tr>
+<tr class="memdesc:aa4995b5b66dfd31153708d6fa242ea27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Etykiety sensorów (nieużywane, zachowane na przyszłość)  <br /></td></tr>
+<tr class="separator:aa4995b5b66dfd31153708d6fa242ea27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ead0d7421c8b42b82133d4fe6747089" id="r_a2ead0d7421c8b42b82133d4fe6747089"><td class="memItemLeft" align="right" valign="top">QVector&lt; <a class="el" href="structSensorTile.html">SensorTile</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a2ead0d7421c8b42b82133d4fe6747089">sensorTiles</a></td></tr>
+<tr class="memdesc:a2ead0d7421c8b42b82133d4fe6747089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kafelki sensorów.  <br /></td></tr>
+<tr class="separator:a2ead0d7421c8b42b82133d4fe6747089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1108c2b0f58b54e7e69f6e3929ca4eec" id="r_a1108c2b0f58b54e7e69f6e3929ca4eec"><td class="memItemLeft" align="right" valign="top">QVector&lt; QPair&lt; QString, QString &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a1108c2b0f58b54e7e69f6e3929ca4eec">sensorConfig</a></td></tr>
+<tr class="memdesc:a1108c2b0f58b54e7e69f6e3929ca4eec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konfiguracja sensorów: para &lt;nazwa, jednostka&gt;  <br /></td></tr>
+<tr class="separator:a1108c2b0f58b54e7e69f6e3929ca4eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92d08c165f352a5187ca16c3f4517b9d" id="r_a92d08c165f352a5187ca16c3f4517b9d"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a92d08c165f352a5187ca16c3f4517b9d">langButton</a> = nullptr</td></tr>
+<tr class="memdesc:a92d08c165f352a5187ca16c3f4517b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przyciski zmiany języka (deprecated / nieużywane)  <br /></td></tr>
+<tr class="separator:a92d08c165f352a5187ca16c3f4517b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d6a75930e70103d1d08289b51f0937" id="r_ab1d6a75930e70103d1d08289b51f0937"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#ab1d6a75930e70103d1d08289b51f0937">btnPL</a> = nullptr</td></tr>
+<tr class="memdesc:ab1d6a75930e70103d1d08289b51f0937"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przycisk do wyboru języka polskiego.  <br /></td></tr>
+<tr class="separator:ab1d6a75930e70103d1d08289b51f0937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb1de0d49e14bad708dccf9b19fe5f3f" id="r_aeb1de0d49e14bad708dccf9b19fe5f3f"><td class="memItemLeft" align="right" valign="top">QPushButton *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#aeb1de0d49e14bad708dccf9b19fe5f3f">btnEN</a> = nullptr</td></tr>
+<tr class="memdesc:aeb1de0d49e14bad708dccf9b19fe5f3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przycisk do wyboru języka angielskiego.  <br /></td></tr>
+<tr class="separator:aeb1de0d49e14bad708dccf9b19fe5f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e829b3590ccdeeada42625415afc6f3" id="r_a8e829b3590ccdeeada42625415afc6f3"><td class="memItemLeft" align="right" valign="top">QTranslator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a8e829b3590ccdeeada42625415afc6f3">translator</a></td></tr>
+<tr class="memdesc:a8e829b3590ccdeeada42625415afc6f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tłumacz Qt.  <br /></td></tr>
+<tr class="separator:a8e829b3590ccdeeada42625415afc6f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd14383d1d27c426e0cf1df5bf20cb16" id="r_afd14383d1d27c426e0cf1df5bf20cb16"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#afd14383d1d27c426e0cf1df5bf20cb16">mapReady</a> = false</td></tr>
+<tr class="memdesc:afd14383d1d27c426e0cf1df5bf20cb16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flaga gotowości mapy.  <br /></td></tr>
+<tr class="separator:afd14383d1d27c426e0cf1df5bf20cb16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4aa7e99e292a9ef95b65f61e46e7870e" id="r_a4aa7e99e292a9ef95b65f61e46e7870e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a4aa7e99e292a9ef95b65f61e46e7870e">hasPendingPosition</a> = false</td></tr>
+<tr class="memdesc:a4aa7e99e292a9ef95b65f61e46e7870e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flaga oczekującej pozycji do narysowania.  <br /></td></tr>
+<tr class="separator:a4aa7e99e292a9ef95b65f61e46e7870e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbd49b4459b1d9d64dbf57d14c820b16" id="r_abbd49b4459b1d9d64dbf57d14c820b16"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#abbd49b4459b1d9d64dbf57d14c820b16">lastLat</a> = 0</td></tr>
+<tr class="memdesc:abbd49b4459b1d9d64dbf57d14c820b16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ostatnia szerokość geograficzna.  <br /></td></tr>
+<tr class="separator:abbd49b4459b1d9d64dbf57d14c820b16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a996ad0ebb5c3242a90d3bc51180fe" id="r_a44a996ad0ebb5c3242a90d3bc51180fe"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMainWindow.html#a44a996ad0ebb5c3242a90d3bc51180fe">lastLon</a> = 0</td></tr>
+<tr class="memdesc:a44a996ad0ebb5c3242a90d3bc51180fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ostatnia długość geograficzna.  <br /></td></tr>
+<tr class="separator:a44a996ad0ebb5c3242a90d3bc51180fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Klasa reprezentująca główne okno aplikacji. </p>
-<p><a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a> zawiera funkcjonalności takie jak wyświetlanie danych z czujników, logowanie zdarzeń, oraz wizualizację mapy przy użyciu QGraphicsScene. </p>
+<div class="textblock"><p>Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym, obsługą sensorów i lokalizacją łodzi. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a996c5a2b6f77944776856f08ec30858d" name="a996c5a2b6f77944776856f08ec30858d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a996c5a2b6f77944776856f08ec30858d">&#9670;&#160;</a></span>MainWindow()</h2>
@@ -131,14 +222,679 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Konstruktor klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji.">MainWindow</a>. </p>
+<p>Konstruktor klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym,...">MainWindow</a>. </p>
+<p>Konstruktor klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym,...">MainWindow</a>. Inicjalizuje UI, komponenty graficzne, managera portu szeregowego oraz ustawia pozycje elementów.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">parent</td><td>Wskaźnik na nadrzędny widget (opcjonalnie).</td></tr>
-    <tr><td class="paramname">parent</td><td>Wskaźnik na rodzica (opcjonalnie). </td></tr>
+    <tr><td class="paramname">parent</td><td>Wskaźnik na widget nadrzędny (domyślnie nullptr).</td></tr>
+    <tr><td class="paramname">parent</td><td>Wskaźnik na obiekt nadrzędny (domyślnie nullptr). </td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="ae98d00a93bc118200eeef9f9bba1dba7" name="ae98d00a93bc118200eeef9f9bba1dba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae98d00a93bc118200eeef9f9bba1dba7">&#9670;&#160;</a></span>~MainWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MainWindow::~MainWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruktor klasy <a class="el" href="classMainWindow.html" title="Klasa reprezentująca główne okno aplikacji Project FOKA. Zarządza UI, mapą, portem szeregowym,...">MainWindow</a>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a2d8c660a89cbff3f408e33110c1c2c61" name="a2d8c660a89cbff3f408e33110c1c2c61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d8c660a89cbff3f408e33110c1c2c61">&#9670;&#160;</a></span>handleNewPacket</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::handleNewPacket </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structParsedPacket.html">ParsedPacket</a> &amp;&#160;</td>
+          <td class="paramname"><em>packet</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje nowy pakiet danych odebrany z portu szeregowego. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">packet</td><td>Struktura z danymi pomiarowymi i lokalizacją.</td></tr>
+    <tr><td class="paramname">packet</td><td>Struktura zawierająca dane pomiarowe i pozycję. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a064b13fe8d8c2c4471dec0c44a4b0a6b" name="a064b13fe8d8c2c4471dec0c44a4b0a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a064b13fe8d8c2c4471dec0c44a4b0a6b">&#9670;&#160;</a></span>handleSerialError</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::handleSerialError </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>error</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje błędy portu szeregowego. </p>
+<p>Obsługuje błędy związane z komunikacją szeregową.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">error</td><td>Treść błędu.</td></tr>
+    <tr><td class="paramname">error</td><td>Komunikat błędu. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afe4a897bd163a15ecd30f6a262b4a135" name="afe4a897bd163a15ecd30f6a262b4a135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4a897bd163a15ecd30f6a262b4a135">&#9670;&#160;</a></span>loadLanguage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::loadLanguage </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>langCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ładuje i stosuje tłumaczenie GUI. </p>
+<p>Ładuje tłumaczenie interfejsu na podstawie kodu języka.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">langCode</td><td>Kod języka (np. "pl", "en"). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac8fa0d9c2019ef65f4a71feb2d1e8ea4" name="ac8fa0d9c2019ef65f4a71feb2d1e8ea4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8fa0d9c2019ef65f4a71feb2d1e8ea4">&#9670;&#160;</a></span>loadSensorConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt; QPair&lt; QString, QString &gt; &gt; MainWindow::loadSensorConfig </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>filePath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ładuje konfigurację sensorów z pliku JSON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>Ścieżka do pliku JSON z konfiguracją. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Wektor par &lt;nazwa, jednostka&gt;.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filePath</td><td>Ścieżka do pliku JSON. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Wektor par &lt;nazwa, jednostka&gt;. </dd></dl>
+
+</div>
+</div>
+<a id="aad75236c74a5c340c3e18749a9b5eb4f" name="aad75236c74a5c340c3e18749a9b5eb4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad75236c74a5c340c3e18749a9b5eb4f">&#9670;&#160;</a></span>resizeEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::resizeEvent </td>
+          <td>(</td>
+          <td class="paramtype">QResizeEvent *&#160;</td>
+          <td class="paramname"><em>event</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje zdarzenie zmiany rozmiaru okna. </p>
+<p>Zdarzenie zmiany rozmiaru okna.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">event</td><td>Obiekt zdarzenia zmiany rozmiaru.</td></tr>
+    <tr><td class="paramname">event</td><td>Obiekt zdarzenia (może być nullptr). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a08670ff7ecdbe1b065ff84860525b5bc" name="a08670ff7ecdbe1b065ff84860525b5bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08670ff7ecdbe1b065ff84860525b5bc">&#9670;&#160;</a></span>setupMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::setupMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ustawia mapę i jej parametry (funkcja nieużywana). </p>
+
+</div>
+</div>
+<a id="afc023dc10c45fd50cd731c41952fc6fd" name="afc023dc10c45fd50cd731c41952fc6fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc023dc10c45fd50cd731c41952fc6fd">&#9670;&#160;</a></span>updateLanguageButtonPositions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::updateLanguageButtonPositions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ustawia pozycję przycisków językowych względem mapy. </p>
+
+</div>
+</div>
+<a id="af1363200af71ba9cd608533794a5fcbf" name="af1363200af71ba9cd608533794a5fcbf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1363200af71ba9cd608533794a5fcbf">&#9670;&#160;</a></span>updatePosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MainWindow::updatePosition </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>latitude</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>longitude</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Aktualizuje pozycję łodzi na mapie. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">latitude</td><td>Szerokość geograficzna. </td></tr>
+    <tr><td class="paramname">longitude</td><td>Długość geograficzna. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="aeb1de0d49e14bad708dccf9b19fe5f3f" name="aeb1de0d49e14bad708dccf9b19fe5f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb1de0d49e14bad708dccf9b19fe5f3f">&#9670;&#160;</a></span>btnEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPushButton* MainWindow::btnEN = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Przycisk do wyboru języka angielskiego. </p>
+
+</div>
+</div>
+<a id="ab1d6a75930e70103d1d08289b51f0937" name="ab1d6a75930e70103d1d08289b51f0937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1d6a75930e70103d1d08289b51f0937">&#9670;&#160;</a></span>btnPL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPushButton* MainWindow::btnPL = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Przycisk do wyboru języka polskiego. </p>
+
+</div>
+</div>
+<a id="ae7b5edf93b98f6a1f0db64564a69cc96" name="ae7b5edf93b98f6a1f0db64564a69cc96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7b5edf93b98f6a1f0db64564a69cc96">&#9670;&#160;</a></span>chartWindow</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classChartWindow.html">ChartWindow</a>* MainWindow::chartWindow</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Okno wykresów. </p>
+
+</div>
+</div>
+<a id="a4aa7e99e292a9ef95b65f61e46e7870e" name="a4aa7e99e292a9ef95b65f61e46e7870e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa7e99e292a9ef95b65f61e46e7870e">&#9670;&#160;</a></span>hasPendingPosition</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::hasPendingPosition = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flaga oczekującej pozycji do narysowania. </p>
+
+</div>
+</div>
+<a id="a92d08c165f352a5187ca16c3f4517b9d" name="a92d08c165f352a5187ca16c3f4517b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92d08c165f352a5187ca16c3f4517b9d">&#9670;&#160;</a></span>langButton</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QPushButton* MainWindow::langButton = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Przyciski zmiany języka (deprecated / nieużywane) </p>
+
+</div>
+</div>
+<a id="abbd49b4459b1d9d64dbf57d14c820b16" name="abbd49b4459b1d9d64dbf57d14c820b16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbd49b4459b1d9d64dbf57d14c820b16">&#9670;&#160;</a></span>lastLat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MainWindow::lastLat = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ostatnia szerokość geograficzna. </p>
+
+</div>
+</div>
+<a id="a44a996ad0ebb5c3242a90d3bc51180fe" name="a44a996ad0ebb5c3242a90d3bc51180fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a996ad0ebb5c3242a90d3bc51180fe">&#9670;&#160;</a></span>lastLon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double MainWindow::lastLon = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ostatnia długość geograficzna. </p>
+
+</div>
+</div>
+<a id="ac6acedc605e8700660ab349c08b37eac" name="ac6acedc605e8700660ab349c08b37eac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6acedc605e8700660ab349c08b37eac">&#9670;&#160;</a></span>logTimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTimer* MainWindow::logTimer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Timer do obsługi logów (obecnie nieużywany) </p>
+
+</div>
+</div>
+<a id="afd14383d1d27c426e0cf1df5bf20cb16" name="afd14383d1d27c426e0cf1df5bf20cb16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd14383d1d27c426e0cf1df5bf20cb16">&#9670;&#160;</a></span>mapReady</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MainWindow::mapReady = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flaga gotowości mapy. </p>
+
+</div>
+</div>
+<a id="a1108c2b0f58b54e7e69f6e3929ca4eec" name="a1108c2b0f58b54e7e69f6e3929ca4eec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1108c2b0f58b54e7e69f6e3929ca4eec">&#9670;&#160;</a></span>sensorConfig</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;QPair&lt;QString, QString&gt; &gt; MainWindow::sensorConfig</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Konfiguracja sensorów: para &lt;nazwa, jednostka&gt; </p>
+
+</div>
+</div>
+<a id="aa4995b5b66dfd31153708d6fa242ea27" name="aa4995b5b66dfd31153708d6fa242ea27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4995b5b66dfd31153708d6fa242ea27">&#9670;&#160;</a></span>sensorLabels</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;QLabel*&gt; MainWindow::sensorLabels</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Etykiety sensorów (nieużywane, zachowane na przyszłość) </p>
+
+</div>
+</div>
+<a id="a2ead0d7421c8b42b82133d4fe6747089" name="a2ead0d7421c8b42b82133d4fe6747089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ead0d7421c8b42b82133d4fe6747089">&#9670;&#160;</a></span>sensorTiles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt;<a class="el" href="structSensorTile.html">SensorTile</a>&gt; MainWindow::sensorTiles</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Kafelki sensorów. </p>
+
+</div>
+</div>
+<a id="a1e45c6a8193b3c32ac122bf615748127" name="a1e45c6a8193b3c32ac122bf615748127"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e45c6a8193b3c32ac122bf615748127">&#9670;&#160;</a></span>serialManager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSerialManager.html">SerialManager</a>* MainWindow::serialManager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Manager portu szeregowego. </p>
+
+</div>
+</div>
+<a id="a8e829b3590ccdeeada42625415afc6f3" name="a8e829b3590ccdeeada42625415afc6f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e829b3590ccdeeada42625415afc6f3">&#9670;&#160;</a></span>translator</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QTranslator MainWindow::translator</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Tłumacz Qt. </p>
+
+</div>
+</div>
+<a id="a35466a70ed47252a0191168126a352a5" name="a35466a70ed47252a0191168126a352a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35466a70ed47252a0191168126a352a5">&#9670;&#160;</a></span>ui</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Ui::MainWindow* MainWindow::ui</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Interfejs użytkownika wygenerowany przez Qt Designer. </p>
 
 </div>
 </div>

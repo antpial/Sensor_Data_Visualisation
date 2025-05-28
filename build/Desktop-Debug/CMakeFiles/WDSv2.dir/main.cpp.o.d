@@ -290,6 +290,11 @@ CMakeFiles/WDSv2.dir/main.cpp.o: /home/antek/WDSv2/main.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTranslator \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h \
  /home/antek/WDSv2/serialmanager.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
@@ -301,79 +306,14 @@ CMakeFiles/WDSv2.dir/main.cpp.o: /home/antek/WDSv2/main.cpp \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
- /home/antek/WDSv2/mapwindow.h \
- /usr/include/x86_64-linux-gnu/qt5/QtPositioning/QGeoCoordinate \
- /usr/include/x86_64-linux-gnu/qt5/QtPositioning/qgeocoordinate.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h \
- /usr/include/x86_64-linux-gnu/qt5/QtPositioning/qpositioningglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/QQuickWidget \
- /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qquickwidget.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qquickwindow.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qtquickglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qtqmlglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qtqml-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetworkglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtNetwork/qtnetwork-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qtquick-config.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qsgrendererinterface.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qsgnode.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuick/qsggeometry.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qopengl.h /usr/include/GL/gl.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qopenglext.h \
- /usr/include/inttypes.h /usr/include/x86_64-linux-gnu/qt5/QtCore/QRectF \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/QMatrix4x4 \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qmatrix4x4.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector3d.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector4d.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qquaternion.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qgenericmatrix.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
- /usr/include/c++/13/variant \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
- /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindow.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QEvent \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QMargins \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QRect \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qsurface.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qsurfaceformat.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qevent.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qvector2d.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqml.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlprivate.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlparserstatus.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmllist.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmlpropertyvaluesource.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qpointer.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetaobject.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQml/qqmldebug.h \
- /usr/include/x86_64-linux-gnu/qt5/QtQuickWidgets/qtquickwidgetsglobal.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/QTranslator \
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qtranslator.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h \
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qguiapplication.h \
- /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/qinputmethod.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
+ /usr/include/c++/13/variant

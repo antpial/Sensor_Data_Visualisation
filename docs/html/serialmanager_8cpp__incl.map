@@ -1,0 +1,17 @@
+<map id="serialmanager.cpp" name="serialmanager.cpp">
+<area shape="rect" id="Node000001" title="Implementacja klasy SerialManager obsługującej komunikację szeregową oraz parsowanie danych." alt="" coords="143,5,286,31"/>
+<area shape="rect" id="Node000002" href="$serialmanager_8h.html" title="Deklaracja klasy SerialManager odpowiedzialnej za komunikację szeregową i parsowanie danych." alt="" coords="89,79,215,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,33,173,70,169,66,202,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="240,79,315,104"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="227,29,260,66,256,70,223,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,80,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="136,106,74,147,71,142,133,102"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="105,152,199,177"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="155,104,155,138,149,138,149,104"/>
+<area shape="rect" id="Node000005" href="$parsedpacket_8h.html" title="Deklaracja struktury ParsedPacket służącej do przechowywania danych odebranych z portu szeregowego." alt="" coords="223,152,345,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="174,102,252,143,249,148,172,106"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="199,225,273,251"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="278,179,254,216,249,213,274,176"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="297,225,367,251"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="294,176,319,213,314,216,290,179"/>
+</map>

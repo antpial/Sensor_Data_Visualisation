@@ -1,0 +1,82 @@
+\doxysection{chartwindow.\+cpp File Reference}
+\hypertarget{chartwindow_8cpp}{}\label{chartwindow_8cpp}\index{chartwindow.cpp@{chartwindow.cpp}}
+
+
+Implementacja klasy \doxylink{classChartWindow}{Chart\+Window} do wizualizacji danych sensorów za pomocą wykresów.  
+
+
+{\ttfamily \#include "{}chartwindow.\+h"{}}\newline
+{\ttfamily \#include "{}ui\+\_\+chartwindow.\+h"{}}\newline
+{\ttfamily \#include $<$Qt\+Charts/\+QChart\+View$>$}\newline
+{\ttfamily \#include $<$Qt\+Charts/\+QChart$>$}\newline
+{\ttfamily \#include $<$Qt\+Charts/\+QLine\+Series$>$}\newline
+{\ttfamily \#include $<$Qt\+Charts/\+QValue\+Axis$>$}\newline
+{\ttfamily \#include $<$QFile$>$}\newline
+{\ttfamily \#include $<$QJson\+Document$>$}\newline
+{\ttfamily \#include $<$QJson\+Object$>$}\newline
+{\ttfamily \#include $<$QJson\+Array$>$}\newline
+{\ttfamily \#include $<$QRandom\+Generator$>$}\newline
+{\ttfamily \#include $<$QDebug$>$}\newline
+{\ttfamily \#include "{}parsedpacket.\+h"{}}\newline
+Include dependency graph for chartwindow.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{chartwindow_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structChartConfig}{Chart\+Config}}
+\begin{DoxyCompactList}\small\item\em Struktura przechowująca konfigurację pojedynczego wykresu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{chartwindow_8cpp_add28519412f37ec4551e30e2aa3cc130}{NUM\+\_\+\+OF\+\_\+\+SAMPLES}}~20
+\begin{DoxyCompactList}\small\item\em Liczba próbek przechowywanych na wykresie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+QVector$<$ \mbox{\hyperlink{structChartConfig}{Chart\+Config}} $>$ \mbox{\hyperlink{chartwindow_8cpp_ad705b03b5b5dac906c7696e8d65856bc}{load\+Chart\+Configs}} (const QString \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Wczytuje konfigurację wykresów z pliku JSON. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementacja klasy \doxylink{classChartWindow}{Chart\+Window} do wizualizacji danych sensorów za pomocą wykresów. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{chartwindow_8cpp_add28519412f37ec4551e30e2aa3cc130}\label{chartwindow_8cpp_add28519412f37ec4551e30e2aa3cc130} 
+\index{chartwindow.cpp@{chartwindow.cpp}!NUM\_OF\_SAMPLES@{NUM\_OF\_SAMPLES}}
+\index{NUM\_OF\_SAMPLES@{NUM\_OF\_SAMPLES}!chartwindow.cpp@{chartwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{NUM\_OF\_SAMPLES}{NUM\_OF\_SAMPLES}}
+{\footnotesize\ttfamily \#define NUM\+\_\+\+OF\+\_\+\+SAMPLES~20}
+
+
+
+Liczba próbek przechowywanych na wykresie. 
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{chartwindow_8cpp_ad705b03b5b5dac906c7696e8d65856bc}\label{chartwindow_8cpp_ad705b03b5b5dac906c7696e8d65856bc} 
+\index{chartwindow.cpp@{chartwindow.cpp}!loadChartConfigs@{loadChartConfigs}}
+\index{loadChartConfigs@{loadChartConfigs}!chartwindow.cpp@{chartwindow.cpp}}
+\doxysubsubsection{\texorpdfstring{loadChartConfigs()}{loadChartConfigs()}}
+{\footnotesize\ttfamily QVector$<$ \mbox{\hyperlink{structChartConfig}{Chart\+Config}} $>$ load\+Chart\+Configs (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path }\end{DoxyParamCaption})}
+
+
+
+Wczytuje konfigurację wykresów z pliku JSON. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Ścieżka do pliku JSON z konfiguracją wykresów. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wektor konfiguracji wykresów. 
+\end{DoxyReturn}

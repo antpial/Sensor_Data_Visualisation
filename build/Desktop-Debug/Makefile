@@ -296,30 +296,6 @@ mainwindow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
-mapwindow.o: mapwindow.cpp.o
-.PHONY : mapwindow.o
-
-# target to build an object file
-mapwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/mapwindow.cpp.o
-.PHONY : mapwindow.cpp.o
-
-mapwindow.i: mapwindow.cpp.i
-.PHONY : mapwindow.i
-
-# target to preprocess a source file
-mapwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/mapwindow.cpp.i
-.PHONY : mapwindow.cpp.i
-
-mapwindow.s: mapwindow.cpp.s
-.PHONY : mapwindow.s
-
-# target to generate assembly for a file
-mapwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/WDSv2.dir/build.make CMakeFiles/WDSv2.dir/mapwindow.cpp.s
-.PHONY : mapwindow.cpp.s
-
 serialmanager.o: serialmanager.cpp.o
 .PHONY : serialmanager.o
 
@@ -371,9 +347,6 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
-	@echo "... mapwindow.o"
-	@echo "... mapwindow.i"
-	@echo "... mapwindow.s"
 	@echo "... serialmanager.o"
 	@echo "... serialmanager.i"
 	@echo "... serialmanager.s"

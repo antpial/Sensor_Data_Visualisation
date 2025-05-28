@@ -1,5 +1,7 @@
 <map id="mainwindow.h" name="mainwindow.h">
-<area shape="rect" id="Node000001" title="Deklaracja klasy MainWindow – głównego okna aplikacji Project FOKA." alt="" coords="13,5,129,31"/>
-<area shape="rect" id="Node000002" href="$mainwindow_8cpp.html" title="Implementacja klasy MainWindow odpowiedzialnej za główne okno aplikacji Project FOKA." alt="" coords="5,79,136,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="73,44,73,79,68,79,68,44"/>
+<area shape="rect" id="Node000001" title="Deklaracja klasy MainWindow &#45; głównego interfejsu użytkownika aplikacji Project FOKA." alt="" coords="54,5,170,31"/>
+<area shape="rect" id="Node000002" href="$main_8cpp.html" title="Punkt wejścia do aplikacji Project FOKA." alt="" coords="5,79,88,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,43,59,80,55,77,90,39"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implementacja klasy MainWindow &#45; głównego okna aplikacji naziemnej Project FOKA." alt="" coords="112,79,243,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="134,39,169,77,165,80,130,43"/>
 </map>
