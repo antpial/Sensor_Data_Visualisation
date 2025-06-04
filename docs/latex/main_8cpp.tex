@@ -7,8 +7,7 @@ Punkt wejścia do aplikacji Project FOKA.
 
 {\ttfamily \#include "{}mainwindow.\+h"{}}\newline
 {\ttfamily \#include $<$QApplication$>$}\newline
-Include dependency graph for main.\+cpp\+:
-\nopagebreak
+Include dependency graph for main.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -26,6 +25,10 @@ int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int ar
 Punkt wejścia do aplikacji Project FOKA. 
 
 Inicjalizuje aplikację Qt, tworzy i wyświetla główne okno \doxylink{classMainWindow}{Main\+Window}. 
+
+Definition in file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
 
 \doxysubsection{Function Documentation}
 \Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
@@ -48,3 +51,17 @@ Główna funkcja uruchamiająca aplikację Qt.
 \begin{DoxyReturn}{Returns}
 Kod zakończenia aplikacji. 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ QApplication\ a(argc,\ argv);}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}\ w;}
+\DoxyCodeLine{00021\ \ \ \ \ w.show();}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{return}\ a.exec();}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}

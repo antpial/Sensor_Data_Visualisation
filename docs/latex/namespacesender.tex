@@ -8,7 +8,7 @@
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-str \mbox{\hyperlink{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}{PORT}} = \textquotesingle{}/dev/pts/2\textquotesingle{}
+str \mbox{\hyperlink{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}{PORT}} = \textquotesingle{}/dev/pts/1\textquotesingle{}
 \item 
 int \mbox{\hyperlink{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381}{BAUD\+\_\+\+RATE}} = 9600
 \item 
@@ -53,6 +53,33 @@ str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{message}
 
 
 
+Definition at line \mbox{\hyperlink{sender_8py_source_l00040}{40}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \textcolor{keyword}{def\ }generate\_circular\_coordinates():}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{global}\ angle}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{\#\ Oblicz\ przesunięcie\ w\ metrach\ względem\ środka}}
+\DoxyCodeLine{00044\ \ \ \ \ dx\ =\ radius\ *\ math.cos(math.radians(angle))}
+\DoxyCodeLine{00045\ \ \ \ \ dy\ =\ radius\ *\ math.sin(math.radians(angle))}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{\#\ Zamiana\ metry\ →\ stopnie\ geograficzne}}
+\DoxyCodeLine{00048\ \ \ \ \ delta\_lat\ =\ dy\ /\ EARTH\_RADIUS\ *\ (180\ /\ math.pi)}
+\DoxyCodeLine{00049\ \ \ \ \ delta\_lon\ =\ dx\ /\ (EARTH\_RADIUS\ *\ math.cos(math.radians(start\_lat)))\ *\ (180\ /\ math.pi)}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ lat\ =\ start\_lat\ +\ delta\_lat}
+\DoxyCodeLine{00052\ \ \ \ \ lon\ =\ start\_lon\ +\ delta\_lon}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{comment}{\#\ Zwiększ\ kąt\ do\ kolejnego\ kroku\ (pełne\ koło:\ 360\ stopni)}}
+\DoxyCodeLine{00055\ \ \ \ \ angle\ =\ (angle\ +\ angular\_speed\_deg\_per\_sec)\ \%\ 360}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{return}\ round(lat,\ 6),\ round(lon,\ 6)}
+\DoxyCodeLine{00058\ }
+
+\end{DoxyCode}
+
+
 \doxysubsection{Variable Documentation}
 \Hypertarget{namespacesender_ae1cc33e852a1a7d42321e84cbe266ec4}\label{namespacesender_ae1cc33e852a1a7d42321e84cbe266ec4} 
 \index{sender@{sender}!angle@{angle}}
@@ -60,11 +87,19 @@ str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{message}
 \doxysubsubsection{\texorpdfstring{angle}{angle}}
 {\footnotesize\ttfamily int sender.\+angle = 0}
 
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00030}{30}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
+
 \Hypertarget{namespacesender_ae14be42f80757e2ac7fbba7c1da9dd50}\label{namespacesender_ae14be42f80757e2ac7fbba7c1da9dd50} 
 \index{sender@{sender}!angular\_speed\_deg\_per\_sec@{angular\_speed\_deg\_per\_sec}}
 \index{angular\_speed\_deg\_per\_sec@{angular\_speed\_deg\_per\_sec}!sender@{sender}}
 \doxysubsubsection{\texorpdfstring{angular\_speed\_deg\_per\_sec}{angular\_speed\_deg\_per\_sec}}
 {\footnotesize\ttfamily int sender.\+angular\+\_\+speed\+\_\+deg\+\_\+per\+\_\+sec = 10}
+
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00028}{28}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
 
 \Hypertarget{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381}\label{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381} 
 \index{sender@{sender}!BAUD\_RATE@{BAUD\_RATE}}
@@ -72,11 +107,19 @@ str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{message}
 \doxysubsubsection{\texorpdfstring{BAUD\_RATE}{BAUD\_RATE}}
 {\footnotesize\ttfamily int sender.\+BAUD\+\_\+\+RATE = 9600}
 
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00008}{8}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
+
 \Hypertarget{namespacesender_ae062f7af50dedac7843a9f1f44f47727}\label{namespacesender_ae062f7af50dedac7843a9f1f44f47727} 
 \index{sender@{sender}!EARTH\_RADIUS@{EARTH\_RADIUS}}
 \index{EARTH\_RADIUS@{EARTH\_RADIUS}!sender@{sender}}
 \doxysubsubsection{\texorpdfstring{EARTH\_RADIUS}{EARTH\_RADIUS}}
 {\footnotesize\ttfamily int sender.\+EARTH\+\_\+\+RADIUS = 6371000}
+
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00033}{33}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
 
 \Hypertarget{namespacesender_a8139e479d3f16bc95ef5d253300da965}\label{namespacesender_a8139e479d3f16bc95ef5d253300da965} 
 \index{sender@{sender}!gps\_coords@{gps\_coords}}
@@ -84,11 +127,19 @@ str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{message}
 \doxysubsubsection{\texorpdfstring{gps\_coords}{gps\_coords}}
 {\footnotesize\ttfamily str sender.\+gps\+\_\+coords = f"{}\{\mbox{\hyperlink{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}{lat}}\};\{\mbox{\hyperlink{namespacesender_a73899320007cf34f0d3affedc769da46}{lon}}\}"{}}
 
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00063}{63}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
+
 \Hypertarget{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}\label{namespacesender_a167ecc363ec220fca8586feb9a0c96b1} 
 \index{sender@{sender}!i@{i}}
 \index{i@{i}!sender@{sender}}
 \doxysubsubsection{\texorpdfstring{i}{i}}
 {\footnotesize\ttfamily int sender.\+i = 0}
+
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00036}{36}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
 
 \Hypertarget{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}\label{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62} 
 \index{sender@{sender}!lat@{lat}}
@@ -96,11 +147,19 @@ str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{message}
 \doxysubsubsection{\texorpdfstring{lat}{lat}}
 {\footnotesize\ttfamily sender.\+lat}
 
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00062}{62}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
+
 \Hypertarget{namespacesender_a73899320007cf34f0d3affedc769da46}\label{namespacesender_a73899320007cf34f0d3affedc769da46} 
 \index{sender@{sender}!lon@{lon}}
 \index{lon@{lon}!sender@{sender}}
 \doxysubsubsection{\texorpdfstring{lon}{lon}}
 {\footnotesize\ttfamily sender.\+lon}
+
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00062}{62}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
 
 \Hypertarget{namespacesender_ade590ab6f9253e036d94151cb25acee7}\label{namespacesender_ade590ab6f9253e036d94151cb25acee7} 
 \index{sender@{sender}!message@{message}}
@@ -108,17 +167,29 @@ str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{message}
 \doxysubsubsection{\texorpdfstring{message}{message}}
 {\footnotesize\ttfamily str sender.\+message = "{};"{} + "{};"{}.join(\mbox{\hyperlink{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3}{sensor\+\_\+values}})}
 
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00071}{71}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
+
 \Hypertarget{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}\label{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a} 
 \index{sender@{sender}!PORT@{PORT}}
 \index{PORT@{PORT}!sender@{sender}}
 \doxysubsubsection{\texorpdfstring{PORT}{PORT}}
-{\footnotesize\ttfamily str sender.\+PORT = \textquotesingle{}/dev/pts/2\textquotesingle{}}
+{\footnotesize\ttfamily str sender.\+PORT = \textquotesingle{}/dev/pts/1\textquotesingle{}}
+
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00007}{7}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
 
 \Hypertarget{namespacesender_a5325b9900ae4e312e1c897f126ba0814}\label{namespacesender_a5325b9900ae4e312e1c897f126ba0814} 
 \index{sender@{sender}!radius@{radius}}
 \index{radius@{radius}!sender@{sender}}
 \doxysubsubsection{\texorpdfstring{radius}{radius}}
 {\footnotesize\ttfamily int sender.\+radius = 10}
+
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00027}{27}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
 
 \Hypertarget{namespacesender_a2a79b48310f28dddc55624fe44dc90ab}\label{namespacesender_a2a79b48310f28dddc55624fe44dc90ab} 
 \index{sender@{sender}!SENSOR\_RANGES@{SENSOR\_RANGES}}
@@ -140,11 +211,19 @@ str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{message}
 \DoxyCodeLine{00010\ ]}
 
 \end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00015}{15}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
+
 \Hypertarget{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3}\label{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3} 
 \index{sender@{sender}!sensor\_values@{sensor\_values}}
 \index{sensor\_values@{sensor\_values}!sender@{sender}}
 \doxysubsubsection{\texorpdfstring{sensor\_values}{sensor\_values}}
 {\footnotesize\ttfamily list sender.\+sensor\+\_\+values = \mbox{[}\mbox{\hyperlink{namespacesender_a8139e479d3f16bc95ef5d253300da965}{gps\+\_\+coords}}\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00066}{66}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
 
 \Hypertarget{namespacesender_a1ae8f95a1098e31638cdc47980f0d1d4}\label{namespacesender_a1ae8f95a1098e31638cdc47980f0d1d4} 
 \index{sender@{sender}!ser@{ser}}
@@ -152,11 +231,19 @@ str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{message}
 \doxysubsubsection{\texorpdfstring{ser}{ser}}
 {\footnotesize\ttfamily sender.\+ser = serial.\+Serial(\mbox{\hyperlink{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}{PORT}}, \mbox{\hyperlink{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381}{BAUD\+\_\+\+RATE}})}
 
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00035}{35}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
+
 \Hypertarget{namespacesender_a660ff5f39d1a59b1b3d18a36edc18019}\label{namespacesender_a660ff5f39d1a59b1b3d18a36edc18019} 
 \index{sender@{sender}!start\_lat@{start\_lat}}
 \index{start\_lat@{start\_lat}!sender@{sender}}
 \doxysubsubsection{\texorpdfstring{start\_lat}{start\_lat}}
 {\footnotesize\ttfamily float sender.\+start\+\_\+lat = 51.\+106054}
+
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00011}{11}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
 
 \Hypertarget{namespacesender_abc13dc3fb9c99d9925f270acaad69dbc}\label{namespacesender_abc13dc3fb9c99d9925f270acaad69dbc} 
 \index{sender@{sender}!start\_lon@{start\_lon}}
@@ -164,9 +251,17 @@ str \mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{message}
 \doxysubsubsection{\texorpdfstring{start\_lon}{start\_lon}}
 {\footnotesize\ttfamily float sender.\+start\+\_\+lon = 17.\+060251}
 
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00012}{12}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
+
 \Hypertarget{namespacesender_a3d12c2434abf97cd2e17b81d80816347}\label{namespacesender_a3d12c2434abf97cd2e17b81d80816347} 
 \index{sender@{sender}!val@{val}}
 \index{val@{val}!sender@{sender}}
 \doxysubsubsection{\texorpdfstring{val}{val}}
 {\footnotesize\ttfamily sender.\+val = round(random.\+uniform(low, high), 2)}
+
+
+
+Definition at line \mbox{\hyperlink{sender_8py_source_l00068}{68}} of file \mbox{\hyperlink{sender_8py_source}{sender.\+py}}.
 

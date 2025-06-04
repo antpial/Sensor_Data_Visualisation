@@ -1,44 +1,44 @@
 \doxysection{chartwindow.\+h}
 \hypertarget{chartwindow_8h_source}{}\label{chartwindow_8h_source}\mbox{\hyperlink{chartwindow_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ }
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ CHARTWINDOW\_H}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ CHARTWINDOW\_H}}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QWidget>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QtCharts/QChartView>}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QtCharts/QLineSeries>}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QTimer>}}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parsedpacket_8h}{parsedpacket.h}}"{}}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ QT\_CHARTS\_USE\_NAMESPACE}
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceUi}{Ui}}\ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classChartWindow}{ChartWindow}};}
-\DoxyCodeLine{00020\ \}}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00028\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classChartWindow}{ChartWindow}}\ :\ \textcolor{keyword}{public}\ QWidget}
-\DoxyCodeLine{00029\ \{}
-\DoxyCodeLine{00030\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classChartWindow}{ChartWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3}{retranslateUi}}();}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{classChartWindow_a9714c04a78085f4a64559008c5fe39e9}{\string~ChartWindow}}();}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \textcolor{keyword}{public}\ slots:}
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9}{updateFromPacket}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ \&packet);}
-\DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00057\ \ \ \ \ Ui::ChartWindow\ *\mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00058\ \ \ \ \ QList<QLineSeries*>\ \mbox{\hyperlink{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}{seriesList}};\ \ \ \ \ \ \ }
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChartWindow_a37dcba8017c15a968b733da3a23ca769}{initializeCharts}}();}
-\DoxyCodeLine{00065\ \};}
-\DoxyCodeLine{00066\ }
-\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHARTWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ CHARTWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ CHARTWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <QWidget>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <QtCharts/QChartView>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <QtCharts/QLineSeries>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parsedpacket_8h}{parsedpacket.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00016}00016\ QT\_CHARTS\_USE\_NAMESPACE}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00018}\mbox{\hyperlink{namespaceUi}{00018}}\ \ \ \ \ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceUi}{Ui}}\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classChartWindow}{ChartWindow}};}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00028}\mbox{\hyperlink{classChartWindow}{00028}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classChartWindow}{ChartWindow}}\ :\ \textcolor{keyword}{public}\ QWidget}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00029}00029\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00030}00030\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00032}00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00037}00037\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classChartWindow}{ChartWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3}{retranslateUi}}();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{classChartWindow_a9714c04a78085f4a64559008c5fe39e9}{\string~ChartWindow}}();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00049}00049\ \textcolor{keyword}{public}\ slots:}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00054}00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9}{updateFromPacket}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ \&packet);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00056}00056\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00057}\mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{00057}}\ \ \ \ \ Ui::ChartWindow\ *\mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00058}\mbox{\hyperlink{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}{00058}}\ \ \ \ \ QList<QLineSeries*>\ \mbox{\hyperlink{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}{seriesList}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00064}00064\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChartWindow_a37dcba8017c15a968b733da3a23ca769}{initializeCharts}}();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00065}00065\ \};}
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8h_source_l00067}00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHARTWINDOW\_H}}
 
 \end{DoxyCode}

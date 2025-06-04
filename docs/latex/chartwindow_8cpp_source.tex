@@ -1,0 +1,168 @@
+\doxysection{chartwindow.\+cpp}
+\hypertarget{chartwindow_8cpp_source}{}\label{chartwindow_8cpp_source}\mbox{\hyperlink{chartwindow_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{chartwindow_8h}{chartwindow.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}ui\_chartwindow.h"{}}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <QtCharts/QChartView>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <QtCharts/QChart>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <QtCharts/QLineSeries>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <QtCharts/QValueAxis>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <QFile>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <QJsonDocument>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <QJsonObject>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <QJsonArray>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <QRandomGenerator>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parsedpacket_8h}{parsedpacket.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00022}\mbox{\hyperlink{chartwindow_8cpp_add28519412f37ec4551e30e2aa3cc130}{00022}}\ \textcolor{preprocessor}{\#define\ NUM\_OF\_SAMPLES\ 20\ }}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00028}\mbox{\hyperlink{structChartConfig}{00028}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structChartConfig}{ChartConfig}}\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00029}\mbox{\hyperlink{structChartConfig_ad39334b0e85542174c7602e036edc11b}{00029}}\ \ \ \ \ QString\ \mbox{\hyperlink{structChartConfig_ad39334b0e85542174c7602e036edc11b}{sensorName}};\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00030}\mbox{\hyperlink{structChartConfig_a4d3727dd27e5f5bbd216d29383d0d42e}{00030}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{structChartConfig_a4d3727dd27e5f5bbd216d29383d0d42e}{yRange}};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00031}\mbox{\hyperlink{structChartConfig_aacf4fa7d81792040525b3ab7e31f17b5}{00031}}\ \ \ \ \ QString\ \mbox{\hyperlink{structChartConfig_aacf4fa7d81792040525b3ab7e31f17b5}{unitY}};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00032}\mbox{\hyperlink{structChartConfig_a59f7662dc6929f9a301f8e84f3c996dc}{00032}}\ \ \ \ \ QColor\ \mbox{\hyperlink{structChartConfig_a59f7662dc6929f9a301f8e84f3c996dc}{color}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00033}00033\ \};}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00039}\mbox{\hyperlink{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3}{00039}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3}{ChartWindow::retranslateUi}}()\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>retranslateUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00041}00041\ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00048}\mbox{\hyperlink{chartwindow_8cpp_ad705b03b5b5dac906c7696e8d65856bc}{00048}}\ QVector<ChartConfig>\ \mbox{\hyperlink{chartwindow_8cpp_ad705b03b5b5dac906c7696e8d65856bc}{loadChartConfigs}}(\textcolor{keyword}{const}\ QString\ \&filePath)}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00049}00049\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00050}00050\ \ \ \ \ QVector<ChartConfig>\ configs;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00052}00052\ \ \ \ \ QFile\ file(filePath);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file.open(QIODevice::ReadOnly))\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ qWarning()\ <<\ \textcolor{stringliteral}{"{}Nie\ można\ otworzyć\ pliku:"{}}\ <<\ filePath;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ configs;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00058}00058\ \ \ \ \ QByteArray\ jsonData\ =\ file.readAll();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00059}00059\ \ \ \ \ file.close();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00061}00061\ \ \ \ \ QJsonDocument\ doc\ =\ QJsonDocument::fromJson(jsonData);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{if}\ (!doc.isObject())\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ qWarning()\ <<\ \textcolor{stringliteral}{"{}Nieprawidłowy\ format\ JSON"{}};}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ configs;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00067}00067\ \ \ \ \ QJsonArray\ chartsArray\ =\ doc.object()[\textcolor{stringliteral}{"{}charts"{}}].toArray();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00068}00068\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ QJsonValue\ \&value\ :\ chartsArray)\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ QJsonObject\ obj\ =\ value.toObject();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChartConfig}{ChartConfig}}\ config;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ config.\mbox{\hyperlink{structChartConfig_ad39334b0e85542174c7602e036edc11b}{sensorName}}\ =\ obj[\textcolor{stringliteral}{"{}sensor"{}}].toString();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ config.\mbox{\hyperlink{structChartConfig_a4d3727dd27e5f5bbd216d29383d0d42e}{yRange}}\ =\ obj[\textcolor{stringliteral}{"{}y\_range"{}}].toDouble();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ config.\mbox{\hyperlink{structChartConfig_aacf4fa7d81792040525b3ab7e31f17b5}{unitY}}\ =\ obj[\textcolor{stringliteral}{"{}unit\_y"{}}].toString();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ QString\ colorStr\ =\ obj[\textcolor{stringliteral}{"{}color"{}}].toString(\textcolor{stringliteral}{"{}\#000000"{}});\ \textcolor{comment}{//\ domyślnie\ czarny}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ config.\mbox{\hyperlink{structChartConfig_a59f7662dc6929f9a301f8e84f3c996dc}{color}}\ =\ QColor(colorStr);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ configs.append(config);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00079}00079\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{return}\ configs;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00089}\mbox{\hyperlink{classChartWindow_a898138e91e25646ddbcce42ebe88d3d5}{00089}}\ \mbox{\hyperlink{classChartWindow_a898138e91e25646ddbcce42ebe88d3d5}{ChartWindow::ChartWindow}}(QWidget\ *parent)\ :}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00090}00090\ \ \ \ \ QWidget(parent),}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00091}00091\ \ \ \ \ ui(new\ \mbox{\hyperlink{namespaceUi}{Ui}}::\mbox{\hyperlink{classChartWindow}{ChartWindow}})}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00092}00092\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00093}00093\ \ \ \ \ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00094}00094\ \ \ \ \ this-\/>setStyleSheet(\textcolor{stringliteral}{"{}background-\/color:\ \#ffffff;"{}});}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00095}00095\ \ \ \ \ \mbox{\hyperlink{classChartWindow_a37dcba8017c15a968b733da3a23ca769}{initializeCharts}}();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00096}00096\ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00101}\mbox{\hyperlink{classChartWindow_a9714c04a78085f4a64559008c5fe39e9}{00101}}\ \mbox{\hyperlink{classChartWindow_a9714c04a78085f4a64559008c5fe39e9}{ChartWindow::\string~ChartWindow}}()}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00102}00102\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00103}00103\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}};}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00104}00104\ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00110}\mbox{\hyperlink{classChartWindow_a37dcba8017c15a968b733da3a23ca769}{00110}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChartWindow_a37dcba8017c15a968b733da3a23ca769}{ChartWindow::initializeCharts}}()}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00111}00111\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00112}00112\ \ \ \ \ QList<QChartView*>\ views\ =\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00113}00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_1,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_2,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_3,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_4,}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_5,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_6,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_7,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_8}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00115}00115\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00117}00117\ \ \ \ \ QVector<ChartConfig>\ chartConfigs\ =\ \mbox{\hyperlink{chartwindow_8cpp_ad705b03b5b5dac906c7696e8d65856bc}{loadChartConfigs}}(\textcolor{stringliteral}{"{}charts\_config.json"{}});}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00119}00119\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ views.size();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ QLineSeries\ *series\ =\ \textcolor{keyword}{new}\ QLineSeries();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ QChart\ *chart\ =\ \textcolor{keyword}{new}\ QChart();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00122}00122\ \ \ \ \ \ \ \ \ chart-\/>addSeries(series);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ QString\ sensorName\ =\ QString(\textcolor{stringliteral}{"{}Sensor\ \%1"{}}).arg(i\ +\ 1);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ yRange\ =\ 100.0;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ QString\ unitY\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ QColor\ color;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ chartConfigs.size())\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ sensorName\ =\ chartConfigs[i].sensorName;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ yRange\ =\ chartConfigs[i].yRange;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ unitY\ =\ chartConfigs[i].unitY;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ color\ =\ chartConfigs[i].color;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ QValueAxis\ *axisX\ =\ \textcolor{keyword}{new}\ QValueAxis();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ axisX-\/>setRange(0,\ 20);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ QValueAxis\ *axisY\ =\ \textcolor{keyword}{new}\ QValueAxis();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ axisY-\/>setRange(0,\ yRange);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ axisY-\/>setTitleText(unitY);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00142}00142\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ chart-\/>addAxis(axisX,\ Qt::AlignBottom);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ chart-\/>addAxis(axisY,\ Qt::AlignLeft);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ series-\/>attachAxis(axisX);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ series-\/>attachAxis(axisY);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ chart-\/>setTitle(sensorName);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ views[i]-\/>setChart(chart);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ views[i]-\/>setRenderHint(QPainter::Antialiasing);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ QPen\ pen(color);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ pen.setWidth(2);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ series-\/>setPen(pen);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ axisX-\/>setLabelsColor(\textcolor{stringliteral}{"{}\#000000"{}});}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ axisY-\/>setLabelsColor(\textcolor{stringliteral}{"{}\#000000"{}});}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ chart-\/>setTitleBrush(Qt::black);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ chart-\/>legend()-\/>hide();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}{seriesList}}.append(series);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00161}00161\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00162}00162\ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00168}\mbox{\hyperlink{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9}{00168}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9}{ChartWindow::updateFromPacket}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ \&packet)}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00169}00169\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00170}00170\ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ qMin(packet.\mbox{\hyperlink{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}{sensors}}.size(),\ \mbox{\hyperlink{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}{seriesList}}.size());}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00172}00172\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ count;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ QLineSeries\ *series\ =\ \mbox{\hyperlink{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}{seriesList}}[i];}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ QVector<QPointF>\ points\ =\ series-\/>pointsVector();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (points.size()\ >=\ \mbox{\hyperlink{chartwindow_8cpp_add28519412f37ec4551e30e2aa3cc130}{NUM\_OF\_SAMPLES}})}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ points.removeFirst();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00179}00179\ \ \ \ \ \ \ \ \ qreal\ x\ =\ points.isEmpty()\ ?\ 0\ :\ points.last().x()\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ qreal\ y\ =\ packet.\mbox{\hyperlink{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}{sensors}}[i];}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ points.append(QPointF(x,\ y));}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ series-\/>replace(points);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ QChart\ *chart\ =\ series-\/>chart();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (chart\ \&\&\ chart-\/>axisX())\ \{}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ qreal\ xMax\ =\ points.last().x();}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ qreal\ xMin\ =\ xMax\ -\/\ \mbox{\hyperlink{chartwindow_8cpp_add28519412f37ec4551e30e2aa3cc130}{NUM\_OF\_SAMPLES}};}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (xMin\ <\ 0)\ xMin\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ QValueAxis\ *axisX\ =\ qobject\_cast<QValueAxis\ *>(chart-\/>axisX());}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (axisX)}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ axisX-\/>setRange(xMin,\ xMax);}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00195}00195\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{chartwindow_8cpp_source_l00196}00196\ \}}
+
+\end{DoxyCode}

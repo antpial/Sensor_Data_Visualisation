@@ -23,7 +23,7 @@
 #include <QResizeEvent>
 #include <QTranslator>
 
-#define PORT_PATH "/dev/pts/1"           ///< Ścieżka do portu szeregowego
+#define PORT_PATH "/dev/pts/2"           ///< Ścieżka do portu szeregowego
 #define CRITICAL_DEPTH 50                ///< Głębokość krytyczna w cm
 
 /**
@@ -205,9 +205,10 @@ void MainWindow::handleNewPacket(const ParsedPacket &packet)
         for (int i = 0; i < packet.sensors.size(); ++i) {
             QFrame* frame = new QFrame(this);
             frame->setFrameShape(QFrame::StyledPanel);
-            frame->setMaximumWidth(150);
+            frame->setMaximumWidth(120);
             frame->setMinimumHeight(60);
             frame->setMaximumHeight(120);
+            frame->setMinimumWidth(120);
             frame->setStyleSheet("QFrame { border: 1px solid #000000; border-radius: 6px; background-color: #ffffff; }");
 
             QVBoxLayout* vbox = new QVBoxLayout(frame);
@@ -217,7 +218,7 @@ void MainWindow::handleNewPacket(const ParsedPacket &packet)
 
             QLabel* nameLabel = new QLabel(tr(qUtf8Printable(name)), frame);
             nameLabel->setAlignment(Qt::AlignCenter);
-            nameLabel->setStyleSheet("font-size: 20px; border: 0px;");
+            nameLabel->setStyleSheet("font-size: 20px; border: 0px;color: #404040;");
 
             QLabel* valueLabel = new QLabel("0.00 " + unit, frame);
             valueLabel->setAlignment(Qt::AlignCenter);

@@ -11,8 +11,7 @@ Klasa \doxylink{classChartWindow}{Chart\+Window} reprezentuje okno wykresów w a
 
 
 
-Inheritance diagram for Chart\+Window\+:
-\nopagebreak
+Inheritance diagram for Chart\+Window\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Chart\+Window\+:
 \end{figure}
 
 
-Collaboration diagram for Chart\+Window\+:
-\nopagebreak
+Collaboration diagram for Chart\+Window\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -62,6 +60,10 @@ Klasa \doxylink{classChartWindow}{Chart\+Window} reprezentuje okno wykresów w a
 
 Wyświetla dane z sensorów w formie wykresów liniowych. Każdy sensor ma swój osobny wykres, aktualizowany przy nadejściu nowego pakietu danych. 
 
+Definition at line \mbox{\hyperlink{chartwindow_8h_source_l00028}{28}} of file \mbox{\hyperlink{chartwindow_8h_source}{chartwindow.\+h}}.
+
+
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classChartWindow_a898138e91e25646ddbcce42ebe88d3d5}\label{classChartWindow_a898138e91e25646ddbcce42ebe88d3d5} 
 \index{ChartWindow@{ChartWindow}!ChartWindow@{ChartWindow}}
@@ -80,6 +82,22 @@ Konstruktor klasy \doxylink{classChartWindow}{Chart\+Window}. Inicjalizuje inter
 {\em parent} & Wskaźnik na obiekt nadrzędny (domyślnie nullptr). \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{chartwindow_8cpp_source_l00089}{89}} of file \mbox{\hyperlink{chartwindow_8cpp_source}{chartwindow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :}
+\DoxyCodeLine{00090\ \ \ \ \ QWidget(parent),}
+\DoxyCodeLine{00091\ \ \ \ \ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}(\textcolor{keyword}{new}\ Ui::ChartWindow)}
+\DoxyCodeLine{00092\ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>setupUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{00094\ \ \ \ \ this-\/>setStyleSheet(\textcolor{stringliteral}{"{}background-\/color:\ \#ffffff;"{}});}
+\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{classChartWindow_a37dcba8017c15a968b733da3a23ca769}{initializeCharts}}();}
+\DoxyCodeLine{00096\ \}}
+
+\end{DoxyCode}
 \Hypertarget{classChartWindow_a9714c04a78085f4a64559008c5fe39e9}\label{classChartWindow_a9714c04a78085f4a64559008c5fe39e9} 
 \index{ChartWindow@{ChartWindow}!````~ChartWindow@{\texorpdfstring{$\sim$}{\string~}ChartWindow}}
 \index{````~ChartWindow@{\texorpdfstring{$\sim$}{\string~}ChartWindow}!ChartWindow@{ChartWindow}}
@@ -90,6 +108,17 @@ Konstruktor klasy \doxylink{classChartWindow}{Chart\+Window}. Inicjalizuje inter
 
 Destruktor klasy \doxylink{classChartWindow}{Chart\+Window}. 
 
+
+
+Definition at line \mbox{\hyperlink{chartwindow_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{chartwindow_8cpp_source}{chartwindow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00102\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keyword}{delete}\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}};}
+\DoxyCodeLine{00104\ \}}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
@@ -103,7 +132,67 @@ Destruktor klasy \doxylink{classChartWindow}{Chart\+Window}.
 
 Inicjalizuje wykresy zgodnie z konfiguracją z pliku JSON. Tworzy wykresy, ustawia ich zakresy i kolory. 
 
-Tworzy i konfiguruje wykresy dla każdego sensora. Wczytuje parametry wykresów z pliku {\ttfamily charts\+\_\+config.\+json}. \Hypertarget{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3}\label{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3} 
+Tworzy i konfiguruje wykresy dla każdego sensora. Wczytuje parametry wykresów z pliku {\ttfamily charts\+\_\+config.\+json}. 
+
+Definition at line \mbox{\hyperlink{chartwindow_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{chartwindow_8cpp_source}{chartwindow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00111\ \{}
+\DoxyCodeLine{00112\ \ \ \ \ QList<QChartView*>\ views\ =\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_1,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_2,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_3,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_4,}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_5,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_6,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_7,\ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>chartView\_8}
+\DoxyCodeLine{00115\ \ \ \ \ \};}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ QVector<ChartConfig>\ chartConfigs\ =\ \mbox{\hyperlink{chartwindow_8cpp_ad705b03b5b5dac906c7696e8d65856bc}{loadChartConfigs}}(\textcolor{stringliteral}{"{}charts\_config.json"{}});}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ \mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}\ <\ views.size();\ ++\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}})\ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ QLineSeries\ *series\ =\ \textcolor{keyword}{new}\ QLineSeries();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ QChart\ *chart\ =\ \textcolor{keyword}{new}\ QChart();}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ chart-\/>addSeries(series);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ QString\ sensorName\ =\ QString(\textcolor{stringliteral}{"{}Sensor\ \%1"{}}).arg(i\ +\ 1);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ yRange\ =\ 100.0;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ QString\ unitY\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ QColor\ color;}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (i\ <\ chartConfigs.size())\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ sensorName\ =\ chartConfigs[\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}].sensorName;}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ yRange\ =\ chartConfigs[\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}].yRange;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ unitY\ =\ chartConfigs[\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}].unitY;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ color\ =\ chartConfigs[\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}].color;}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ QValueAxis\ *axisX\ =\ \textcolor{keyword}{new}\ QValueAxis();}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ axisX-\/>setRange(0,\ 20);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ QValueAxis\ *axisY\ =\ \textcolor{keyword}{new}\ QValueAxis();}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ axisY-\/>setRange(0,\ yRange);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ axisY-\/>setTitleText(unitY);}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ chart-\/>addAxis(axisX,\ Qt::AlignBottom);}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ chart-\/>addAxis(axisY,\ Qt::AlignLeft);}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ series-\/>attachAxis(axisX);}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ series-\/>attachAxis(axisY);}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ chart-\/>setTitle(sensorName);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ views[\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}]-\/>setChart(chart);}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ views[\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}]-\/>setRenderHint(QPainter::Antialiasing);}
+\DoxyCodeLine{00151\ }
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ QPen\ pen(color);}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ pen.setWidth(2);}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ series-\/>setPen(pen);}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ axisX-\/>setLabelsColor(\textcolor{stringliteral}{"{}\#000000"{}});}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ axisY-\/>setLabelsColor(\textcolor{stringliteral}{"{}\#000000"{}});}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ chart-\/>setTitleBrush(Qt::black);}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ chart-\/>legend()-\/>hide();}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}{seriesList}}.append(series);}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3}\label{classChartWindow_aefc5d504858c6f891f507fd9d9cdf6a3} 
 \index{ChartWindow@{ChartWindow}!retranslateUi@{retranslateUi}}
 \index{retranslateUi@{retranslateUi}!ChartWindow@{ChartWindow}}
 \doxysubsubsection{\texorpdfstring{retranslateUi()}{retranslateUi()}}
@@ -113,7 +202,18 @@ Tworzy i konfiguruje wykresy dla każdego sensora. Wczytuje parametry wykresów 
 
 Umożliwia przetłumaczenie interfejsu wykresów po zmianie języka aplikacji. 
 
-Tłumaczy interfejs użytkownika wykresów na nowy język. Funkcja wywoływana przy zmianie języka. \Hypertarget{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9}\label{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9} 
+Tłumaczy interfejs użytkownika wykresów na nowy język. Funkcja wywoływana przy zmianie języka. 
+
+Definition at line \mbox{\hyperlink{chartwindow_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{chartwindow_8cpp_source}{chartwindow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}{ui}}-\/>retranslateUi(\textcolor{keyword}{this});}
+\DoxyCodeLine{00041\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9}\label{classChartWindow_a067e0b6ea233d3aeb0b00e5f23168df9} 
 \index{ChartWindow@{ChartWindow}!updateFromPacket@{updateFromPacket}}
 \index{updateFromPacket@{updateFromPacket}!ChartWindow@{ChartWindow}}
 \doxysubsubsection{\texorpdfstring{updateFromPacket}{updateFromPacket}}
@@ -134,6 +234,42 @@ Aktualizuje dane wykresów na podstawie nowego pakietu danych.
 \end{DoxyParams}
 
 
+Definition at line \mbox{\hyperlink{chartwindow_8cpp_source_l00168}{168}} of file \mbox{\hyperlink{chartwindow_8cpp_source}{chartwindow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169\ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ qMin(packet.\mbox{\hyperlink{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}{sensors}}.size(),\ \mbox{\hyperlink{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}{seriesList}}.size());}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ \mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}\ <\ count;\ ++\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}})\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ QLineSeries\ *series\ =\ \mbox{\hyperlink{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}{seriesList}}[\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}];}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ QVector<QPointF>\ points\ =\ series-\/>pointsVector();}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (points.size()\ >=\ \mbox{\hyperlink{chartwindow_8cpp_add28519412f37ec4551e30e2aa3cc130}{NUM\_OF\_SAMPLES}})}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ points.removeFirst();}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ qreal\ x\ =\ points.isEmpty()\ ?\ 0\ :\ points.last().x()\ +\ 1;}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ qreal\ y\ =\ packet.\mbox{\hyperlink{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}{sensors}}[\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}];}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ points.append(QPointF(x,\ y));}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ series-\/>replace(points);}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ QChart\ *chart\ =\ series-\/>chart();}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (chart\ \&\&\ chart-\/>axisX())\ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ qreal\ xMax\ =\ points.last().x();}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ qreal\ xMin\ =\ xMax\ -\/\ \mbox{\hyperlink{chartwindow_8cpp_add28519412f37ec4551e30e2aa3cc130}{NUM\_OF\_SAMPLES}};}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (xMin\ <\ 0)\ xMin\ =\ 0;}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ QValueAxis\ *axisX\ =\ qobject\_cast<QValueAxis\ *>(chart-\/>axisX());}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (axisX)}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ axisX-\/>setRange(xMin,\ xMax);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00195\ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \}}
+
+\end{DoxyCode}
+
+
 \doxysubsection{Member Data Documentation}
 \Hypertarget{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8}\label{classChartWindow_a95b3d6ad97ee57d180790ab60f1a35c8} 
 \index{ChartWindow@{ChartWindow}!seriesList@{seriesList}}
@@ -145,6 +281,10 @@ Aktualizuje dane wykresów na podstawie nowego pakietu danych.
 
 Lista serii danych (jedna seria na jeden wykres/sensor) 
 
+
+
+Definition at line \mbox{\hyperlink{chartwindow_8h_source_l00058}{58}} of file \mbox{\hyperlink{chartwindow_8h_source}{chartwindow.\+h}}.
+
 \Hypertarget{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9}\label{classChartWindow_aa5b7848a04ff1432fe842398ab54dae9} 
 \index{ChartWindow@{ChartWindow}!ui@{ui}}
 \index{ui@{ui}!ChartWindow@{ChartWindow}}
@@ -154,6 +294,10 @@ Lista serii danych (jedna seria na jeden wykres/sensor)
 
 
 Wskaźnik na interfejs użytkownika (wygenerowany przez Qt Designer) 
+
+
+
+Definition at line \mbox{\hyperlink{chartwindow_8h_source_l00057}{57}} of file \mbox{\hyperlink{chartwindow_8h_source}{chartwindow.\+h}}.
 
 
 

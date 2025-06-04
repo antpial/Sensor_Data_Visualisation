@@ -11,8 +11,7 @@ Klasa odpowiedzialna za odbieranie danych z portu szeregowego oraz ich przetwarz
 
 
 
-Inheritance diagram for Serial\+Manager\+:
-\nopagebreak
+Inheritance diagram for Serial\+Manager\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for Serial\+Manager\+:
 \end{figure}
 
 
-Collaboration diagram for Serial\+Manager\+:
-\nopagebreak
+Collaboration diagram for Serial\+Manager\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -65,6 +63,10 @@ Klasa odpowiedzialna za odbieranie danych z portu szeregowego oraz ich przetwarz
 
 \doxylink{classSerialManager}{Serial\+Manager} nasłuchuje portu szeregowego, odczytuje linie danych, parsuje je do struktury {\ttfamily \doxylink{structParsedPacket}{Parsed\+Packet}} i emituje sygnały w przypadku odebrania danych lub błędu. 
 
+Definition at line \mbox{\hyperlink{serialmanager_8h_source_l00021}{21}} of file \mbox{\hyperlink{serialmanager_8h_source}{serialmanager.\+h}}.
+
+
+
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classSerialManager_aa2d090c2f7dc822a3fb1f3ac432abd0d}\label{classSerialManager_aa2d090c2f7dc822a3fb1f3ac432abd0d} 
 \index{SerialManager@{SerialManager}!SerialManager@{SerialManager}}
@@ -83,6 +85,18 @@ Konstruktor klasy \doxylink{classSerialManager}{Serial\+Manager}. Inicjalizuje o
 {\em parent} & Obiekt nadrzędny (domyślnie nullptr). \\
 \hline
 \end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{serialmanager_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{serialmanager_8cpp_source}{serialmanager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \ \ \ \ :\ QObject(parent),\ \mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}(\textcolor{keyword}{new}\ QSerialPort(\textcolor{keyword}{this}))}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ connect(\mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}},\ \&QSerialPort::readyRead,\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{classSerialManager_ab9f933dca0b5d7a302acc702ef395706}{SerialManager::readData}});}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
 
 
 \doxysubsection{Member Function Documentation}
@@ -143,6 +157,57 @@ Przykład\+:
 \begin{DoxyReturn}{Returns}
 Parsowana struktura danych \doxylink{structParsedPacket}{Parsed\+Packet}. 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{serialmanager_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{serialmanager_8cpp_source}{serialmanager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ result;}
+\DoxyCodeLine{00068\ \ \ \ \ result.\mbox{\hyperlink{structParsedPacket_a8b780ebe2dea38bfbf4daa3f17a50493}{hasPosition}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ QString\ cleanLine\ =\ line.trimmed();}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ logIndex\ =\ cleanLine.indexOf(\textcolor{charliteral}{'!'});}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ QString\ dataPart\ =\ (logIndex\ >=\ 0)\ ?\ cleanLine.left(logIndex)\ :\ cleanLine;}
+\DoxyCodeLine{00074\ \ \ \ \ QString\ logPart\ =\ (logIndex\ >=\ 0)\ ?\ cleanLine.mid(logIndex\ +\ 1)\ :\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ QStringList\ items\ =\ dataPart.split(\textcolor{charliteral}{';'},\ Qt::SkipEmptyParts);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{if}\ (items.size()\ >=\ 2)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ latOk\ =\ \textcolor{keyword}{false},\ lonOk\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}{lat}}\ =\ items[0].toDouble(\&latOk);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{namespacesender_a73899320007cf34f0d3affedc769da46}{lon}}\ =\ items[1].toDouble(\&lonOk);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (latOk\ \&\&\ lonOk)\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structParsedPacket_ab39507c102d3c4cadf87af36b9b34203}{latitude}}\ =\ \mbox{\hyperlink{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}{lat}};}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structParsedPacket_a3094b3a650084273b23890a521ce4783}{longitude}}\ =\ \mbox{\hyperlink{namespacesender_a73899320007cf34f0d3affedc769da46}{lon}};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ \mbox{\hyperlink{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}{lat}}\ <<\ \textcolor{stringliteral}{"{}\ ,\ "{}}\ <<\ \mbox{\hyperlink{namespacesender_a73899320007cf34f0d3affedc769da46}{lon}};}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structParsedPacket_a8b780ebe2dea38bfbf4daa3f17a50493}{hasPosition}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pozostałe\ elementy\ to\ sensory}}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 2;\ \mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}\ <\ items.size();\ ++\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}})\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ ok;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{namespacesender_a3d12c2434abf97cd2e17b81d80816347}{val}}\ =\ items[\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{i}}].toDouble(\&ok);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)\ result.\mbox{\hyperlink{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}{sensors}}.append(val);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Jeśli\ współrzędne\ niepoprawne,\ potraktuj\ wszystko\ jako\ sensory}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ QString\ \&item\ :\ items)\ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ ok;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{namespacesender_a3d12c2434abf97cd2e17b81d80816347}{val}}\ =\ item.toDouble(\&ok);}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)\ result.\mbox{\hyperlink{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}{sensors}}.append(val);}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00104\ \ \ \ \ \}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \ \ \ \ result.\mbox{\hyperlink{structParsedPacket_a21c17f7e156918b39f9b4f52edaa34fc}{log}}\ =\ logPart;}
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{00108\ \}}
+
+\end{DoxyCode}
 \Hypertarget{classSerialManager_ab9f933dca0b5d7a302acc702ef395706}\label{classSerialManager_ab9f933dca0b5d7a302acc702ef395706} 
 \index{SerialManager@{SerialManager}!readData@{readData}}
 \index{readData@{readData}!SerialManager@{SerialManager}}
@@ -155,7 +220,23 @@ Slot do obsługi danych przychodzących z portu szeregowego.
 
 Odczytuje dostępne linie z portu szeregowego i przekazuje je do parsera.
 
-Funkcja wywoływana automatycznie po odebraniu danych (ready\+Read). \Hypertarget{classSerialManager_acf8595e4fcee2d061daea8e63517c89f}\label{classSerialManager_acf8595e4fcee2d061daea8e63517c89f} 
+Funkcja wywoływana automatycznie po odebraniu danych (ready\+Read). 
+
+Definition at line \mbox{\hyperlink{serialmanager_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{serialmanager_8cpp_source}{serialmanager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}-\/>canReadLine())\ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ QByteArray\ data\ =\ \mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}-\/>readLine();}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ QString\ line\ =\ QString::fromUtf8(data).trimmed();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ packet\ =\ \mbox{\hyperlink{classSerialManager_a43f9af28ef02b9e1a4eed48a0a1d7e7e}{parseSerialLine}}(line);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{classSerialManager_a9a87300a5ea23e50817b47545534e55f}{newPacketReceived}}(packet);}
+\DoxyCodeLine{00046\ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classSerialManager_acf8595e4fcee2d061daea8e63517c89f}\label{classSerialManager_acf8595e4fcee2d061daea8e63517c89f} 
 \index{SerialManager@{SerialManager}!serialError@{serialError}}
 \index{serialError@{serialError}!SerialManager@{SerialManager}}
 \doxysubsubsection{\texorpdfstring{serialError}{serialError}}
@@ -191,6 +272,22 @@ Rozpoczyna nasłuch na wskazanym porcie szeregowym.
 \end{DoxyParams}
 
 
+Definition at line \mbox{\hyperlink{serialmanager_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{serialmanager_8cpp_source}{serialmanager.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}-\/>setPortName(portName);}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}-\/>setBaudRate(QSerialPort::Baud9600);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}-\/>open(QIODevice::ReadOnly))\ \{}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{classSerialManager_acf8595e4fcee2d061daea8e63517c89f}{serialError}}(\textcolor{stringliteral}{"{}!Nie\ można\ otworzyć\ portu:\ "{}}\ +\ portName);}
+\DoxyCodeLine{00031\ \ \ \ \ \}}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+
+
 \doxysubsection{Member Data Documentation}
 \Hypertarget{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}\label{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d} 
 \index{SerialManager@{SerialManager}!serial@{serial}}
@@ -201,6 +298,10 @@ Rozpoczyna nasłuch na wskazanym porcie szeregowym.
 
 
 Obiekt do obsługi komunikacji szeregowej (QSerial\+Port). 
+
+
+
+Definition at line \mbox{\hyperlink{serialmanager_8h_source_l00065}{65}} of file \mbox{\hyperlink{serialmanager_8h_source}{serialmanager.\+h}}.
 
 
 

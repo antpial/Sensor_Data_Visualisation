@@ -1,0 +1,7 @@
+<map id="chartwindow.h" name="chartwindow.h">
+<area shape="rect" id="Node000001" title="Deklaracja klasy ChartWindow odpowiedzialnej za wyświetlanie wykresów sensorów." alt="" coords="90,5,206,31"/>
+<area shape="rect" id="Node000002" href="$chartwindow_8cpp.html" title="Implementacja klasy ChartWindow do wizualizacji danych sensorów za pomocą wykresów." alt="" coords="5,79,136,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="127,42,85,80,82,76,124,38"/>
+<area shape="rect" id="Node000003" href="$mainwindow_8cpp.html" title="Implementacja klasy MainWindow &#45; głównego okna aplikacji naziemnej Project FOKA." alt="" coords="160,79,291,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="172,38,214,76,211,80,169,42"/>
+</map>

@@ -1,38 +1,38 @@
 \doxysection{serialmanager.\+h}
 \hypertarget{serialmanager_8h_source}{}\label{serialmanager_8h_source}\mbox{\hyperlink{serialmanager_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ }
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ SERIALMANAGER\_H}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ SERIALMANAGER\_H}}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QObject>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QSerialPort>}}
-\DoxyCodeLine{00011\ }
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parsedpacket_8h}{parsedpacket.h}}"{}}}
-\DoxyCodeLine{00013\ }
-\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSerialManager}{SerialManager}}\ :\ \textcolor{keyword}{public}\ QObject}
-\DoxyCodeLine{00022\ \{}
-\DoxyCodeLine{00023\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSerialManager}{SerialManager}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00031\ }
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerialManager_a97cb7430b2decec7805fde39590ed7fa}{start}}(\textcolor{keyword}{const}\ QString\ \&portName);}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ signals:}
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerialManager_a9a87300a5ea23e50817b47545534e55f}{newPacketReceived}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ \&packet);}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerialManager_acf8595e4fcee2d061daea8e63517c89f}{serialError}}(\textcolor{keyword}{const}\ QString\ \&error);}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{keyword}{private}\ slots:}
-\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerialManager_ab9f933dca0b5d7a302acc702ef395706}{readData}}();}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00063\ \ \ \ \ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ \mbox{\hyperlink{classSerialManager_a43f9af28ef02b9e1a4eed48a0a1d7e7e}{parseSerialLine}}(\textcolor{keyword}{const}\ QString\ \&line);}
-\DoxyCodeLine{00064\ }
-\DoxyCodeLine{00065\ \ \ \ \ QSerialPort\ *\mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}};\ }
-\DoxyCodeLine{00066\ \};}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SERIALMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ SERIALMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ SERIALMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <QSerialPort>}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{parsedpacket_8h}{parsedpacket.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00021}\mbox{\hyperlink{classSerialManager}{00021}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSerialManager}{SerialManager}}\ :\ \textcolor{keyword}{public}\ QObject}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00023}00023\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00025}00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classSerialManager}{SerialManager}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00036}00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerialManager_a97cb7430b2decec7805fde39590ed7fa}{start}}(\textcolor{keyword}{const}\ QString\ \&portName);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00038}00038\ signals:}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00043}\mbox{\hyperlink{classSerialManager_a9a87300a5ea23e50817b47545534e55f}{00043}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerialManager_a9a87300a5ea23e50817b47545534e55f}{newPacketReceived}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ \&packet);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00049}\mbox{\hyperlink{classSerialManager_acf8595e4fcee2d061daea8e63517c89f}{00049}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerialManager_acf8595e4fcee2d061daea8e63517c89f}{serialError}}(\textcolor{keyword}{const}\ QString\ \&error);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00051}00051\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerialManager_ab9f933dca0b5d7a302acc702ef395706}{readData}}();}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00057}00057\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00063}00063\ \ \ \ \ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ \mbox{\hyperlink{classSerialManager_a43f9af28ef02b9e1a4eed48a0a1d7e7e}{parseSerialLine}}(\textcolor{keyword}{const}\ QString\ \&line);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00065}\mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{00065}}\ \ \ \ \ QSerialPort\ *\mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}};\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00066}00066\ \};}
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8h_source_l00068}00068\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SERIALMANAGER\_H}}
 
 \end{DoxyCode}

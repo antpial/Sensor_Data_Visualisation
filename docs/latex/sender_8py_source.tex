@@ -1,0 +1,94 @@
+\doxysection{sender.\+py}
+\hypertarget{sender_8py_source}{}\label{sender_8py_source}\mbox{\hyperlink{sender_8py}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00001}\mbox{\hyperlink{namespacesender}{00001}}\ \textcolor{keyword}{import}\ serial}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00002}00002\ \textcolor{keyword}{import}\ time}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00003}00003\ \textcolor{keyword}{import}\ random}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00004}00004\ \textcolor{keyword}{import}\ math}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00006}00006\ \textcolor{comment}{\#\ Ustaw\ właściwy\ port\ socat\ (drugi\ koniec\ wirtualnego\ portu)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00007}\mbox{\hyperlink{namespacesender_a9f37da13fe4520d69f6faeb05d26c78a}{00007}}\ PORT\ =\ \textcolor{stringliteral}{'/dev/pts/1'}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00008}\mbox{\hyperlink{namespacesender_ae49ce1bd4e9992753ee9b4eb391bd381}{00008}}\ BAUD\_RATE\ =\ 9600}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00010}00010\ \textcolor{comment}{\#\ Początkowe\ współrzędne\ GPS\ (podaj\ swoje\ wartości)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00011}\mbox{\hyperlink{namespacesender_a660ff5f39d1a59b1b3d18a36edc18019}{00011}}\ start\_lat\ =\ 51.106054\ \ \textcolor{comment}{\#\ przykładowa\ szerokość\ geograficzna}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00012}\mbox{\hyperlink{namespacesender_abc13dc3fb9c99d9925f270acaad69dbc}{00012}}\ start\_lon\ =\ 17.060251\ \ \textcolor{comment}{\#\ przykładowa\ długość\ geograficzna}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00014}00014\ \textcolor{comment}{\#\ Zakresy\ wartości\ z\ configa\ (pozostałe\ sensory)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00015}\mbox{\hyperlink{namespacesender_a2a79b48310f28dddc55624fe44dc90ab}{00015}}\ SENSOR\_RANGES\ =\ [}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00016}00016\ \ \ \ \ (0,\ 30),\ \ \ \ \ \textcolor{comment}{\#\ Thermometer\ (°C)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00017}00017\ \ \ \ \ (0,\ 14),\ \ \ \ \ \textcolor{comment}{\#\ Ph\ sensor\ (V)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00018}00018\ \ \ \ \ (0,\ 100),\ \ \ \ \textcolor{comment}{\#\ Turbidity\ sensor\ (TSS)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00019}00019\ \ \ \ \ (0,\ 100),\ \ \ \ \textcolor{comment}{\#\ Quality\ sensor\ (ppm)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00020}00020\ \ \ \ \ (0,\ 200),\ \ \ \ \textcolor{comment}{\#\ Depth\ sensor\ (cm)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00021}00021\ \ \ \ \ (18,\ 26),\ \ \ \ \textcolor{comment}{\#\ Battery\ Voltage\ (V)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00022}00022\ \ \ \ \ (0,\ 100),\ \ \ \ \textcolor{comment}{\#\ Current\ (A)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00023}00023\ \ \ \ \ (0,\ 20)\ \ \ \ \ \ \textcolor{comment}{\#\ Boat\ Velocity\ (km/h)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00024}00024\ ]}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00026}00026\ \textcolor{comment}{\#\ Parametry\ ruchu}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00027}\mbox{\hyperlink{namespacesender_a5325b9900ae4e312e1c897f126ba0814}{00027}}\ radius\ =\ 10\ \ \textcolor{comment}{\#\ promień\ okręgu\ w\ metrach}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00028}\mbox{\hyperlink{namespacesender_ae14be42f80757e2ac7fbba7c1da9dd50}{00028}}\ angular\_speed\_deg\_per\_sec\ =\ 10\ \ \textcolor{comment}{\#\ prędkość\ kątowa\ w\ stopniach\ na\ sekundę}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00030}\mbox{\hyperlink{namespacesender_ae1cc33e852a1a7d42321e84cbe266ec4}{00030}}\ angle\ =\ 0\ \ \textcolor{comment}{\#\ początkowy\ kąt}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00032}00032\ \textcolor{comment}{\#\ Stałe\ pomocnicze}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00033}\mbox{\hyperlink{namespacesender_ae062f7af50dedac7843a9f1f44f47727}{00033}}\ EARTH\_RADIUS\ =\ 6371000\ \ \textcolor{comment}{\#\ promień\ Ziemi\ w\ metrach}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00035}\mbox{\hyperlink{namespacesender_a1ae8f95a1098e31638cdc47980f0d1d4}{00035}}\ ser\ =\ serial.Serial(PORT,\ BAUD\_RATE)}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00036}\mbox{\hyperlink{namespacesender_a167ecc363ec220fca8586feb9a0c96b1}{00036}}\ i\ =\ 0}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00038}00038\ print(f\textcolor{stringliteral}{"{}Wysyłanie\ danych\ na\ port\ \{PORT\}..."{}})}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00040}\mbox{\hyperlink{namespacesender_a4f9705a1286d85955ffd896aa6261edb}{00040}}\ \textcolor{keyword}{def\ }\mbox{\hyperlink{namespacesender_a4f9705a1286d85955ffd896aa6261edb}{generate\_circular\_coordinates}}():}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00041}00041\ \ \ \ \ \textcolor{keyword}{global}\ angle}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00043}00043\ \ \ \ \ \textcolor{comment}{\#\ Oblicz\ przesunięcie\ w\ metrach\ względem\ środka}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00044}00044\ \ \ \ \ dx\ =\ radius\ *\ math.cos(math.radians(angle))}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00045}00045\ \ \ \ \ dy\ =\ radius\ *\ math.sin(math.radians(angle))}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00047}00047\ \ \ \ \ \textcolor{comment}{\#\ Zamiana\ metry\ →\ stopnie\ geograficzne}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00048}00048\ \ \ \ \ delta\_lat\ =\ dy\ /\ EARTH\_RADIUS\ *\ (180\ /\ math.pi)}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00049}00049\ \ \ \ \ delta\_lon\ =\ dx\ /\ (EARTH\_RADIUS\ *\ math.cos(math.radians(start\_lat)))\ *\ (180\ /\ math.pi)}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00051}00051\ \ \ \ \ lat\ =\ start\_lat\ +\ delta\_lat}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00052}00052\ \ \ \ \ lon\ =\ start\_lon\ +\ delta\_lon}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00054}00054\ \ \ \ \ \textcolor{comment}{\#\ Zwiększ\ kąt\ do\ kolejnego\ kroku\ (pełne\ koło:\ 360\ stopni)}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00055}00055\ \ \ \ \ angle\ =\ (angle\ +\ angular\_speed\_deg\_per\_sec)\ \%\ 360}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{return}\ round(lat,\ 6),\ round(lon,\ 6)}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00059}00059\ \textcolor{keywordflow}{try}:}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{while}\ \textcolor{keyword}{True}:}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Generowanie\ współrzędnych\ spiralnych}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00062}\mbox{\hyperlink{namespacesender_aa3b05347cd8bf4181ad39be59ae51c62}{00062}}\ \ \ \ \ \ \ \ \ lat,\ lon\ =\ \mbox{\hyperlink{namespacesender_a4f9705a1286d85955ffd896aa6261edb}{generate\_circular\_coordinates}}()}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00063}\mbox{\hyperlink{namespacesender_a8139e479d3f16bc95ef5d253300da965}{00063}}\ \ \ \ \ \ \ \ \ gps\_coords\ =\ f\textcolor{stringliteral}{"{}\{lat\};\{lon\}"{}}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{\#\ Generowanie\ pozostałych\ wartości\ sensorycznych}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00066}\mbox{\hyperlink{namespacesender_a7b6778339682ab9a9b3bd1bd4d397ef3}{00066}}\ \ \ \ \ \ \ \ \ sensor\_values\ =\ [gps\_coords]}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (low,\ high)\ \textcolor{keywordflow}{in}\ SENSOR\_RANGES:}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00068}\mbox{\hyperlink{namespacesender_a3d12c2434abf97cd2e17b81d80816347}{00068}}\ \ \ \ \ \ \ \ \ \ \ \ \ val\ =\ round(random.uniform(low,\ high),\ 2)}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ sensor\_values.append(str(val))}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00071}\mbox{\hyperlink{namespacesender_ade590ab6f9253e036d94151cb25acee7}{00071}}\ \ \ \ \ \ \ \ \ message\ =\ \textcolor{stringliteral}{"{};"{}}\ +\ \textcolor{stringliteral}{"{};"{}}.join(sensor\_values)}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ i\ \%\ 10\ ==\ 0:}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ message\ +=\ f\textcolor{stringliteral}{"{}!Log:\ Pakiet\ diagnostyczny\ \#\{i\}"{}}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00076}00076\ \ \ \ \ \ \ \ \ message\ +=\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00077}00077\ \ \ \ \ \ \ \ \ ser.write(message.encode(\textcolor{stringliteral}{'utf-\/8'}))}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00078}00078\ \ \ \ \ \ \ \ \ print(f\textcolor{stringliteral}{"{}Sent:\ \{message.strip()\}"{}})}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00080}00080\ \ \ \ \ \ \ \ \ i\ +=\ 1}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ i\ ==\ 100:}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ print(\textcolor{stringliteral}{"{}Wysłano\ 100\ wiadomości,\ resetuję\ licznik."{}})}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ i\ =\ 0}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00085}00085\ \ \ \ \ \ \ \ \ time.sleep(1)}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00087}00087\ \textcolor{keywordflow}{except}\ KeyboardInterrupt:}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00088}00088\ \ \ \ \ ser.close()}
+\DoxyCodeLine{\Hypertarget{sender_8py_source_l00089}00089\ \ \ \ \ print(\textcolor{stringliteral}{"{}Zamknięto\ port."{}})}
+
+\end{DoxyCode}

@@ -1,0 +1,28 @@
+var classMainWindow =
+[
+    [ "MainWindow", "classMainWindow.html#a996c5a2b6f77944776856f08ec30858d", null ],
+    [ "~MainWindow", "classMainWindow.html#ae98d00a93bc118200eeef9f9bba1dba7", null ],
+    [ "handleNewPacket", "classMainWindow.html#a2d8c660a89cbff3f408e33110c1c2c61", null ],
+    [ "handleSerialError", "classMainWindow.html#a064b13fe8d8c2c4471dec0c44a4b0a6b", null ],
+    [ "loadLanguage", "classMainWindow.html#afe4a897bd163a15ecd30f6a262b4a135", null ],
+    [ "loadSensorConfig", "classMainWindow.html#ac8fa0d9c2019ef65f4a71feb2d1e8ea4", null ],
+    [ "resizeEvent", "classMainWindow.html#aad75236c74a5c340c3e18749a9b5eb4f", null ],
+    [ "setupMap", "classMainWindow.html#a08670ff7ecdbe1b065ff84860525b5bc", null ],
+    [ "updateLanguageButtonPositions", "classMainWindow.html#afc023dc10c45fd50cd731c41952fc6fd", null ],
+    [ "updatePosition", "classMainWindow.html#af1363200af71ba9cd608533794a5fcbf", null ],
+    [ "btnEN", "classMainWindow.html#aeb1de0d49e14bad708dccf9b19fe5f3f", null ],
+    [ "btnPL", "classMainWindow.html#ab1d6a75930e70103d1d08289b51f0937", null ],
+    [ "chartWindow", "classMainWindow.html#ae7b5edf93b98f6a1f0db64564a69cc96", null ],
+    [ "hasPendingPosition", "classMainWindow.html#a4aa7e99e292a9ef95b65f61e46e7870e", null ],
+    [ "langButton", "classMainWindow.html#a92d08c165f352a5187ca16c3f4517b9d", null ],
+    [ "lastLat", "classMainWindow.html#abbd49b4459b1d9d64dbf57d14c820b16", null ],
+    [ "lastLon", "classMainWindow.html#a44a996ad0ebb5c3242a90d3bc51180fe", null ],
+    [ "logTimer", "classMainWindow.html#ac6acedc605e8700660ab349c08b37eac", null ],
+    [ "mapReady", "classMainWindow.html#afd14383d1d27c426e0cf1df5bf20cb16", null ],
+    [ "sensorConfig", "classMainWindow.html#a1108c2b0f58b54e7e69f6e3929ca4eec", null ],
+    [ "sensorLabels", "classMainWindow.html#aa4995b5b66dfd31153708d6fa242ea27", null ],
+    [ "sensorTiles", "classMainWindow.html#a2ead0d7421c8b42b82133d4fe6747089", null ],
+    [ "serialManager", "classMainWindow.html#a1e45c6a8193b3c32ac122bf615748127", null ],
+    [ "translator", "classMainWindow.html#a8e829b3590ccdeeada42625415afc6f3", null ],
+    [ "ui", "classMainWindow.html#a35466a70ed47252a0191168126a352a5", null ]
+];

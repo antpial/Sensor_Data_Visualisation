@@ -1,0 +1,19 @@
+<map id="parsedpacket.h" name="parsedpacket.h">
+<area shape="rect" id="Node000001" title="Deklaracja struktury ParsedPacket służącej do przechowywania danych odebranych z portu szeregowego." alt="" coords="106,5,227,31"/>
+<area shape="rect" id="Node000002" href="$chartwindow_8cpp.html" title="Implementacja klasy ChartWindow do wizualizacji danych sensorów za pomocą wykresów." alt="" coords="5,152,136,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,41,117,58,98,80,82,118,75,152,69,151,77,116,94,77,113,55,135,36"/>
+<area shape="rect" id="Node000003" href="$chartwindow_8h.html" title="Deklaracja klasy ChartWindow odpowiedzialnej za wyświetlanie wykresów sensorów." alt="" coords="109,79,225,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="169,44,169,79,164,79,164,44"/>
+<area shape="rect" id="Node000005" href="$serialmanager_8h.html" title="Deklaracja klasy SerialManager odpowiedzialnej za komunikację szeregową i parsowanie danych." alt="" coords="249,79,375,104"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="203,34,289,76,287,81,201,39"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="142,114,88,154,85,150,139,110"/>
+<area shape="rect" id="Node000004" href="$mainwindow_8cpp.html" title="Implementacja klasy MainWindow &#45; głównego okna aplikacji naziemnej Project FOKA." alt="" coords="108,225,239,251"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="171,118,175,225,170,225,165,118"/>
+<area shape="rect" id="Node000006" href="$mainwindow_8h.html" title="Deklaracja klasy MainWindow &#45; głównego interfejsu użytkownika aplikacji Project FOKA." alt="" coords="229,152,345,177"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="306,118,293,153,288,151,301,116"/>
+<area shape="rect" id="Node000008" href="$serialmanager_8cpp.html" title="Implementacja klasy SerialManager obsługującej komunikację szeregową oraz parsowanie danych." alt="" coords="369,152,511,177"/>
+<area shape="poly" id="edge9_Node000005_Node000008" title=" " alt="" coords="346,108,420,149,418,154,343,113"/>
+<area shape="poly" id="edge8_Node000006_Node000004" title=" " alt="" coords="258,187,193,227,190,223,255,183"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html" title="Punkt wejścia do aplikacji Project FOKA." alt="" coords="263,225,345,251"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="295,190,304,225,299,226,290,191"/>
+</map>

@@ -18,8 +18,7 @@ Implementacja klasy \doxylink{classChartWindow}{Chart\+Window} do wizualizacji d
 {\ttfamily \#include $<$QRandom\+Generator$>$}\newline
 {\ttfamily \#include $<$QDebug$>$}\newline
 {\ttfamily \#include "{}parsedpacket.\+h"{}}\newline
-Include dependency graph for chartwindow.\+cpp\+:
-\nopagebreak
+Include dependency graph for chartwindow.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -48,6 +47,10 @@ Implementacja klasy \doxylink{classChartWindow}{Chart\+Window} do wizualizacji d
 
 
 
+Definition in file \mbox{\hyperlink{chartwindow_8cpp_source}{chartwindow.\+cpp}}.
+
+
+
 \doxysubsection{Macro Definition Documentation}
 \Hypertarget{chartwindow_8cpp_add28519412f37ec4551e30e2aa3cc130}\label{chartwindow_8cpp_add28519412f37ec4551e30e2aa3cc130} 
 \index{chartwindow.cpp@{chartwindow.cpp}!NUM\_OF\_SAMPLES@{NUM\_OF\_SAMPLES}}
@@ -58,6 +61,10 @@ Implementacja klasy \doxylink{classChartWindow}{Chart\+Window} do wizualizacji d
 
 
 Liczba próbek przechowywanych na wykresie. 
+
+
+
+Definition at line \mbox{\hyperlink{chartwindow_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{chartwindow_8cpp_source}{chartwindow.\+cpp}}.
 
 
 
@@ -80,3 +87,45 @@ Wczytuje konfigurację wykresów z pliku JSON.
 \begin{DoxyReturn}{Returns}
 Wektor konfiguracji wykresów. 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{chartwindow_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{chartwindow_8cpp_source}{chartwindow.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \{}
+\DoxyCodeLine{00050\ \ \ \ \ QVector<ChartConfig>\ configs;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ QFile\ file(filePath);}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{if}\ (!file.open(QIODevice::ReadOnly))\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ qWarning()\ <<\ \textcolor{stringliteral}{"{}Nie\ można\ otworzyć\ pliku:"{}}\ <<\ filePath;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ configs;}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ QByteArray\ jsonData\ =\ file.readAll();}
+\DoxyCodeLine{00059\ \ \ \ \ file.close();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ QJsonDocument\ doc\ =\ QJsonDocument::fromJson(jsonData);}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{if}\ (!doc.isObject())\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ qWarning()\ <<\ \textcolor{stringliteral}{"{}Nieprawidłowy\ format\ JSON"{}};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ configs;}
+\DoxyCodeLine{00065\ \ \ \ \ \}}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ QJsonArray\ chartsArray\ =\ doc.object()[\textcolor{stringliteral}{"{}charts"{}}].toArray();}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ QJsonValue\ \&value\ :\ chartsArray)\ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ QJsonObject\ obj\ =\ value.toObject();}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structChartConfig}{ChartConfig}}\ config;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ config.\mbox{\hyperlink{structChartConfig_ad39334b0e85542174c7602e036edc11b}{sensorName}}\ =\ obj[\textcolor{stringliteral}{"{}sensor"{}}].toString();}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ config.\mbox{\hyperlink{structChartConfig_a4d3727dd27e5f5bbd216d29383d0d42e}{yRange}}\ =\ obj[\textcolor{stringliteral}{"{}y\_range"{}}].toDouble();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ config.\mbox{\hyperlink{structChartConfig_aacf4fa7d81792040525b3ab7e31f17b5}{unitY}}\ =\ obj[\textcolor{stringliteral}{"{}unit\_y"{}}].toString();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ QString\ colorStr\ =\ obj[\textcolor{stringliteral}{"{}color"{}}].toString(\textcolor{stringliteral}{"{}\#000000"{}});\ \textcolor{comment}{//\ domyślnie\ czarny}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ config.\mbox{\hyperlink{structChartConfig_a59f7662dc6929f9a301f8e84f3c996dc}{color}}\ =\ QColor(colorStr);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ configs.append(config);}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ configs;}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}

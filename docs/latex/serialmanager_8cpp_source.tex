@@ -1,0 +1,79 @@
+\doxysection{serialmanager.\+cpp}
+\hypertarget{serialmanager_8cpp_source}{}\label{serialmanager_8cpp_source}\mbox{\hyperlink{serialmanager_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{serialmanager_8h}{serialmanager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <QDebug>}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00014}\mbox{\hyperlink{classSerialManager_aa2d090c2f7dc822a3fb1f3ac432abd0d}{00014}}\ \mbox{\hyperlink{classSerialManager_aa2d090c2f7dc822a3fb1f3ac432abd0d}{SerialManager::SerialManager}}(QObject\ *parent)}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00015}00015\ \ \ \ \ :\ QObject(parent),\ serial(new\ QSerialPort(this))}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00017}00017\ \ \ \ \ connect(\mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}},\ \&QSerialPort::readyRead,\ \textcolor{keyword}{this},\ \&\mbox{\hyperlink{classSerialManager_ab9f933dca0b5d7a302acc702ef395706}{SerialManager::readData}});}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00024}\mbox{\hyperlink{classSerialManager_a97cb7430b2decec7805fde39590ed7fa}{00024}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerialManager_a97cb7430b2decec7805fde39590ed7fa}{SerialManager::start}}(\textcolor{keyword}{const}\ QString\ \&portName)}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00025}00025\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}-\/>setPortName(portName);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}-\/>setBaudRate(QSerialPort::Baud9600);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}-\/>open(QIODevice::ReadOnly))\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{classSerialManager_acf8595e4fcee2d061daea8e63517c89f}{serialError}}(\textcolor{stringliteral}{"{}!Nie\ można\ otworzyć\ portu:\ "{}}\ +\ portName);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00039}\mbox{\hyperlink{classSerialManager_ab9f933dca0b5d7a302acc702ef395706}{00039}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSerialManager_ab9f933dca0b5d7a302acc702ef395706}{SerialManager::readData}}()}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{while}\ (\mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}-\/>canReadLine())\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ QByteArray\ data\ =\ \mbox{\hyperlink{classSerialManager_a5b4e9ddd74bb9faff2ec2088c59bcf9d}{serial}}-\/>readLine();}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ QString\ line\ =\ QString::fromUtf8(data).trimmed();}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ packet\ =\ \mbox{\hyperlink{classSerialManager_a43f9af28ef02b9e1a4eed48a0a1d7e7e}{parseSerialLine}}(line);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ emit\ \mbox{\hyperlink{classSerialManager_a9a87300a5ea23e50817b47545534e55f}{newPacketReceived}}(packet);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00065}\mbox{\hyperlink{classSerialManager_a43f9af28ef02b9e1a4eed48a0a1d7e7e}{00065}}\ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ \mbox{\hyperlink{classSerialManager_a43f9af28ef02b9e1a4eed48a0a1d7e7e}{SerialManager::parseSerialLine}}(\textcolor{keyword}{const}\ QString\ \&line)}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00066}00066\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00067}00067\ \ \ \ \ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ result;}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00068}00068\ \ \ \ \ result.\mbox{\hyperlink{structParsedPacket_a8b780ebe2dea38bfbf4daa3f17a50493}{hasPosition}}\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00070}00070\ \ \ \ \ QString\ cleanLine\ =\ line.trimmed();}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordtype}{int}\ logIndex\ =\ cleanLine.indexOf(\textcolor{charliteral}{'!'});}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00073}00073\ \ \ \ \ QString\ dataPart\ =\ (logIndex\ >=\ 0)\ ?\ cleanLine.left(logIndex)\ :\ cleanLine;}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00074}00074\ \ \ \ \ QString\ logPart\ =\ (logIndex\ >=\ 0)\ ?\ cleanLine.mid(logIndex\ +\ 1)\ :\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00076}00076\ \ \ \ \ QStringList\ items\ =\ dataPart.split(\textcolor{charliteral}{';'},\ Qt::SkipEmptyParts);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{if}\ (items.size()\ >=\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ latOk\ =\ \textcolor{keyword}{false},\ lonOk\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ lat\ =\ items[0].toDouble(\&latOk);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ lon\ =\ items[1].toDouble(\&lonOk);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (latOk\ \&\&\ lonOk)\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structParsedPacket_ab39507c102d3c4cadf87af36b9b34203}{latitude}}\ =\ lat;}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structParsedPacket_a3094b3a650084273b23890a521ce4783}{longitude}}\ =\ lon;}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ qDebug()\ <<\ lat\ <<\ \textcolor{stringliteral}{"{}\ ,\ "{}}\ <<\ lon;}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ result.\mbox{\hyperlink{structParsedPacket_a8b780ebe2dea38bfbf4daa3f17a50493}{hasPosition}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Pozostałe\ elementy\ to\ sensory}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 2;\ i\ <\ items.size();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ ok;}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ val\ =\ items[i].toDouble(\&ok);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)\ result.\mbox{\hyperlink{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}{sensors}}.append(val);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Jeśli\ współrzędne\ niepoprawne,\ potraktuj\ wszystko\ jako\ sensory}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ QString\ \&item\ :\ items)\ \{}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ ok;}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ val\ =\ item.toDouble(\&ok);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (ok)\ result.\mbox{\hyperlink{structParsedPacket_a5717e3804d9be81e2bac5161e4c17f2c}{sensors}}.append(val);}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00104}00104\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00106}00106\ \ \ \ \ result.\mbox{\hyperlink{structParsedPacket_a21c17f7e156918b39f9b4f52edaa34fc}{log}}\ =\ logPart;}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00107}00107\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{serialmanager_8cpp_source_l00108}00108\ \}}
+
+\end{DoxyCode}

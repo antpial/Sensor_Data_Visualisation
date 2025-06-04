@@ -1,78 +1,78 @@
 \doxysection{mainwindow.\+h}
 \hypertarget{mainwindow_8h_source}{}\label{mainwindow_8h_source}\mbox{\hyperlink{mainwindow_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ }
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
-\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
-\DoxyCodeLine{00008\ }
-\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
-\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <QTimer>}}
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <QLabel>}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <QTranslator>}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{serialmanager_8h}{serialmanager.h}}"{}}}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ QT\_BEGIN\_NAMESPACE}
-\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceUi}{Ui}}\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}};\ \}}
-\DoxyCodeLine{00018\ QT\_END\_NAMESPACE}
-\DoxyCodeLine{00019\ }
-\DoxyCodeLine{00023\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSensorTile}{SensorTile}}\ \{}
-\DoxyCodeLine{00024\ \ \ \ \ QFrame*\ \mbox{\hyperlink{structSensorTile_a252b6703828d886c7ffca26ea053b896}{frame}};\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00025\ \ \ \ \ QLabel*\ \mbox{\hyperlink{structSensorTile_a1fa553fd51f55be7be9ac6758e71877a}{nameLabel}};\ \ \ \ \ }
-\DoxyCodeLine{00026\ \ \ \ \ QLabel*\ \mbox{\hyperlink{structSensorTile_ada36f7d86cb0805a55f9f30efab2321d}{valueLabel}};\ \ \ \ }
-\DoxyCodeLine{00027\ \};}
-\DoxyCodeLine{00028\ }
-\DoxyCodeLine{00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classChartWindow}{ChartWindow}};}
-\DoxyCodeLine{00030\ }
-\DoxyCodeLine{00035\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
-\DoxyCodeLine{00036\ \{}
-\DoxyCodeLine{00037\ \ \ \ \ Q\_OBJECT}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{keyword}{private}\ slots:}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a2d8c660a89cbff3f408e33110c1c2c61}{handleNewPacket}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ \&packet);}
-\DoxyCodeLine{00057\ }
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a064b13fe8d8c2c4471dec0c44a4b0a6b}{handleSerialError}}(\textcolor{keyword}{const}\ QString\ \&error);}
-\DoxyCodeLine{00063\ }
-\DoxyCodeLine{00064\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00065\ \ \ \ \ Ui::MainWindow\ *\mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00066\ \ \ \ \ QTimer\ *\mbox{\hyperlink{classMainWindow_ac6acedc605e8700660ab349c08b37eac}{logTimer}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{classSerialManager}{SerialManager}}\ *\mbox{\hyperlink{classMainWindow_a1e45c6a8193b3c32ac122bf615748127}{serialManager}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{classChartWindow}{ChartWindow}}\ *\mbox{\hyperlink{classMainWindow_ae7b5edf93b98f6a1f0db64564a69cc96}{chartWindow}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00069\ \ \ \ \ QVector<QLabel*>\ \mbox{\hyperlink{classMainWindow_aa4995b5b66dfd31153708d6fa242ea27}{sensorLabels}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00070\ \ \ \ \ QVector<SensorTile>\ \mbox{\hyperlink{classMainWindow_a2ead0d7421c8b42b82133d4fe6747089}{sensorTiles}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00071\ \ \ \ \ QVector<QPair<QString,\ QString>>\ \mbox{\hyperlink{classMainWindow_a1108c2b0f58b54e7e69f6e3929ca4eec}{sensorConfig}};\ }
-\DoxyCodeLine{00072\ }
-\DoxyCodeLine{00078\ \ \ \ \ QVector<QPair<QString,\ QString>>\ \mbox{\hyperlink{classMainWindow_ac8fa0d9c2019ef65f4a71feb2d1e8ea4}{loadSensorConfig}}(\textcolor{keyword}{const}\ QString\ \&filePath);}
-\DoxyCodeLine{00079\ }
-\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_af1363200af71ba9cd608533794a5fcbf}{updatePosition}}(\textcolor{keywordtype}{double}\ latitude,\ \textcolor{keywordtype}{double}\ longitude);}
-\DoxyCodeLine{00086\ }
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{comment}{//\ Przyciski\ językowe}}
-\DoxyCodeLine{00088\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_a92d08c165f352a5187ca16c3f4517b9d}{langButton}}\ =\ \textcolor{keyword}{nullptr};\ }
-\DoxyCodeLine{00089\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_ab1d6a75930e70103d1d08289b51f0937}{btnPL}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ }
-\DoxyCodeLine{00090\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_aeb1de0d49e14bad708dccf9b19fe5f3f}{btnEN}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ }
-\DoxyCodeLine{00091\ \ \ \ \ QTranslator\ \mbox{\hyperlink{classMainWindow_a8e829b3590ccdeeada42625415afc6f3}{translator}};\ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_afc023dc10c45fd50cd731c41952fc6fd}{updateLanguageButtonPositions}}();}
-\DoxyCodeLine{00097\ }
-\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_afe4a897bd163a15ecd30f6a262b4a135}{loadLanguage}}(\textcolor{keyword}{const}\ QString\ \&langCode);}
-\DoxyCodeLine{00103\ }
-\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a08670ff7ecdbe1b065ff84860525b5bc}{setupMap}}();}
-\DoxyCodeLine{00108\ }
-\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//\ Dane\ lokalizacyjne}}
-\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainWindow_afd14383d1d27c426e0cf1df5bf20cb16}{mapReady}}\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainWindow_a4aa7e99e292a9ef95b65f61e46e7870e}{hasPendingPosition}}\ =\ \textcolor{keyword}{false};\ \ \ }
-\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classMainWindow_abbd49b4459b1d9d64dbf57d14c820b16}{lastLat}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classMainWindow_a44a996ad0ebb5c3242a90d3bc51180fe}{lastLon}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00114\ }
-\DoxyCodeLine{00115\ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_aad75236c74a5c340c3e18749a9b5eb4f}{resizeEvent}}(QResizeEvent\ *event)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00121\ \};}
-\DoxyCodeLine{00122\ }
-\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00006}00006\ \textcolor{preprocessor}{\#ifndef\ MAINWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ MAINWINDOW\_H}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <QTimer>}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <QLabel>}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <QPushButton>}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <QTranslator>}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{serialmanager_8h}{serialmanager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00016}00016\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00017}00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceUi}{Ui}}\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}};\ \}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00018}00018\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00023}\mbox{\hyperlink{structSensorTile}{00023}}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structSensorTile}{SensorTile}}\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00024}\mbox{\hyperlink{structSensorTile_a252b6703828d886c7ffca26ea053b896}{00024}}\ \ \ \ \ QFrame*\ \mbox{\hyperlink{structSensorTile_a252b6703828d886c7ffca26ea053b896}{frame}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00025}\mbox{\hyperlink{structSensorTile_a1fa553fd51f55be7be9ac6758e71877a}{00025}}\ \ \ \ \ QLabel*\ \mbox{\hyperlink{structSensorTile_a1fa553fd51f55be7be9ac6758e71877a}{nameLabel}};\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00026}\mbox{\hyperlink{structSensorTile_ada36f7d86cb0805a55f9f30efab2321d}{00026}}\ \ \ \ \ QLabel*\ \mbox{\hyperlink{structSensorTile_ada36f7d86cb0805a55f9f30efab2321d}{valueLabel}};\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00027}00027\ \};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00029}00029\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classChartWindow}{ChartWindow}};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00035}\mbox{\hyperlink{classMainWindow}{00035}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMainWindow}{MainWindow}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00037}00037\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00039}00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{classMainWindow}{MainWindow}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{classMainWindow_ae98d00a93bc118200eeef9f9bba1dba7}{\string~MainWindow}}();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00051}00051\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00056}00056\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a2d8c660a89cbff3f408e33110c1c2c61}{handleNewPacket}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structParsedPacket}{ParsedPacket}}\ \&packet);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a064b13fe8d8c2c4471dec0c44a4b0a6b}{handleSerialError}}(\textcolor{keyword}{const}\ QString\ \&error);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00064}00064\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00065}\mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{00065}}\ \ \ \ \ Ui::MainWindow\ *\mbox{\hyperlink{classMainWindow_a35466a70ed47252a0191168126a352a5}{ui}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00066}\mbox{\hyperlink{classMainWindow_ac6acedc605e8700660ab349c08b37eac}{00066}}\ \ \ \ \ QTimer\ *\mbox{\hyperlink{classMainWindow_ac6acedc605e8700660ab349c08b37eac}{logTimer}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00067}\mbox{\hyperlink{classMainWindow_a1e45c6a8193b3c32ac122bf615748127}{00067}}\ \ \ \ \ \mbox{\hyperlink{classSerialManager}{SerialManager}}\ *\mbox{\hyperlink{classMainWindow_a1e45c6a8193b3c32ac122bf615748127}{serialManager}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00068}\mbox{\hyperlink{classMainWindow_ae7b5edf93b98f6a1f0db64564a69cc96}{00068}}\ \ \ \ \ \mbox{\hyperlink{classChartWindow}{ChartWindow}}\ *\mbox{\hyperlink{classMainWindow_ae7b5edf93b98f6a1f0db64564a69cc96}{chartWindow}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00069}\mbox{\hyperlink{classMainWindow_aa4995b5b66dfd31153708d6fa242ea27}{00069}}\ \ \ \ \ QVector<QLabel*>\ \mbox{\hyperlink{classMainWindow_aa4995b5b66dfd31153708d6fa242ea27}{sensorLabels}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00070}\mbox{\hyperlink{classMainWindow_a2ead0d7421c8b42b82133d4fe6747089}{00070}}\ \ \ \ \ QVector<SensorTile>\ \mbox{\hyperlink{classMainWindow_a2ead0d7421c8b42b82133d4fe6747089}{sensorTiles}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00071}\mbox{\hyperlink{classMainWindow_a1108c2b0f58b54e7e69f6e3929ca4eec}{00071}}\ \ \ \ \ QVector<QPair<QString,\ QString>>\ \mbox{\hyperlink{classMainWindow_a1108c2b0f58b54e7e69f6e3929ca4eec}{sensorConfig}};\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00078}00078\ \ \ \ \ QVector<QPair<QString,\ QString>>\ \mbox{\hyperlink{classMainWindow_ac8fa0d9c2019ef65f4a71feb2d1e8ea4}{loadSensorConfig}}(\textcolor{keyword}{const}\ QString\ \&filePath);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00085}00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_af1363200af71ba9cd608533794a5fcbf}{updatePosition}}(\textcolor{keywordtype}{double}\ latitude,\ \textcolor{keywordtype}{double}\ longitude);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00087}00087\ \ \ \ \ \textcolor{comment}{//\ Przyciski\ językowe}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00088}\mbox{\hyperlink{classMainWindow_a92d08c165f352a5187ca16c3f4517b9d}{00088}}\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_a92d08c165f352a5187ca16c3f4517b9d}{langButton}}\ =\ \textcolor{keyword}{nullptr};\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00089}\mbox{\hyperlink{classMainWindow_ab1d6a75930e70103d1d08289b51f0937}{00089}}\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_ab1d6a75930e70103d1d08289b51f0937}{btnPL}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00090}\mbox{\hyperlink{classMainWindow_aeb1de0d49e14bad708dccf9b19fe5f3f}{00090}}\ \ \ \ \ QPushButton\ *\mbox{\hyperlink{classMainWindow_aeb1de0d49e14bad708dccf9b19fe5f3f}{btnEN}}\ =\ \textcolor{keyword}{nullptr};\ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00091}\mbox{\hyperlink{classMainWindow_a8e829b3590ccdeeada42625415afc6f3}{00091}}\ \ \ \ \ QTranslator\ \mbox{\hyperlink{classMainWindow_a8e829b3590ccdeeada42625415afc6f3}{translator}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00096}00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_afc023dc10c45fd50cd731c41952fc6fd}{updateLanguageButtonPositions}}();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00102}00102\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_afe4a897bd163a15ecd30f6a262b4a135}{loadLanguage}}(\textcolor{keyword}{const}\ QString\ \&langCode);}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00107}\mbox{\hyperlink{classMainWindow_a08670ff7ecdbe1b065ff84860525b5bc}{00107}}\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_a08670ff7ecdbe1b065ff84860525b5bc}{setupMap}}();}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00109}00109\ \ \ \ \ \textcolor{comment}{//\ Dane\ lokalizacyjne}}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00110}\mbox{\hyperlink{classMainWindow_afd14383d1d27c426e0cf1df5bf20cb16}{00110}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainWindow_afd14383d1d27c426e0cf1df5bf20cb16}{mapReady}}\ =\ \textcolor{keyword}{false};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00111}\mbox{\hyperlink{classMainWindow_a4aa7e99e292a9ef95b65f61e46e7870e}{00111}}\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMainWindow_a4aa7e99e292a9ef95b65f61e46e7870e}{hasPendingPosition}}\ =\ \textcolor{keyword}{false};\ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00112}\mbox{\hyperlink{classMainWindow_abbd49b4459b1d9d64dbf57d14c820b16}{00112}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classMainWindow_abbd49b4459b1d9d64dbf57d14c820b16}{lastLat}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00113}\mbox{\hyperlink{classMainWindow_a44a996ad0ebb5c3242a90d3bc51180fe}{00113}}\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classMainWindow_a44a996ad0ebb5c3242a90d3bc51180fe}{lastLon}}\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00115}00115\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00120}00120\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMainWindow_aad75236c74a5c340c3e18749a9b5eb4f}{resizeEvent}}(QResizeEvent\ *event)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00121}00121\ \};}
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{mainwindow_8h_source_l00123}00123\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MAINWINDOW\_H}}
 
 \end{DoxyCode}
