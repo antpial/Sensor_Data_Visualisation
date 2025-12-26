@@ -2,11 +2,8 @@
 
 This repository contains the source code for a **Ground Control Station (GCS)** application, developed as part of a student project. The application is designed to visualize telemetry data, monitor sensor status, and track the real-time GPS position of the autonomous USV **FOKA**.
 
-![GCS Screenshot](icons/guikoncowe.png)
-*Fig 1. Main application dashboard showing the map view and boat parameters.*
-
 ![GCS Screenshot1](icons/giu_prawie_koncowe.png)
-*Fig 1. Second application dashboard ploting boat parameters.*
+*Fig 1. Main application dashboard showing the map view and boat parameters.*
 
 ## 🎯 Key Features
 
